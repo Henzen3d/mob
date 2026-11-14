@@ -11,578 +11,395 @@ import Footer from '../components/Footer.astro';
 >
   <Navbar currentPage="home" />
 
-  <main>
+  <main class="bg-[#020202] text-white selection:bg-amber-400 selection:text-black">
     <!-- 1. HERO SECTION WITH LIVING AURORA RAYS -->
     <AuroraHero />
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 2. OS 3 PILARES PRÁTICOS DA MOB (Double-Bezel Bento Grid)     -->
+    <!-- 2. PILARES DE ENGENHARIA (Asymmetric Editorial Architecture)   -->
     <!-- ------------------------------------------------------------- -->
-    <section id="como-funciona" class="relative py-28 px-4 max-w-6xl mx-auto">
-      <div class="text-center max-w-3xl mx-auto mb-16">
-        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full">
-          ARQUITETURA PRÁTICA
-        </span>
-        <h2 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-          Chega de teoria sobre IA.<br />Veja o que funciona na sua empresa:
-        </h2>
-        <p class="mt-4 text-gray-400 text-base md:text-lg">
-          Zero jargões ou fórmulas acadêmicas. Criamos uma solução pronta para resolver os gargalos reais do seu escritório no primeiro dia.
-        </p>
-      </div>
+    <section id="como-funciona" class="relative py-28 px-4 max-w-6xl mx-auto border-t border-white/[0.06]">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+        
+        <!-- Left: Editorial Headline & Stance -->
+        <div class="lg:col-span-5 lg:sticky lg:top-28">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
+            Chega de teoria sobre IA. Veja o que resolve a operação da sua empresa.
+          </h2>
+          <p class="mt-5 text-zinc-400 text-base leading-relaxed">
+            Não somos uma agência vendendo posts nem uma consultoria que entrega relatórios em PDF. Somos os <em>"pedreiros da IA"</em>: instalamos hardware pronto, assistentes calibrados e automações invisíveis na sua rotina em menos de 15 dias.
+          </p>
 
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Pilar 1: MOB Box -->
-        <div class="relative p-1.5 rounded-[2rem] bg-gradient-to-b from-white/10 to-white/[0.02] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] group hover:border-amber-400/40 transition-all">
-          <div class="h-full rounded-[calc(2rem-0.375rem)] bg-[#08080c] p-7 flex flex-col justify-between border border-white/5">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/>
-                </svg>
-              </div>
-              <span class="text-xs font-mono text-amber-400 font-semibold">PILAR 01</span>
-              <h3 class="text-xl font-bold text-white mt-1 mb-3">A MOB Box no Escritório</h3>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Um computador silencioso e compacto que fica dentro da sua empresa. Seus contratos, tabelas e dados confidenciais são armazenados localmente, sem riscos de vazamento para inteligências públicas.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-400">
-              <span>Hardware Físico</span>
-              <span class="text-emerald-400 font-semibold">100% Protegido</span>
-            </div>
+          <div class="mt-8 p-5 rounded-xl bg-[#09090c] border border-white/[0.08]">
+            <div class="text-xs font-mono text-zinc-500 uppercase tracking-wider mb-1">Diretriz Central</div>
+            <div class="text-sm font-semibold text-white">Alívio imediato para donos e gestores de PMEs</div>
+            <p class="text-xs text-zinc-400 mt-1 leading-relaxed">
+              Sua equipe não precisa aprender programação. Para abastecer a IA, basta arrastar arquivos para uma pasta na rede do Windows.
+            </p>
           </div>
         </div>
 
-        <!-- Pilar 2: Assistentes com Suas Regras -->
-        <div class="relative p-1.5 rounded-[2rem] bg-gradient-to-b from-white/10 to-white/[0.02] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] group hover:border-amber-400/40 transition-all">
-          <div class="h-full rounded-[calc(2rem-0.375rem)] bg-[#08080c] p-7 flex flex-col justify-between border border-white/5">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                </svg>
-              </div>
-              <span class="text-xs font-mono text-amber-400 font-semibold">PILAR 02</span>
-              <h3 class="text-xl font-bold text-white mt-1 mb-3">Assistentes Treinados</h3>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Três assistentes de fábrica calibrados com as diretrizes do seu negócio: o <strong>Consultor Interno</strong> (tabelas e manuais), o <strong>Redator de Padrão</strong> (áudios virando orçamentos) e o <strong>Analista de Documentos</strong>.
-              </p>
+        <!-- Right: 3 High-Density Structural Blocks -->
+        <div class="lg:col-span-7 flex flex-col gap-6">
+          
+          <!-- Block 1: Appliance MOB Box -->
+          <div class="p-8 rounded-2xl bg-[#08080b] border border-white/[0.08] hover:border-white/20 transition-all">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.06]">
+              <h3 class="text-lg font-semibold text-white">1. A MOB Box Física no seu Escritório</h3>
+              <span class="text-xs font-mono text-emerald-400">Hardware Dedicado</span>
             </div>
-            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-400">
-              <span>3 Modelos Prontos</span>
-              <span class="text-amber-400 font-semibold">Cita Fontes</span>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Um servidor compacto e silencioso instalado no seu rack ou mesa. Todos os seus orçamentos, contratos e tabelas de preços ficam armazenados fisicamente dentro da sua empresa, imunes a vazamentos na nuvem.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-4 text-xs font-mono text-zinc-400">
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">Restore on AC Loss</span>
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">Backups Criptografados</span>
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">Túnel VPN Tailscale</span>
             </div>
           </div>
+
+          <!-- Block 2: 3 Assistentes de Fábrica -->
+          <div class="p-8 rounded-2xl bg-[#08080b] border border-white/[0.08] hover:border-white/20 transition-all">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.06]">
+              <h3 class="text-lg font-semibold text-white">2. Assistentes Calibrados com as Suas Regras</h3>
+              <span class="text-xs font-mono text-amber-400">3 Modelos Inclusos</span>
+            </div>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Três assistentes prontos para uso desde o primeiro minuto: o <strong>Consultor Interno</strong> (consulta tabelas e regras), o <strong>Redator de Padrão</strong> (transforma áudios do WhatsApp em propostas em PDF) e o <strong>Analista de Documentos</strong> (resumos de contratos e planilhas).
+            </p>
+            <div class="mt-5 flex flex-wrap gap-4 text-xs font-mono text-zinc-400">
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">Citação Exata de Fontes</span>
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">Zero Alucinações</span>
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">Multi-usuário</span>
+            </div>
+          </div>
+
+          <!-- Block 3: Treinamento Mão na Massa -->
+          <div class="p-8 rounded-2xl bg-[#08080b] border border-white/[0.08] hover:border-white/20 transition-all">
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/[0.06]">
+              <h3 class="text-lg font-semibold text-white">3. Treinamento Presencial e Acompanhamento</h3>
+              <span class="text-xs font-mono text-zinc-300">Gente de Verdade</span>
+            </div>
+            <p class="text-sm text-zinc-400 leading-relaxed">
+              Nossa equipe vai até a sua empresa para uma sessão prática de 2 a 3 horas na estação de trabalho dos seus funcionários. Garantimos que até quem tem receio de tecnologia aprenda a usar a IA na rotina no mesmo dia.
+            </p>
+            <div class="mt-5 flex flex-wrap gap-4 text-xs font-mono text-zinc-400">
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">Suporte Local Blumenau</span>
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">14 Dias de Hipercare</span>
+              <span class="px-2.5 py-1 rounded bg-white/[0.03] border border-white/[0.06]">Garantia de Troca em 24h</span>
+            </div>
+          </div>
+
         </div>
 
-        <!-- Pilar 3: Automação & Treinamento -->
-        <div class="relative p-1.5 rounded-[2rem] bg-gradient-to-b from-white/10 to-white/[0.02] border border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.5)] group hover:border-amber-400/40 transition-all">
-          <div class="h-full rounded-[calc(2rem-0.375rem)] bg-[#08080c] p-7 flex flex-col justify-between border border-white/5">
-            <div>
-              <div class="w-12 h-12 rounded-2xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 mb-6 group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(245,158,11,0.2)]">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
-                </svg>
-              </div>
-              <span class="text-xs font-mono text-amber-400 font-semibold">PILAR 03</span>
-              <h3 class="text-xl font-bold text-white mt-1 mb-3">Treinamento Presencial</h3>
-              <p class="text-sm text-gray-400 leading-relaxed">
-                Não exigimos que sua equipe entenda de tecnologia. Para alimentar a IA, basta arrastar arquivos numa pasta da rede do Windows. Nós vamos até sua empresa e ensinamos todo mundo a usar na prática.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs font-mono text-gray-400">
-              <span>Metodologia</span>
-              <span class="text-amber-400 font-semibold">Mão na Massa</span>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 3. COMO FUNCIONA EM 3 PASSOS (Fácil Assim)                    -->
+    <!-- 3. FLUXO DE IMPLANTAÇÃO (Zylon Precision Steps)                -->
     <!-- ------------------------------------------------------------- -->
-    <section class="relative py-20 px-4 bg-[#050508] border-y border-white/5">
+    <section class="relative py-24 px-4 bg-[#050508] border-y border-white/[0.06]">
       <div class="max-w-6xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs font-mono font-semibold uppercase tracking-widest text-amber-400">
-            SIMPLICIDADE DE ADOÇÃO
-          </span>
-          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
+        <div class="max-w-2xl mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
             Como funciona a implantação na sua empresa
           </h2>
-          <p class="mt-3 text-gray-400 text-sm md:text-base">
-            Sem obras, sem reformulação de sistemas e sem parar o trabalho da sua equipe.
+          <p class="mt-3 text-zinc-400 text-base">
+            Sem obras, sem reformulação de sistemas e sem parar o trabalho da sua equipe por um único minuto.
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          <!-- Step 1 -->
-          <div class="flex flex-col items-start p-6 rounded-3xl bg-white/[0.02] border border-white/5 relative">
-            <div class="text-3xl font-black font-mono text-amber-400/40 mb-4">01</div>
-            <h3 class="text-lg font-bold text-white mb-2">Instalamos a MOB Box</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Levamos a caixa até seu escritório, conectamos na tomada e na rede local. Nenhuma porta é aberta para a internet pública.
-            </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <div class="relative p-6 rounded-xl bg-[#08080c] border border-white/[0.06] flex flex-col justify-between">
+            <div>
+              <div class="text-2xl font-mono font-bold text-zinc-500 mb-4">01</div>
+              <h3 class="text-base font-semibold text-white mb-2">Demonstração de 15 Minutos</h3>
+              <p class="text-sm text-zinc-400 leading-relaxed">
+                Levamos a nossa Maleta de Demonstração MOB Box até o seu escritório. Ligamos na tomada e mostramos um áudio do WhatsApp virando orçamento na sua frente.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-amber-400">
+              Sem custo • Na sua mesa
+            </div>
           </div>
 
-          <!-- Step 2 -->
-          <div class="flex flex-col items-start p-6 rounded-3xl bg-white/[0.02] border border-white/5 relative">
-            <div class="text-3xl font-black font-mono text-amber-400/40 mb-4">02</div>
-            <h3 class="text-lg font-bold text-white mb-2">Alimentamos o Cérebro</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Carregamos suas tabelas de preços, manuais de procedimento e modelos de proposta. A IA aprende as regras da sua empresa.
-            </p>
+          <div class="relative p-6 rounded-xl bg-[#08080c] border border-white/[0.06] flex flex-col justify-between">
+            <div>
+              <div class="text-2xl font-mono font-bold text-zinc-500 mb-4">02</div>
+              <h3 class="text-base font-semibold text-white mb-2">Montagem & Gravação de Bancada</h3>
+              <p class="text-sm text-zinc-400 leading-relaxed">
+                Configuramos o seu appliance físico com a Golden Image do MOB CORE, testamos o estresse elétrico e térmico por 72 horas contínuas e lacramos o equipamento.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-zinc-300">
+              Pronto em 48 a 72h
+            </div>
           </div>
 
-          <!-- Step 3 -->
-          <div class="flex flex-col items-start p-6 rounded-3xl bg-white/[0.02] border border-white/5 relative">
-            <div class="text-3xl font-black font-mono text-amber-400/40 mb-4">03</div>
-            <h3 class="text-lg font-bold text-white mb-2">Sua Equipe Poupa Horas</h3>
-            <p class="text-sm text-gray-400 leading-relaxed">
-              Vendedores mandam áudios e recebem orçamentos prontos em PDF. Respostas a dúvidas operacionais saem em segundos.
-            </p>
+          <div class="relative p-6 rounded-xl bg-[#08080c] border border-white/[0.06] flex flex-col justify-between">
+            <div>
+              <div class="text-2xl font-mono font-bold text-zinc-500 mb-4">03</div>
+              <h3 class="text-base font-semibold text-white mb-2">Instalação & Treinamento Chave na Mão</h3>
+              <p class="text-sm text-zinc-400 leading-relaxed">
+                Plugamos a MOB Box na sua rede, compartilhamos a pasta no Windows de todos os computadores e realizamos o treinamento presencial de 2h30 com a equipe.
+              </p>
+            </div>
+            <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-emerald-400">
+              Operando no mesmo dia
+            </div>
           </div>
+
         </div>
       </div>
     </section>
 
     <!-- ------------------------------------------------------------- -->
-    <!-- 4. A LINHA MOB BOX (Hardware Showcase & Maleta Demo)          -->
+    <!-- 4. MATRIZ DE COMPARAÇÃO ENTERPRISE (Zylon Comparison Style)    -->
     <!-- ------------------------------------------------------------- -->
-    <section id="mob-box" class="relative py-28 px-4 max-w-6xl mx-auto">
-      <div class="flex flex-col lg:flex-row items-center justify-between gap-12 mb-16">
-        <div class="max-w-xl text-left">
-          <span class="text-xs font-mono font-semibold uppercase tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full">
-            HARDWARE DEDICADO
-          </span>
-          <h2 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-            A MOB Box: Silenciosa, potente e segura.
+    <section id="comparativo" class="relative py-28 px-4 max-w-6xl mx-auto">
+      <div class="max-w-3xl mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+          Por que as empresas escolhem a MOB Box
+        </h2>
+        <p class="mt-3 text-zinc-400 text-base">
+          Entenda a diferença técnica e financeira entre soluções genéricas em nuvem e a infraestrutura física dedicada da MOB.
+        </p>
+      </div>
+
+      <!-- Enterprise Comparison Table -->
+      <div class="overflow-x-auto rounded-2xl border border-white/[0.08] bg-[#07070a]">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="border-b border-white/[0.08] bg-white/[0.02]">
+              <th class="p-5 font-medium text-zinc-400">Critério de Avaliação</th>
+              <th class="p-5 font-medium text-zinc-400">IA Pública em Nuvem (ChatGPT/Copilot)</th>
+              <th class="p-5 font-medium text-zinc-400">Consultorias Teóricas</th>
+              <th class="p-5 font-semibold text-white bg-white/[0.04]">MOB Box & MOB CORE</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-white/[0.06] font-mono text-xs">
+            <tr>
+              <td class="p-5 font-sans font-semibold text-zinc-200">Privacidade & LGPD</td>
+              <td class="p-5 text-red-400">Dados trafegam em servidores nos EUA</td>
+              <td class="p-5 text-zinc-400">Apenas recomendação teórica</td>
+              <td class="p-5 text-emerald-400 font-semibold bg-white/[0.04]">100% On-Premise / Zero Data Retention</td>
+            </tr>
+            <tr>
+              <td class="p-5 font-sans font-semibold text-zinc-200">Previsibilidade Financeira</td>
+              <td class="p-5 text-red-400">Cobrança em dólar por usuário (escalada de custos)</td>
+              <td class="p-5 text-zinc-400">Horas técnicas caras sem produto final</td>
+              <td class="p-5 text-emerald-400 font-semibold bg-white/[0.04]">Custo fixo em reais, usuários ilimitados</td>
+            </tr>
+            <tr>
+              <td class="p-5 font-sans font-semibold text-zinc-200">Treinamento com Suas Regras</td>
+              <td class="p-5 text-zinc-400">Respostas genéricas da internet</td>
+              <td class="p-5 text-zinc-400">Prompting manual dependente do usuário</td>
+              <td class="p-5 text-emerald-400 font-semibold bg-white/[0.04]">Treinado com suas tabelas de preços e PDFs</td>
+            </tr>
+            <tr>
+              <td class="p-5 font-sans font-semibold text-zinc-200">Facilidade para a Equipe</td>
+              <td class="p-5 text-zinc-400">Exige saber escrever "prompts" avançados</td>
+              <td class="p-5 text-zinc-400">Manuais extensos que ninguém lê</td>
+              <td class="p-5 text-emerald-400 font-semibold bg-white/[0.04]">Arrastar e soltar numa pasta de rede do Windows</td>
+            </tr>
+            <tr>
+              <td class="p-5 font-sans font-semibold text-zinc-200">Presença Física Local</td>
+              <td class="p-5 text-zinc-400">Atendimento por robô ou ticket em inglês</td>
+              <td class="p-5 text-zinc-400">Reuniões no Google Meet</td>
+              <td class="p-5 text-emerald-400 font-semibold bg-white/[0.04]">Suporte presencial em Blumenau e região</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 5. MODELO COMERCIAL & PREÇOS (Direct & Asaas Tone)            -->
+    <!-- ------------------------------------------------------------- -->
+    <section id="precos" class="relative py-28 px-4 bg-[#050508] border-t border-white/[0.06]">
+      <div class="max-w-6xl mx-auto">
+        <div class="max-w-2xl mb-16">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+            Transparência total nos investimentos
           </h2>
-          <p class="mt-4 text-gray-400 text-base leading-relaxed">
-            Desenvolvida para operar 24 horas por dia dentro de escritórios. Com ajuste de religamento autônomo após queda de energia (*Restore on AC Power Loss*), nobreak homologado e consumo elétrico de apenas R$ 12 por mês.
+          <p class="mt-3 text-zinc-400 text-base">
+            Dois modelos comerciais objetivos para você escolher o que melhor se adapta ao fluxo de caixa da sua empresa.
           </p>
         </div>
 
-        <div class="p-6 rounded-3xl bg-gradient-to-br from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/20 max-w-md text-left">
-          <div class="flex items-center gap-3 mb-3">
-            <span class="text-2xl">💼</span>
-            <h3 class="text-base font-bold text-white">A Maleta de Demonstração (15 min)</h3>
-          </div>
-          <p class="text-xs text-gray-300 leading-relaxed mb-4">
-            Não pedimos sua senha de Wi-Fi. Nosso consultor chega com a maleta autônoma, liga na tomada e demonstra com um áudio ou arquivo real da sua empresa funcionando na hora.
-          </p>
-          <a
-            href="https://wa.me/5547999999999?text=Ol%C3%A1%20Osmar!%20Gostaria%20de%20receber%20a%20Maleta%20de%20Demonstra%C3%A7%C3%A3o%20de%2015%20minutos%20no%20meu%20escrit%C3%B3rio."
-            target="_blank"
-            class="inline-flex items-center gap-2 text-xs font-bold text-amber-300 hover:text-amber-200 transition-colors"
-          >
-            <span>Solicitar demonstração presencial</span>
-            <svg class="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
-          </a>
-        </div>
-      </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl">
+          
+          <!-- Plano 1: Compra Chave na Mão -->
+          <div class="p-8 rounded-2xl bg-[#08080c] border border-white/[0.08] flex flex-col justify-between">
+            <div>
+              <div class="text-xs font-mono text-zinc-500 uppercase tracking-wider mb-2">Formato A</div>
+              <h3 class="text-xl font-bold text-white mb-2">Compra Chave na Mão</h3>
+              <p class="text-xs text-zinc-400 mb-6 leading-relaxed">
+                O hardware da MOB Box passa a ser propriedade definitiva da sua empresa.
+              </p>
 
-      <!-- Models Bento -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <!-- Compact -->
-        <div class="p-6 rounded-3xl bg-[#090a0f] border border-white/10 hover:border-amber-400/40 transition-colors flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-mono font-bold text-amber-400">MOB BOX COMPACT</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-gray-300">Entrada / Híbrida</span>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2">Ideal para 90% das PMEs</h4>
-            <p class="text-xs text-gray-400 leading-relaxed mb-6">
-              Documentos locais, busca vetorial interna e inferência rápida via API privada com Zero Data Retention.
-            </p>
-            <ul class="space-y-2 text-xs text-gray-300 font-mono">
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Mini PC Intel N100 / Ryzen 5</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> 16GB RAM + 512GB SSD NVMe</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Nobreak compacto incluso</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Consumo elétrico de ~15W</li>
-            </ul>
-          </div>
-          <div class="mt-8 pt-4 border-t border-white/5 text-xs text-gray-400">
-            Recomendado para orçamentos e rotinas de escritório.
-          </div>
-        </div>
+              <div class="mb-6">
+                <span class="text-3xl font-extrabold text-white font-mono">R$ 6.490</span>
+                <span class="text-xs text-zinc-400 ml-2">Setup + Appliance físico</span>
+                <div class="text-xs text-zinc-500 font-mono mt-1">+ R$ 990 / mês (manutenção e atualizações)</div>
+              </div>
 
-        <!-- Pro -->
-        <div class="p-6 rounded-3xl bg-[#090a0f] border-2 border-amber-500/40 shadow-[0_0_30px_rgba(245,158,11,0.15)] flex flex-col justify-between relative">
-          <div class="absolute -top-3 right-6 px-3 py-0.5 rounded-full bg-amber-500 text-black text-[10px] font-bold tracking-wider uppercase font-mono">
-            100% LOCAL SILENCIOSA
-          </div>
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-mono font-bold text-amber-400">MOB BOX PRO</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-amber-500/20 text-amber-300">Advocacia & Sigilo</span>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2">Para Sigilo e Conformidade Rigorosa</h4>
-            <p class="text-xs text-gray-400 leading-relaxed mb-6">
-              Modelos de linguagem rodando 100% dentro do hardware físico local. Nenhum byte cruza as paredes da empresa.
-            </p>
-            <ul class="space-y-2 text-xs text-gray-300 font-mono">
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Mac Mini M4 24GB ou Workstation RTX</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Operação 100% desconectada da nuvem</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Silêncio absoluto (&lt; 18dB)</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Leitura profunda de contratos e laudos</li>
-            </ul>
-          </div>
-          <div class="mt-8 pt-4 border-t border-white/5">
-            <a href="/advocacia" class="text-xs font-bold text-amber-300 hover:text-amber-200 flex items-center justify-between">
-              <span>Conhecer solução para Advocacia</span>
-              <span>→</span>
-            </a>
-          </div>
-        </div>
-
-        <!-- Ultra -->
-        <div class="p-6 rounded-3xl bg-[#090a0f] border border-white/10 hover:border-amber-400/40 transition-colors flex flex-col justify-between">
-          <div>
-            <div class="flex items-center justify-between mb-4">
-              <span class="text-xs font-mono font-bold text-amber-400">MOB BOX ULTRA</span>
-              <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-white/10 text-gray-300">Alta Densidade</span>
-            </div>
-            <h4 class="text-lg font-bold text-white mb-2">Workstation Multi-GPU</h4>
-            <p class="text-xs text-gray-400 leading-relaxed mb-6">
-              Para empresas com alta concorrência simultânea e múltiplos fluxos de automação pesada em paralelo.
-            </p>
-            <ul class="space-y-2 text-xs text-gray-300 font-mono">
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> GPUs dedicadas de 24GB a 48GB VRAM</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Modelos de 32B a 70B parâmetros</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Suporte a 25+ usuários concorrentes</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Projeto sob consulta personalizada</li>
-            </ul>
-          </div>
-          <div class="mt-8 pt-4 border-t border-white/5 text-xs text-gray-400">
-            Fornecimento estritamente sob encomenda.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ------------------------------------------------------------- -->
-    <!-- 5. COMPARATIVO DE MERCADO (Zylon-Style Matrix)                -->
-    <!-- ------------------------------------------------------------- -->
-    <section id="comparativo" class="relative py-28 px-4 bg-[#050508] border-y border-white/5">
-      <div class="max-w-5xl mx-auto">
-        <div class="text-center max-w-2xl mx-auto mb-16">
-          <span class="text-xs font-mono font-semibold uppercase tracking-widest text-amber-400">
-            POR QUE ESCOLHER A MOB
-          </span>
-          <h2 class="mt-3 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Comparativo de Soluções de IA no Mercado
-          </h2>
-          <p class="mt-3 text-gray-400 text-sm md:text-base">
-            Veja a diferença entre instalar uma infraestrutura própria e assinar ferramentas genéricas em dólar.
-          </p>
-        </div>
-
-        <div class="overflow-x-auto">
-          <table class="w-full text-left text-sm border-collapse min-w-[640px]">
-            <thead>
-              <tr class="border-b border-white/10 text-xs font-mono text-gray-400 uppercase">
-                <th class="py-4 px-4 font-semibold">Critério de Avaliação</th>
-                <th class="py-4 px-4 font-bold text-amber-400 bg-amber-500/5 rounded-t-2xl">MOB Box / MOB IA</th>
-                <th class="py-4 px-4 font-semibold">ChatGPT Team (em Dólar)</th>
-                <th class="py-4 px-4 font-semibold">Consultorias Tradicionais</th>
-              </tr>
-            </thead>
-            <tbody class="divide-y divide-white/5 text-gray-300">
-              <tr>
-                <td class="py-4 px-4 font-medium text-white">Onde os dados ficam guardados?</td>
-                <td class="py-4 px-4 bg-amber-500/5 text-amber-300 font-semibold">No seu escritório ou ZDR</td>
-                <td class="py-4 px-4 text-gray-400">Nuvem pública nos EUA</td>
-                <td class="py-4 px-4 text-gray-400">Nuvens complexas de terceiros</td>
-              </tr>
-              <tr>
-                <td class="py-4 px-4 font-medium text-white">Modelo de Cobrança</td>
-                <td class="py-4 px-4 bg-amber-500/5 text-amber-300 font-semibold">Fixo em Reais (Sem sustos)</td>
-                <td class="py-4 px-4 text-gray-400">US$ 30 por usuário + IOF</td>
-                <td class="py-4 px-4 text-gray-400">R$ 15.000 a R$ 50.000/mês</td>
-              </tr>
-              <tr>
-                <td class="py-4 px-4 font-medium text-white">Alimentação da Inteligência</td>
-                <td class="py-4 px-4 bg-amber-500/5 text-amber-300 font-semibold">Pasta do Windows Explorer</td>
-                <td class="py-4 px-4 text-gray-400">Upload manual tela a tela</td>
-                <td class="py-4 px-4 text-gray-400">Scripts complexos</td>
-              </tr>
-              <tr>
-                <td class="py-4 px-4 font-medium text-white">Treinamento da Equipe</td>
-                <td class="py-4 px-4 bg-amber-500/5 text-amber-300 font-semibold">Presencial, na mesa do cliente</td>
-                <td class="py-4 px-4 text-gray-400">Nenhum treinamento</td>
-                <td class="py-4 px-4 text-gray-400">Palestras teóricas</td>
-              </tr>
-              <tr>
-                <td class="py-4 px-4 font-medium text-white">Suporte Técnico</td>
-                <td class="py-4 px-4 bg-amber-500/5 text-amber-300 font-semibold">Local em Blumenau e Vale</td>
-                <td class="py-4 px-4 text-gray-400">Fóruns em inglês</td>
-                <td class="py-4 px-4 text-gray-400">Tickets impessoais</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ------------------------------------------------------------- -->
-    <!-- 6. TABELA OFICIAL DE PREÇOS & CALCULADORA DE ROI              -->
-    <!-- ------------------------------------------------------------- -->
-    <section id="precos" class="relative py-28 px-4 max-w-6xl mx-auto">
-      <div class="text-center max-w-2xl mx-auto mb-16">
-        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full">
-          INVESTIMENTO TRANSPARENTE
-        </span>
-        <h2 class="mt-4 text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight">
-          Preços em Reais, Sem Surpresas
-        </h2>
-        <p class="mt-4 text-gray-400 text-base">
-          Escolha entre a compra definitiva do equipamento ou o modelo de assinatura com comodato.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
-        <!-- Card 1: MOB Start -->
-        <div class="p-8 rounded-[2rem] bg-[#08080c] border border-white/10 flex flex-col justify-between">
-          <div>
-            <span class="text-xs font-mono text-gray-400 uppercase font-semibold">Nuvem Privada</span>
-            <h3 class="text-2xl font-bold text-white mt-1">MOB Start</h3>
-            <p class="text-xs text-gray-400 mt-2 mb-6">Para empresas que querem começar rápido sem comprar hardware físico inicial.</p>
-            
-            <div class="mb-6">
-              <span class="text-3xl font-extrabold text-white">R$ 4.900</span>
-              <span class="text-xs text-gray-400"> setup único</span>
-              <div class="text-sm font-semibold text-amber-400 mt-1">+ R$ 990 / mês</div>
+              <ul class="space-y-3 text-xs text-zinc-300 font-mono">
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-400">✓</span> Mini PC homologado (16GB RAM / 512GB NVMe)
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-400">✓</span> 3 Assistentes de rotina configurados
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-400">✓</span> Treinamento presencial de 2h30 para a equipe
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-emerald-400">✓</span> Backups diários criptografados
+                </li>
+              </ul>
             </div>
 
-            <ul class="space-y-3 text-xs text-gray-300 font-mono mb-8">
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> 1 Fluxo prioritário implantado</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Até 50 documentos da empresa</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> 3 Assistentes de fábrica</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Treinamento prático da equipe</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Implantação em até 15 dias</li>
-            </ul>
+            <div class="mt-8 pt-6 border-t border-white/[0.06]">
+              <a
+                href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20formato%20Chave%20na%20M%C3%A3o%20da%20MOB%20Box."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full py-3 text-center rounded-lg text-xs font-semibold bg-white/[0.06] hover:bg-white/[0.12] text-white border border-white/10 transition-colors"
+              >
+                Solicitar Proposta Chave na Mão
+              </a>
+            </div>
           </div>
 
-          <a
-            href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20pacote%20MOB%20Start."
-            target="_blank"
-            class="w-full py-3 px-4 rounded-full text-center text-xs font-bold text-white bg-white/10 hover:bg-white/15 transition-all border border-white/10"
-          >
-            Contratar MOB Start
-          </a>
-        </div>
+          <!-- Plano 2: Comodato HaaS -->
+          <div class="p-8 rounded-2xl bg-[#09090d] border border-amber-400/30 flex flex-col justify-between relative shadow-[0_0_30px_rgba(245,158,11,0.08)]">
+            <div>
+              <div class="text-xs font-mono text-amber-400 uppercase tracking-wider mb-2">Formato B • Mais Escolhido</div>
+              <h3 class="text-xl font-bold text-white mb-2">Comodato (HaaS 12 Meses)</h3>
+              <p class="text-xs text-zinc-400 mb-6 leading-relaxed">
+                Baixo investimento de entrada com o equipamento cedido em comodato com garantia vitalícia.
+              </p>
 
-        <!-- Card 2: MOB Box Compact Venda (DESTAQUE) -->
-        <div class="p-8 rounded-[2rem] bg-[#0c0d14] border-2 border-amber-400 shadow-[0_0_40px_rgba(245,158,11,0.2)] flex flex-col justify-between relative scale-105 z-10">
-          <div class="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-amber-400 to-amber-500 text-black text-[10px] font-extrabold tracking-wider uppercase font-mono shadow-[0_0_15px_rgba(245,158,11,0.5)]">
-            MAIS POPULAR • CHAVE NA MÃO
-          </div>
-          <div>
-            <span class="text-xs font-mono text-amber-400 uppercase font-semibold">Appliance Própria</span>
-            <h3 class="text-2xl font-bold text-white mt-1">MOB Box Compact</h3>
-            <p class="text-xs text-gray-400 mt-2 mb-6">A máquina física é da sua empresa. Servidor local silencioso no escritório.</p>
-            
-            <div class="mb-6">
-              <span class="text-3xl font-extrabold text-white">R$ 6.490</span>
-              <span class="text-xs text-gray-400"> equipamento + setup</span>
-              <div class="text-sm font-semibold text-amber-400 mt-1">+ R$ 990 / mês de gestão</div>
+              <div class="mb-6">
+                <span class="text-3xl font-extrabold text-white font-mono">R$ 2.900</span>
+                <span class="text-xs text-zinc-400 ml-2">Taxa de Ativação inicial</span>
+                <div class="text-xs text-amber-300 font-mono mt-1">+ R$ 1.290 / mês (tudo incluso)</div>
+              </div>
+
+              <ul class="space-y-3 text-xs text-zinc-300 font-mono">
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-400">✓</span> MOB Box em comodato com troca imediata
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-400">✓</span> Ingestão e calibração dos assistentes
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-400">✓</span> Treinamento presencial e suporte contínuo
+                </li>
+                <li class="flex items-center gap-2">
+                  <span class="text-amber-400">✓</span> Atualizações automáticas de segurança e modelos
+                </li>
+              </ul>
             </div>
 
-            <ul class="space-y-3 text-xs text-gray-300 font-mono mb-8">
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> <strong>Mini PC N100 + Nobreak incluso</strong></li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Pasta na rede Samba do Windows</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Backup noturno criptografado AES-256</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Treinamento presencial completo</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Manutenção e suporte local incluso</li>
-            </ul>
-          </div>
-
-          <a
-            href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Quero%20agendar%20a%20implanta%C3%A7%C3%A3o%20da%20MOB%20Box%20Compact%20no%20meu%20escrit%C3%B3rio."
-            target="_blank"
-            class="w-full py-3.5 px-4 rounded-full text-center text-xs font-bold text-black bg-gradient-to-r from-amber-400 to-amber-500 hover:brightness-110 transition-all shadow-[0_0_20px_rgba(245,158,11,0.4)]"
-          >
-            Quero a MOB Box no Meu Escritório
-          </a>
-        </div>
-
-        <!-- Card 3: MOB Box Comodato -->
-        <div class="p-8 rounded-[2rem] bg-[#08080c] border border-white/10 flex flex-col justify-between">
-          <div>
-            <span class="text-xs font-mono text-gray-400 uppercase font-semibold">Assinatura HaaS</span>
-            <h3 class="text-2xl font-bold text-white mt-1">MOB Comodato</h3>
-            <p class="text-xs text-gray-400 mt-2 mb-6">Equipamento cedido em regime de comodato com troca expressa em caso de queima.</p>
-            
-            <div class="mb-6">
-              <span class="text-3xl font-extrabold text-white">R$ 2.900</span>
-              <span class="text-xs text-gray-400"> ativação de bancada</span>
-              <div class="text-sm font-semibold text-amber-400 mt-1">+ R$ 1.290 / mês (12 meses)</div>
+            <div class="mt-8 pt-6 border-t border-white/[0.06]">
+              <a
+                href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Tenho%20interesse%20no%20formato%20Comodato%20da%20MOB%20Box."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="block w-full py-3 text-center rounded-lg text-xs font-semibold bg-white text-black hover:bg-zinc-200 transition-colors"
+              >
+                Solicitar Comodato HaaS
+              </a>
             </div>
-
-            <ul class="space-y-3 text-xs text-gray-300 font-mono mb-8">
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Hardware em comodato MOB</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Troca física expressa em até 24h</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Monitoramento remoto contínuo</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Atualizações contínuas de IA</li>
-              <li class="flex items-center gap-2"><span class="text-amber-400">✓</span> Suporte técnico N2 incluso</li>
-            </ul>
           </div>
 
-          <a
-            href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20a%20MOB%20Box%20em%20Comodato."
-            target="_blank"
-            class="w-full py-3 px-4 rounded-full text-center text-xs font-bold text-white bg-white/10 hover:bg-white/15 transition-all border border-white/10"
-          >
-            Contratar em Comodato
-          </a>
         </div>
-      </div>
 
-      <!-- ROI Calculator Card -->
-      <div class="mt-16 p-8 rounded-3xl bg-gradient-to-r from-amber-500/10 via-amber-500/5 to-transparent border border-amber-500/20 text-left">
-        <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <!-- ROI Callout Bar -->
+        <div class="mt-12 p-6 rounded-xl bg-[#09090c] border border-white/[0.08] max-w-4xl text-xs text-zinc-400 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono">
           <div>
-            <h4 class="text-xl font-bold text-white">Faça as contas: o investimento se paga em menos de 45 dias</h4>
-            <p class="text-sm text-gray-300 mt-1 max-w-2xl leading-relaxed">
-              Contratar mais um auxiliar administrativo custa em média <strong class="text-white">R$ 3.800/mês</strong> entre salário e encargos em Santa Catarina. A MOB Box resolve os orçamentos e a conferência por uma fração desse custo, gerando uma economia anual de mais de <strong class="text-amber-300">R$ 30.000</strong> para a sua empresa.
-            </p>
+            <strong class="text-white">Cálculo de Retorno Real:</strong> Uma empresa que poupa 4 horas por semana na equipe comercial recupera o valor da mensalidade em menos de 30 dias de uso.
           </div>
           <a
-            href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Quero%20calcular%20o%20ROI%20da%20MOB%20Box%20para%20a%20minha%20empresa."
-            target="_blank"
-            class="shrink-0 px-6 py-3 rounded-full text-xs font-bold bg-amber-400 text-black hover:brightness-110 transition-all shadow-[0_0_20px_rgba(245,158,11,0.3)]"
-          >
-            Simular ROI da Minha Empresa
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ------------------------------------------------------------- -->
-    <!-- 7. DIFERENCIAL HUMANO ("Gente de Verdade")                    -->
-    <!-- ------------------------------------------------------------- -->
-    <section class="relative py-20 px-4 bg-[#050508] border-y border-white/5 text-center">
-      <div class="max-w-3xl mx-auto">
-        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-amber-400">
-          PROXIMIDADE E COMPROMISSO
-        </span>
-        <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Tecnologia configurada por gente de verdade do seu lado.
-        </h2>
-        <p class="mt-4 text-gray-300 text-base leading-relaxed">
-          Você já tentou ligar para o suporte de uma grande multinacional de tecnologia e ficou preso num robô de autoatendimento que não resolve nada? Na MOB é diferente.
-        </p>
-        <p class="mt-3 text-gray-400 text-sm leading-relaxed">
-          Somos uma empresa de Blumenau. Quem configura seu equipamento, quem treina seus funcionários e quem atende o telefone quando você tem uma dúvida é o nosso time técnico. Nós acompanhamos o uso semanalmente para garantir que a inteligência artificial esteja realmente aliviando a carga de trabalho da sua equipe.
-        </p>
-      </div>
-    </section>
-
-    <!-- ------------------------------------------------------------- -->
-    <!-- 8. FAQ ACCORDION                                              -->
-    <!-- ------------------------------------------------------------- -->
-    <section id="faq" class="relative py-28 px-4 max-w-4xl mx-auto">
-      <div class="text-center mb-16">
-        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-amber-400 bg-amber-400/10 border border-amber-400/20 px-3 py-1 rounded-full">
-          DÚVIDAS FREQUENTES
-        </span>
-        <h2 class="mt-4 text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-          Perguntas Frequentes
-        </h2>
-      </div>
-
-      <div class="space-y-4 text-left">
-        <!-- Item 1 -->
-        <details class="group p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-amber-400/30 transition-colors">
-          <summary class="font-bold text-white text-base cursor-pointer list-none flex items-center justify-between">
-            <span>A Inteligência Artificial pode errar ou inventar respostas?</span>
-            <span class="text-amber-400 transition-transform group-open:rotate-180">↓</span>
-          </summary>
-          <p class="mt-4 text-sm text-gray-400 leading-relaxed">
-            Nós não utilizamos IA sem controle. A MOB Box opera sob o princípio da <strong>Revisão Humana Obrigatória</strong> e é configurada para consultar estritamente os manuais e tabelas da sua empresa. Se uma informação não constar nos seus documentos, ela avisa claramente em vez de inventar. Além disso, nenhuma proposta sai da empresa sem a conferência e o clique final de um colaborador humano.
-          </p>
-        </details>
-
-        <!-- Item 2 -->
-        <details class="group p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-amber-400/30 transition-colors">
-          <summary class="font-bold text-white text-base cursor-pointer list-none flex items-center justify-between">
-            <span>Os dados da minha empresa ficam seguros sob a LGPD?</span>
-            <span class="text-amber-400 transition-transform group-open:rotate-180">↓</span>
-          </summary>
-          <p class="mt-4 text-sm text-gray-400 leading-relaxed">
-            Sim, 100%. No modelo padrão da MOB Box, seus documentos e arquivos ficam guardados dentro do servidor físico no seu escritório. Nenhuma informação confidencial é compartilhada com modelos públicos e não há retenção de dados por terceiros. Para escritórios de advocacia e clínicas, disponibilizamos a versão 100% Local Offline, onde o processamento ocorre fisicamente isolado da internet.
-          </p>
-        </details>
-
-        <!-- Item 3 -->
-        <details class="group p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-amber-400/30 transition-colors">
-          <summary class="font-bold text-white text-base cursor-pointer list-none flex items-center justify-between">
-            <span>Minha equipe não tem conhecimentos de informática. Vai ser difícil usar?</span>
-            <span class="text-amber-400 transition-transform group-open:rotate-180">↓</span>
-          </summary>
-          <p class="mt-4 text-sm text-gray-400 leading-relaxed">
-            Não. Desenhamos o sistema para ser invisível. Seus colaboradores não precisam aprender um programa novo: eles alimentam a IA arrastando um arquivo para uma pasta comum da rede do Windows (<code class="text-amber-300 text-xs">\\mob-box\documentos-ia</code>) ou mandando um áudio pelo WhatsApp. Nós vamos presencialmente até o seu escritório, treinamos sua equipe em 2 horas e deixamos tudo rodando.
-          </p>
-        </details>
-
-        <!-- Item 4 -->
-        <details class="group p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-amber-400/30 transition-colors">
-          <summary class="font-bold text-white text-base cursor-pointer list-none flex items-center justify-between">
-            <span>E se faltar energia ou o equipamento desligar sozinho?</span>
-            <span class="text-amber-400 transition-transform group-open:rotate-180">↓</span>
-          </summary>
-          <p class="mt-4 text-sm text-gray-400 leading-relaxed">
-            Toda MOB Box acompanha um nobreak homologado que absorve quedas de luz e picos elétricos. Além disso, a BIOS do computador é parametrizada de fábrica com *Restore on AC Power Loss*: assim que a energia retorna, o servidor religa sozinho, sobe os bancos de dados íntegros e fica disponível na rede sem exigir que alguém aperte o botão.
-          </p>
-        </details>
-
-        <!-- Item 5 -->
-        <details class="group p-6 rounded-2xl bg-white/[0.02] border border-white/10 hover:border-amber-400/30 transition-colors">
-          <summary class="font-bold text-white text-base cursor-pointer list-none flex items-center justify-between">
-            <span>Qual a diferença entre a MOB e assinar o ChatGPT comum?</span>
-            <span class="text-amber-400 transition-transform group-open:rotate-180">↓</span>
-          </summary>
-          <p class="mt-4 text-sm text-gray-400 leading-relaxed">
-            O ChatGPT comum não tem a tabela de preços nem as regras da sua empresa; cada funcionário usa uma conta separada, as informações ficam soltas e seus dados são enviados para servidores no exterior. A MOB entrega um servidor centralizado para a sua equipe, que responde com base nos seus documentos oficiais, com valor fixo em reais e atendimento presencial.
-          </p>
-        </details>
-      </div>
-    </section>
-
-    <!-- ------------------------------------------------------------- -->
-    <!-- 9. FINAL CALL TO ACTION                                       -->
-    <!-- ------------------------------------------------------------- -->
-    <section class="relative py-28 px-4 text-center overflow-hidden">
-      <div class="absolute inset-0 bg-gradient-to-t from-amber-500/10 via-transparent to-transparent pointer-events-none"></div>
-
-      <div class="relative z-10 max-w-3xl mx-auto">
-        <h2 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight">
-          Vamos tomar um café de 15 minutos?
-        </h2>
-        <p class="mt-6 text-gray-300 text-base md:text-lg leading-relaxed">
-          Levamos a nossa Maleta de Demonstração até a sua empresa. Colocamos a MOB Box na sua mesa, você nos manda um áudio de exemplo e vê a mágica acontecer na hora com um processo real do seu negócio.
-        </p>
-
-        <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-          <a
-            href="https://wa.me/5547999999999?text=Ol%C3%A1%20Osmar!%20Acessei%20o%20site%20mob.tec.br%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20presencial%20de%2015%20minutos%20no%20meu%20escrit%C3%B3rio."
+            href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Gostaria%20de%20calcular%20o%20ROI%20da%20MOB%20Box%20para%20minha%20empresa."
             target="_blank"
             rel="noopener noreferrer"
-            class="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-sm font-bold bg-gradient-to-r from-amber-400 to-amber-500 text-black hover:brightness-110 shadow-[0_0_35px_rgba(245,158,11,0.5)] transition-all active:scale-95"
+            class="text-amber-400 hover:underline whitespace-nowrap"
           >
-            <span>Agendar Demonstração Presencial</span>
-            <div class="w-6 h-6 rounded-full bg-black/20 flex items-center justify-center transition-transform group-hover:translate-x-1">
-              <svg class="w-3.5 h-3.5 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-              </svg>
-            </div>
+            Calcular retorno da sua empresa &rarr;
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 6. PERGUNTAS FREQUENTES (Crisp & Direct)                       -->
+    <!-- ------------------------------------------------------------- -->
+    <section id="faq" class="relative py-24 px-4 max-w-4xl mx-auto border-t border-white/[0.06]">
+      <h2 class="text-3xl font-bold text-white tracking-tight mb-12">
+        Perguntas Frequentes
+      </h2>
+
+      <div class="divide-y divide-white/[0.06]">
+        
+        <div class="py-6">
+          <h3 class="text-base font-semibold text-white mb-2">
+            Minha empresa precisa ter um profissional de TI para usar a MOB Box?
+          </h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Não. A MOB Box foi desenvolvida especificamente para operar sem equipe técnica. Nós fazemos a instalação completa na sua rede física e ensinamos sua equipe a usar. Para atualizar as informações, basta arrastar os novos arquivos para uma pasta compartilhada no Windows.
+          </p>
+        </div>
+
+        <div class="py-6">
+          <h3 class="text-base font-semibold text-white mb-2">
+            O que acontece se acabar a luz ou a internet cair?
+          </h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            A MOB Box é homologada com configuração de BIOS <em>Restore on AC Power Loss</em>: ela religa e inicia todos os serviços automaticamente assim que a energia retorna. No modelo 100% local, ela continua funcionando mesmo sem conexão com a internet.
+          </p>
+        </div>
+
+        <div class="py-6">
+          <h3 class="text-base font-semibold text-white mb-2">
+            Os dados e documentos dos meus clientes ficam seguros?
+          </h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Totalmente seguros. Ao contrário de ferramentas públicas na internet, os documentos ficam armazenados dentro do SSD da MOB Box no seu escritório. Nenhuma informação é utilizada para treinar inteligências artificiais externas.
+          </p>
+        </div>
+
+        <div class="py-6">
+          <h3 class="text-base font-semibold text-white mb-2">
+            Como funciona a demonstração presencial de 15 minutos?
+          </h3>
+          <p class="text-sm text-zinc-400 leading-relaxed">
+            Agendamos um horário conveniente e vamos até seu escritório com a nossa Maleta de Demonstração MOB Box. Ligamos na tomada e demonstramos ao vivo um áudio virando orçamento e a leitura de um contrato. Sem compromisso e sem custo.
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Final Call to Action -->
+      <div class="mt-16 p-8 rounded-2xl bg-gradient-to-b from-white/[0.05] to-transparent border border-white/[0.08] text-center">
+        <h3 class="text-2xl font-bold text-white mb-3">Pronto para colocar IA funcionando na sua empresa?</h3>
+        <p class="text-sm text-zinc-400 max-w-xl mx-auto mb-6">
+          Fale diretamente com Osmar pelo WhatsApp e agende uma demonstração prática na sua mesa esta semana.
+        </p>
+        <a
+          href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Acessei%20o%20site%20mob.tec.br%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o."
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold bg-white text-black hover:bg-zinc-200 transition-colors shadow-lg"
+        >
+          Agendar no WhatsApp
+          <svg class="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
       </div>
     </section>
   </main>
