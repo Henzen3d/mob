@@ -1,0 +1,85 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+  isLegal?: boolean;
+}
+
+const {
+  title = "MOB | Inteligência Artificial para Empresas",
+  description = "Servidor físico próprio de IA no seu escritório, sem mensalidade em dólar por usuário e com total sigilo dos dados. Conheça a MOB Box e o MOB CORE.",
+  isLegal = false,
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR" class="dark scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Open Graph / Meta -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mob.tec.br/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="https://mob.tec.br/og-cover.png" />
+
+    <!-- Google Fonts: Geist Sans, Plus Jakarta Sans, and Newsreader for Legal Serif -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style is:global>
+      :root {
+        --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+        --font-serif: 'Newsreader', Georgia, serif;
+        --font-mono: 'JetBrains Mono', monospace;
+      }
+
+      body {
+        font-family: var(--font-sans);
+        background-color: #030303;
+        color: #f3f4f6;
+        overflow-x: hidden;
+      }
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #030303;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #1f2937;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #374151;
+      }
+
+      /* Noise texture overlay */
+      .bg-noise {
+        background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 0);
+        background-size: 24px 24px;
+      }
+
+      /* Double-bezel styling helper */
+      .double-bezel {
+        box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.15),
+                    0 20px 40px -15px rgba(0, 0, 0, 0.7);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-[#030303] text-gray-100 selection:bg-amber-500/30 selection:text-amber-200 antialiased">
+    <slot />
+  </body>
+</html>

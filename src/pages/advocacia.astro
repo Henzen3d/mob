@@ -1,0 +1,492 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout
+  title="MOB Legal | Inteligência Artificial Privada para Escritórios de Advocacia"
+  description="A infraestrutura de IA privada e local sob medida para o setor jurídico. Leitura de contratos, due diligence e redação de minutas com sigilo absoluto e zero retenção de dados."
+  isLegal={true}
+>
+  <Navbar currentPage="advocacia" isLegal={true} />
+
+  <main class="bg-[#08090d] text-gray-100 overflow-hidden">
+    <!-- ------------------------------------------------------------- -->
+    <!-- 1. HERO SECTION (Harvey.ai Editorial Luxury Style - Image 2) -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="relative pt-36 pb-20 px-4 max-w-6xl mx-auto text-center flex flex-col items-center">
+      <!-- Ambient light effect -->
+      <div class="absolute top-20 left-1/2 -translate-x-1/2 w-[900px] h-[400px] bg-gradient-to-b from-[#C5A880]/10 via-[#C5A880]/5 to-transparent rounded-full blur-[140px] pointer-events-none"></div>
+
+      <!-- Eyebrow Pill -->
+      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-[#C5A880]/30 backdrop-blur-xl mb-8 shadow-[0_0_25px_rgba(197,168,128,0.15)]">
+        <span class="w-2 h-2 rounded-full bg-[#C5A880] shadow-[0_0_8px_#C5A880]"></span>
+        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#E6D5BC]">
+          INFRAESTRUTURA JURÍDICA DE VANGUARDA • MOB LEGAL
+        </span>
+      </div>
+
+      <!-- Editorial Serif Headline (Harvey Style) -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal font-serif text-[#F9F8F6] tracking-tight leading-[1.05] max-w-5xl text-balance">
+        Construa uma Advocacia de <span class="italic font-light text-[#C5A880]">Vanguarda</span>.
+      </h1>
+
+      <!-- Subtitle -->
+      <p class="mt-6 md:mt-8 text-base sm:text-lg md:text-xl text-[#B3B7C6] max-w-2xl font-sans font-normal leading-relaxed text-balance">
+        A plataforma de inteligência artificial privada projetada especificamente para o rigor do direito brasileiro. Análise de contratos complexos, apoio contencioso e redação assistida dentro do seu próprio servidor físico, sem expor dados de clientes à nuvem pública.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="mt-8 md:mt-10 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+        <a
+          href="#agendar-demo"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-sm font-semibold bg-[#F9F8F6] text-[#090A0F] hover:bg-[#E6D5BC] transition-all shadow-[0_4px_25px_rgba(249,248,246,0.15)] active:scale-95"
+        >
+          <span>Agendar Demonstração Jurídica</span>
+          <svg class="w-4 h-4 text-[#090A0F]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          </svg>
+        </a>
+
+        <a
+          href="#seguranca"
+          class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 rounded-full text-sm font-medium text-[#F9F8F6] bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 backdrop-blur-xl transition-all"
+        >
+          <span>Conformidade & Sigilo OAB</span>
+        </a>
+      </div>
+
+      <!-- ------------------------------------------------------------- -->
+      <!-- 2. LEGAL DASHBOARD UI PREVIEW (Harvey.ai Preview Card)        -->
+      <!-- ------------------------------------------------------------- -->
+      <div class="mt-16 w-full max-w-5xl mx-auto">
+        <div class="p-2 rounded-[2.5rem] bg-gradient-to-b from-white/15 via-white/5 to-transparent border border-white/10 shadow-[0_30px_90px_rgba(0,0,0,0.8)]">
+          <div class="rounded-[calc(2.5rem-0.5rem)] bg-[#0d0f17] border border-white/5 overflow-hidden text-left font-sans">
+            
+            <!-- Dashboard Top Nav -->
+            <div class="px-6 py-4 bg-[#12141f] border-b border-white/10 flex flex-wrap items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <div class="w-3 h-3 rounded-full bg-emerald-400"></div>
+                <span class="text-xs font-mono font-bold text-white tracking-wider">MOB LEGAL SUITE • SERVIDOR LOCAL ADVOCACIA</span>
+              </div>
+              <div class="flex items-center gap-3 text-xs font-mono text-gray-400">
+                <span class="px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 text-[10px]">
+                  ON-PREMISE AIR-GAPPED
+                </span>
+                <span>LATÊNCIA: <strong class="text-white">18ms</strong></span>
+              </div>
+            </div>
+
+            <!-- Dashboard Content Layout -->
+            <div class="p-6 md:p-8 grid grid-cols-1 lg:grid-cols-12 gap-8">
+              
+              <!-- Left Sidebar: Folders and Matters -->
+              <div class="lg:col-span-4 space-y-4">
+                <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                  <h4 class="text-xs font-mono uppercase tracking-wider text-[#C5A880] font-semibold mb-3">Pastas de Casos Ativos</h4>
+                  <div class="space-y-2 text-xs">
+                    <div class="p-2.5 rounded-xl bg-white/[0.06] border border-white/10 text-white font-medium flex items-center justify-between">
+                      <span>📁 01_M&A_DueDiligence_Contratos</span>
+                      <span class="text-[10px] text-gray-400 font-mono">142 docs</span>
+                    </div>
+                    <div class="p-2.5 rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.03] transition-colors flex items-center justify-between">
+                      <span>📁 02_Contencioso_Tributario_STJ</span>
+                      <span class="text-[10px] text-gray-400 font-mono">58 docs</span>
+                    </div>
+                    <div class="p-2.5 rounded-xl text-gray-400 hover:text-white hover:bg-white/[0.03] transition-colors flex items-center justify-between">
+                      <span>📁 03_Minutas_Contratos_Sociais</span>
+                      <span class="text-[10px] text-gray-400 font-mono">94 docs</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/5">
+                  <h4 class="text-xs font-mono uppercase tracking-wider text-[#C5A880] font-semibold mb-2">Garantia Ética & Legal</h4>
+                  <p class="text-[11px] text-gray-400 leading-relaxed">
+                    Operação em conformidade com o <strong>Art. 34, VII do Estatuto da OAB</strong> (sigilo profissional perpétuo) e art. 46 da LGPD.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Right Main Area: Contract Analysis Simulation -->
+              <div class="lg:col-span-8 space-y-6">
+                <!-- Analysis Header -->
+                <div class="p-5 rounded-2xl bg-white/[0.03] border border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div>
+                    <span class="text-[10px] font-mono text-emerald-400 uppercase tracking-widest font-bold">ANÁLISE DE CONTRATO FINALIZADA</span>
+                    <h3 class="text-base font-bold text-white mt-0.5">Instrumento Particular de Prestação de Serviços & M&A</h3>
+                    <span class="text-xs text-gray-400">Extensão: 48 páginas • Tempo de processamento: 3,2 segundos</span>
+                  </div>
+                  <span class="px-3 py-1 rounded-full text-xs font-bold bg-amber-500/10 text-amber-300 border border-amber-500/20">
+                    3 Alertas de Risco
+                  </span>
+                </div>
+
+                <!-- Extracted Findings -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div class="p-4 rounded-xl bg-black/40 border border-white/5 text-xs">
+                    <span class="text-[#C5A880] font-mono font-semibold">CLÁUSULA RESCISÓRIA</span>
+                    <p class="text-gray-300 mt-1 font-medium">Multa punitiva desproporcional de 50% do saldo remanescente.</p>
+                    <span class="text-[10px] text-gray-400 block mt-2 font-mono">Fonte: Cláusula 12.3, Página 24</span>
+                  </div>
+                  <div class="p-4 rounded-xl bg-black/40 border border-white/5 text-xs">
+                    <span class="text-[#C5A880] font-mono font-semibold">REAJUSTE & ÍNDICE</span>
+                    <p class="text-gray-300 mt-1 font-medium">Aplicação do IGP-M anual cumulativo sem hipótese de deflação.</p>
+                    <span class="text-[10px] text-gray-400 block mt-2 font-mono">Fonte: Cláusula 5.1, Página 9</span>
+                  </div>
+                </div>
+
+                <!-- AI Draft generation output -->
+                <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 text-xs font-mono text-gray-300">
+                  <div class="flex items-center justify-between text-gray-400 pb-2 mb-2 border-b border-white/5 text-[11px]">
+                    <span>RASCUNHO DE PARECER TÉCNICO GERADO</span>
+                    <span class="text-emerald-400 font-semibold">REVISÃO HUMANA DISPONÍVEL</span>
+                  </div>
+                  <p class="text-gray-300 leading-relaxed font-sans text-xs">
+                    "Recomenda-se a supressão do §2º da Cláusula 12 para limitar a penalidade moratória a 10% do valor contratado, em consonância com o entendimento consolidado do TJSC e STJ sobre vedação ao enriquecimento sem causa."
+                  </p>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 3. TRUST & REPUTATION SECTION (Logos / Segment Badges)        -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="py-12 border-y border-white/5 bg-[#06070a] text-center">
+      <div class="max-w-6xl mx-auto px-4">
+        <span class="text-[11px] font-mono uppercase tracking-[0.2em] text-[#C5A880] font-semibold">
+          PROJETADO PARA AS PRÁTICAS JURÍDICAS MAIS EXIGENTES
+        </span>
+        <div class="mt-8 flex flex-wrap items-center justify-center gap-8 md:gap-16 text-gray-400 text-xs md:text-sm font-serif">
+          <span class="tracking-widest uppercase font-light">DIREITO SOCIETÁRIO & M&A</span>
+          <span class="text-gray-600">•</span>
+          <span class="tracking-widest uppercase font-light">CONTENCIOSO DE MASSA & ESTRATÉGICO</span>
+          <span class="text-gray-600">•</span>
+          <span class="tracking-widest uppercase font-light">DIREITO TRIBUTÁRIO & FISCAL</span>
+          <span class="text-gray-600">•</span>
+          <span class="tracking-widest uppercase font-light">RECUPERAÇÃO JUDICIAL & FALÊNCIAS</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 4. OS 3 PILARES JURÍDICOS DA PLATAFORMA                       -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="py-28 px-4 max-w-6xl mx-auto">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#C5A880]">
+          UMA PLATAFORMA PARA A ROTINA JURÍDICA
+        </span>
+        <h2 class="mt-3 text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#F9F8F6] tracking-tight">
+          Velocidade de dias reduzida para segundos.
+        </h2>
+        <p class="mt-4 text-gray-400 text-base md:text-lg">
+          Sem colocar segredos de clientes em chatbots públicos. Três frentes integradas no seu dia a dia:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Feature 1 -->
+        <div class="p-8 rounded-[2rem] bg-[#0c0d15] border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#C5A880]/10 border border-[#C5A880]/20 flex items-center justify-center text-[#C5A880] mb-6">
+              <span class="text-lg">📄</span>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-[#F9F8F6] mb-3">Auditoria & Due Diligence de Contratos</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Arraste lotes de 50 ou 100 contratos para a pasta da rede. A inteligência extrai partes, valores, prazos de renovação automática, cláusulas de não-concorrência e penalidades em uma planilha estruturada.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 text-xs font-mono text-[#C5A880]">
+            Redução de 85% no tempo de análise
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="p-8 rounded-[2rem] bg-[#0c0d15] border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#C5A880]/10 border border-[#C5A880]/20 flex items-center justify-center text-[#C5A880] mb-6">
+              <span class="text-lg">⚖️</span>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-[#F9F8F6] mb-3">Pesquisa Interna de Precedentes & Peças</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Consulte a biblioteca de peças anteriores do seu próprio escritório. O assistente localiza teses vitoriosas, argumentos aplicados pelos sócios e jurisprudências com menção exata do processo de origem.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 text-xs font-mono text-[#C5A880]">
+            Acesso à sabedoria histórica da banca
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="p-8 rounded-[2rem] bg-[#0c0d15] border border-white/10 flex flex-col justify-between">
+          <div>
+            <div class="w-10 h-10 rounded-xl bg-[#C5A880]/10 border border-[#C5A880]/20 flex items-center justify-center text-[#C5A880] mb-6">
+              <span class="text-lg">✍️</span>
+            </div>
+            <h3 class="text-xl font-bold font-serif text-[#F9F8F6] mb-3">Redação Assistida com Citação Obrigatória</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">
+              Elaboração de primeiras minutas de petições, recursos e notificações com rigor técnico. Toda afirmação jurídica é acompanhada da indicação da folha e documento analisado, eliminando alucinações.
+            </p>
+          </div>
+          <div class="mt-8 pt-4 border-t border-white/5 text-xs font-mono text-[#C5A880]">
+            Revisão humana obrigatória por design
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 5. SECURITY & LGPD SECTION (Zero Data Retention)              -->
+    <!-- ------------------------------------------------------------- -->
+    <section id="seguranca" class="py-24 px-4 bg-[#050609] border-y border-white/5">
+      <div class="max-w-5xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#C5A880]">
+            BLINDAGEM JURÍDICA E DE DADOS
+          </span>
+          <h2 class="mt-3 text-3xl sm:text-4xl md:text-5xl font-serif font-normal text-[#F9F8F6] tracking-tight">
+            Por que advogados não podem usar o ChatGPT comum
+          </h2>
+          <p class="mt-3 text-gray-400 text-sm md:text-base">
+            O Código de Ética da OAB impõe sigilo absoluto. Entenda como a MOB protege a responsabilidade civil da sua banca.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          <div class="p-6 rounded-3xl bg-[#0c0e17] border border-white/5">
+            <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-amber-400">🛡️</span> Zero Data Retention (ZDR) Formal
+            </h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Diferente de planos comuns de inteligência artificial de consumo, as chaves e modelos corporativos da MOB contam com garantia contratual de <strong>Não-Retenção</strong>: os prompts são processados em memória volátil e descartados imediatamente, sem armazenamento histórico e sem alimentar modelos públicos.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#0c0e17] border border-white/5">
+            <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-amber-400">🔒</span> Opção 100% On-Premise Air-Gapped
+            </h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Para bancas que atuam em M&A confidencial ou litígios de alto risco, a <strong>MOB Box Pro</strong> opera de forma totalmente desconectada da internet. Os modelos de linguagem rodam fisicamente na memória dos chips locais no escritório da sua empresa.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#0c0e17] border border-white/5">
+            <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-amber-400">⚖️</span> Isenção Contratual & Revisão Humana
+            </h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Nossos contratos de prestação de serviços e comodato delimitam com exatidão a natureza instrumental da IA, formalizando a obrigação indelegável de conferência técnica pelos advogados responsáveis antes do protocolo ou envio externo.
+            </p>
+          </div>
+
+          <div class="p-6 rounded-3xl bg-[#0c0e17] border border-white/5">
+            <h3 class="text-base font-bold text-white mb-2 flex items-center gap-2">
+              <span class="text-amber-400">💾</span> Backups Noturnos Criptografados (AES-256)
+            </h3>
+            <p class="text-xs text-gray-400 leading-relaxed">
+              Toda madrugada, às 02h00, a MOB Box realiza snapshot atômico dos documentos e vetores com criptografia militar AES-256 no padrão 3-2-1, garantindo continuidade de negócios mesmo em caso de falha física ou desastre.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 6. NUMBERS & IMPACT (Harvey.ai Stats - Image 2)               -->
+    <!-- ------------------------------------------------------------- -->
+    <section class="py-20 px-4 max-w-5xl mx-auto border-b border-white/5 text-center">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div>
+          <div class="text-4xl sm:text-5xl font-extrabold font-serif text-[#C5A880]">100%</div>
+          <div class="text-xs font-mono text-gray-400 uppercase tracking-widest mt-2">DADOS NO SEU ESCRITÓRIO</div>
+        </div>
+        <div>
+          <div class="text-4xl sm:text-5xl font-extrabold font-serif text-[#F9F8F6]">0s</div>
+          <div class="text-xs font-mono text-gray-400 uppercase tracking-widest mt-2">ZERO DATA RETENTION</div>
+        </div>
+        <div>
+          <div class="text-4xl sm:text-5xl font-extrabold font-serif text-[#C5A880]">3.5x</div>
+          <div class="text-xs font-mono text-gray-400 uppercase tracking-widest mt-2">VELOCIDADE DE MINUTAS</div>
+        </div>
+        <div>
+          <div class="text-4xl sm:text-5xl font-extrabold font-serif text-[#F9F8F6]">85%</div>
+          <div class="text-xs font-mono text-gray-400 uppercase tracking-widest mt-2">TEMPO POUPADO EM AUDITORIAS</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ------------------------------------------------------------- -->
+    <!-- 7. SPLIT-SCREEN DEMO REQUEST SECTION (Harvey Style - Image 3) -->
+    <!-- ------------------------------------------------------------- -->
+    <section id="agendar-demo" class="py-28 px-4 max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: Editorial Callout -->
+        <div class="lg:col-span-6 text-left">
+          <span class="text-xs font-mono font-semibold uppercase tracking-widest text-[#C5A880]">
+            AGENDAMENTO EXCLUSIVO
+          </span>
+          <h2 class="mt-4 text-4xl sm:text-5xl md:text-6xl font-serif font-normal text-[#F9F8F6] tracking-tight leading-[1.08]">
+            Veja por que as bancas jurídicas mais exigentes usam a MOB.
+          </h2>
+          <p class="mt-6 text-base text-gray-300 leading-relaxed">
+            Desenvolvido para atender aos fluxos de trabalho jurídicos mais sensíveis. Agende uma demonstração prática de 15 minutos com nosso consultor no seu escritório ou online.
+          </p>
+
+          <div class="mt-8 pt-8 border-t border-white/10 space-y-3 text-xs font-mono text-gray-400">
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400">✓</span>
+              <span>Demonstração com minutas e contratos reais anonimizados</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400">✓</span>
+              <span>Apresentação técnica de segurança e arquitetura de hardware</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="text-emerald-400">✓</span>
+              <span>Sem compromisso comercial de contratação</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Conversion Card (Harvey Style Form - Image 3) -->
+        <div class="lg:col-span-6">
+          <div class="p-8 sm:p-10 rounded-[2rem] bg-[#F9F8F6] text-[#090A0F] shadow-[0_20px_60px_rgba(0,0,0,0.8)] border border-white/20">
+            <h3 class="text-xl font-bold font-serif text-[#090A0F] mb-1">
+              Solicitar Demonstração Jurídica
+            </h3>
+            <p class="text-xs text-gray-600 mb-6">
+              Preencha os dados abaixo. Entraremos em contato em até 2 horas úteis via WhatsApp ou e-mail.
+            </p>
+
+            <form
+              id="legal-demo-form"
+              class="space-y-4 text-left text-xs font-sans"
+              action="https://formsubmit.co/contato@mob.tec.br"
+              method="POST"
+            >
+              <!-- Hidden config -->
+              <input type="hidden" name="_subject" value="Novo Lead Jurídico - MOB Legal (mob.tec.br)" />
+              <input type="hidden" name="_captcha" value="false" />
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-semibold text-gray-800 mb-1">Nome *</label>
+                  <input
+                    type="text"
+                    name="primeiro_nome"
+                    required
+                    placeholder="Dr. Carlos"
+                    class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C5A880] text-xs"
+                  />
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-800 mb-1">Sobrenome *</label>
+                  <input
+                    type="text"
+                    name="sobrenome"
+                    required
+                    placeholder="Silva"
+                    class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C5A880] text-xs"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block font-semibold text-gray-800 mb-1">E-mail Corporativo *</label>
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="carlos@sociedade.adv.br"
+                  class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C5A880] text-xs"
+                />
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-semibold text-gray-800 mb-1">Nome do Escritório *</label>
+                  <input
+                    type="text"
+                    name="escritorio"
+                    required
+                    placeholder="Silva & Associados"
+                    class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C5A880] text-xs"
+                  />
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-800 mb-1">WhatsApp / Telefone *</label>
+                  <input
+                    type="tel"
+                    name="telefone"
+                    required
+                    placeholder="(47) 9XXXX-XXXX"
+                    class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C5A880] text-xs"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label class="block font-semibold text-gray-800 mb-1">Cidade / Estado</label>
+                  <input
+                    type="text"
+                    name="cidade_estado"
+                    placeholder="Blumenau - SC"
+                    class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C5A880] text-xs"
+                  />
+                </div>
+                <div>
+                  <label class="block font-semibold text-gray-800 mb-1">Porte da Banca</label>
+                  <select
+                    name="porte"
+                    class="w-full px-3.5 py-2.5 rounded-lg border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-[#C5A880] text-xs"
+                  >
+                    <option value="1 a 5 advogados">1 a 5 advogados</option>
+                    <option value="6 a 20 advogados">6 a 20 advogados</option>
+                    <option value="Mais de 20 advogados">Mais de 20 advogados</option>
+                    <option value="Departamento Jurídico Interno">Departamento Jurídico Interno</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <button
+                  type="submit"
+                  class="w-full py-3.5 px-6 rounded-lg text-xs font-bold uppercase tracking-wider bg-[#090A0F] text-white hover:bg-black transition-all shadow-[0_4px_15px_rgba(0,0,0,0.3)] active:scale-[0.98]"
+                >
+                  Solicitar Agendamento
+                </button>
+              </div>
+
+              <!-- Direct WhatsApp Fast-Track -->
+              <div class="pt-3 text-center">
+                <span class="text-[11px] text-gray-500">Prefere agendar diretamente pelo WhatsApp?</span>
+                <a
+                  href="https://wa.me/5547999999999?text=Ol%C3%A1%20Osmar!%20Sou%20advogado%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20da%20MOB%20Legal%20para%20o%20meu%20escrit%C3%B3rio."
+                  target="_blank"
+                  class="block mt-1 text-xs font-bold text-amber-700 hover:text-amber-800 underline"
+                >
+                  Falar no WhatsApp agora com o Osmar →
+                </a>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <Footer isLegal={true} />
+</Layout>
