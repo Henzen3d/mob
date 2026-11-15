@@ -15,9 +15,8 @@ import Footer from '../components/Footer.astro';
     <AuroraHero />
 
     <section id="como-funciona" class="relative py-20 md:py-28 px-4 max-w-6xl mx-auto border-t border-white/[0.08]">
-      <div id="mob-box" class="absolute -top-20"></div>
 
-      <div class="max-w-2xl mb-14 md:mb-16">
+      <div id="mob-box" class="max-w-2xl mb-14 md:mb-16">
         <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
           O que você leva para a sua empresa
         </h2>
@@ -82,43 +81,34 @@ import Footer from '../components/Footer.astro';
           </p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
-          <div class="relative p-8 rounded-2xl bg-[#08080c] border border-white/[0.08] flex flex-col justify-between">
-            <div>
-              <div class="text-3xl font-mono font-bold text-amber-400 mb-4">01</div>
-              <h3 class="text-lg font-bold text-white mb-3">Demonstração de 15 minutos</h3>
-              <p class="text-base text-zinc-300 leading-relaxed">
-                Levamos a maleta até o seu escritório, ligamos na tomada da sua sala e mostramos um áudio virando orçamento na sua frente.
-              </p>
-            </div>
-            <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-amber-300">
-              Na sua mesa, sem custo
-            </div>
+        <div class="relative">
+          <div class="absolute hidden md:block left-6 right-6 top-6 h-px bg-white/10" aria-hidden="true">
+            <div id="timeline-progress" class="absolute inset-0 origin-left scale-x-0 bg-amber-400/60 transition-transform duration-1000 ease-out"></div>
           </div>
 
-          <div class="relative p-8 rounded-2xl bg-[#08080c] border border-white/[0.08] flex flex-col justify-between">
-            <div>
-              <div class="text-3xl font-mono font-bold text-amber-400 mb-4">02</div>
-              <h3 class="text-lg font-bold text-white mb-3">Preparamos em 48 a 72h</h3>
-              <p class="text-base text-zinc-300 leading-relaxed">
-                Montamos e calibramos o sistema com as tabelas de preços, regras comerciais e modelos oficiais de propostas da sua empresa.
-              </p>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 relative">
+            <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-5">
+              <div class="w-12 h-12 shrink-0 rounded-full bg-[#050508] border-2 border-amber-400/70 text-amber-400 flex items-center justify-center text-base font-bold">1</div>
+              <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold text-white mb-1.5">Demonstração de 15 minutos</h3>
+                <p class="text-base text-zinc-300 leading-relaxed">Levamos a maleta até o seu escritório, ligamos na tomada da sua sala e mostramos um áudio virando orçamento na sua frente.</p>
+              </div>
             </div>
-            <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-zinc-300">
-              Configurado com suas regras
-            </div>
-          </div>
 
-          <div class="relative p-8 rounded-2xl bg-[#08080c] border border-white/[0.08] flex flex-col justify-between">
-            <div>
-              <div class="text-3xl font-mono font-bold text-emerald-400 mb-4">03</div>
-              <h3 class="text-lg font-bold text-white mb-3">Instalamos e treinamos no mesmo dia</h3>
-              <p class="text-base text-zinc-300 leading-relaxed">
-                Plugamos na sua rede, compartilhamos a pasta no Windows de todos os computadores e realizamos o treinamento prático com a equipe.
-              </p>
+            <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-5">
+              <div class="w-12 h-12 shrink-0 rounded-full bg-[#050508] border-2 border-amber-400/70 text-amber-400 flex items-center justify-center text-base font-bold">2</div>
+              <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold text-white mb-1.5">Preparamos em 48 a 72 horas</h3>
+                <p class="text-base text-zinc-300 leading-relaxed">Montamos e calibramos o sistema com as tabelas de preços, regras comerciais e modelos oficiais de propostas da sua empresa.</p>
+              </div>
             </div>
-            <div class="mt-6 pt-4 border-t border-white/[0.06] text-xs font-mono text-emerald-400">
-              Chave na mão, equipe operando em 2h30
+
+            <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-5">
+              <div class="w-12 h-12 shrink-0 rounded-full bg-[#050508] border-2 border-amber-400/70 text-amber-400 flex items-center justify-center text-base font-bold">3</div>
+              <div class="text-center md:text-left">
+                <h3 class="text-lg font-bold text-white mb-1.5">Instalamos e treinamos no mesmo dia</h3>
+                <p class="text-base text-zinc-300 leading-relaxed">Plugamos na sua rede, compartilhamos a pasta no Windows de todos os computadores e realizamos o treinamento prático com a equipe.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -203,8 +193,8 @@ import Footer from '../components/Footer.astro';
 
         <div class="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-[#09090e] border border-white/[0.1] flex flex-col justify-between">
           <div>
-            <div class="text-xs font-mono uppercase tracking-wider text-zinc-400 font-semibold mb-6">
-              Estimativa de Retorno Mensal
+            <div class="text-sm font-semibold text-white mb-6">
+              Estimativa de retorno mensal
             </div>
 
             <div class="space-y-6">
@@ -264,13 +254,13 @@ import Footer from '../components/Footer.astro';
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
           <div class="relative p-8 rounded-2xl bg-[#08080c] border-2 border-amber-400/80 flex flex-col justify-between">
-            <div class="absolute -top-3.5 left-8 px-3 py-1 rounded-full bg-amber-400 text-black text-xs font-mono font-bold tracking-wider uppercase">
+            <div class="absolute -top-3.5 left-8 px-3 py-1 rounded-full bg-amber-400 text-black text-xs font-semibold">
               Recomendado
             </div>
 
             <div>
-              <div class="text-xs font-mono text-amber-400 uppercase tracking-wider mb-2 font-semibold">
-                Equipamento Físico Próprio
+              <div class="text-sm text-zinc-400 mb-2">
+                Servidor físico na sua empresa
               </div>
               <h3 class="text-2xl font-bold text-white mb-2">MOB Box Compact</h3>
               <p class="text-sm text-zinc-300 mb-6 leading-relaxed">
@@ -322,8 +312,8 @@ import Footer from '../components/Footer.astro';
 
           <div class="p-8 rounded-2xl bg-[#08080c] border border-white/[0.08] hover:border-white/20 transition-all flex flex-col justify-between">
             <div>
-              <div class="text-xs font-mono text-zinc-400 uppercase tracking-wider mb-2 font-semibold">
-                Nuvem Privada Dedicada
+              <div class="text-sm text-zinc-400 mb-2">
+                Começa em nuvem, sem hardware agora
               </div>
               <h3 class="text-2xl font-bold text-white mb-2">MOB Start</h3>
               <p class="text-sm text-zinc-300 mb-6 leading-relaxed">
@@ -476,6 +466,20 @@ import Footer from '../components/Footer.astro';
 
         <details class="group rounded-2xl border border-white/[0.08] bg-[#07070a] p-6 transition-colors open:border-white/20">
           <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none">
+            <span>Em quanto tempo vejo resultado?</span>
+            <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 text-zinc-400 group-open:rotate-180 transition-transform duration-200">
+              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+              </svg>
+            </span>
+          </summary>
+          <div class="mt-4 pt-4 border-t border-white/[0.06] text-base text-zinc-300 leading-relaxed">
+            O primeiro resultado já aparece na demonstração: você vê um áudio virar orçamento em segundos, no seu celular. Para o uso diário completo (calibração das suas regras, tabela de preços, treinamento), entregamos tudo pronto em até 72 horas — com suporte presencial durante o treinamento, que dura cerca de 2h30.
+          </div>
+        </details>
+
+        <details class="group rounded-2xl border border-white/[0.08] bg-[#07070a] p-6 transition-colors open:border-white/20">
+          <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none">
             <span>Como funciona a demonstração presencial de 15 minutos?</span>
             <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-white/10 text-zinc-400 group-open:rotate-180 transition-transform duration-200">
               <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -493,7 +497,7 @@ import Footer from '../components/Footer.astro';
         <div class="max-w-xl mx-auto">
           <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 mb-6">
             <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span class="text-xs text-zinc-300 font-mono">Atendimento direto com o fundador</span>
+            <span class="text-sm text-zinc-300">Atendimento direto com o fundador</span>
           </div>
 
           <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight">
@@ -515,7 +519,7 @@ import Footer from '../components/Footer.astro';
             </svg>
           </a>
 
-          <div class="mt-4 text-xs text-zinc-400 font-mono">
+          <div class="mt-4 text-sm text-zinc-400">
             WhatsApp: (47) 98813-1910 • Blumenau - SC
           </div>
         </div>
@@ -594,6 +598,25 @@ import Footer from '../components/Footer.astro';
       sliderRate.addEventListener('input', updateCalculation);
 
       updateCalculation();
+    })();
+  </script>
+
+  <script is:inline>
+    (function initTimeline() {
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      const el = document.getElementById('timeline-progress');
+      if (!el) return;
+      const section = document.querySelector('#como-funciona');
+      if (!section) return;
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            el.style.transform = 'scaleX(1)';
+            obs.disconnect();
+          }
+        });
+      }, { threshold: 0.35 });
+      obs.observe(section);
     })();
   </script>
 </Layout>
