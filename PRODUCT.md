@@ -38,6 +38,7 @@ Empresas soterradas em tarefas manuais repetitivas: orçamentos manuais demorado
 ## Brand Commitments
 
 - Nome: MOB | Inteligência Artificial para Empresas (`mob.tec.br`)
+- Contato Oficial WhatsApp: (47) 98813-1910 (`wa.me/5547988131910`)
 - Tom de Voz Asaas: inteligência aceleradora, maturidade confiante, sobriedade e leveza.
 - Referência visual principal: Zylon.ai (cosmos profundo `#000000`, horizonte cósmico com feixes de luz vivos, microtipografia refinada, layout editorial assimétrico).
 - Referência visual jurídica: Harvey.ai (autoridade editorial, tipografia serifada de imprensa, formulário split-screen de alta conversão, acabamento em preto e pedra polida).
