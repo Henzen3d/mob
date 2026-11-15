@@ -7,10 +7,24 @@ const { isLegal = false } = Astro.props;
 ---
 
 <footer class="relative bg-[#020204] border-t border-white/10 pt-20 pb-12 px-4 overflow-hidden z-10">
-  <!-- Subtle ambient glow -->
-  <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-amber-500/5 rounded-full blur-[140px] pointer-events-none"></div>
+  <!-- ------------------------------------------------------------- -->
+  <!-- 1. RODAPÉ AURORA BACKGROUND (rodape.avif)                      -->
+  <!-- ------------------------------------------------------------- -->
+  <div class="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
+    <!-- Image asset from referencias/rodape.avif -->
+    <img
+      src="/assets/rodape.avif"
+      alt="Aurora Rodapé MOB"
+      loading="lazy"
+      decoding="async"
+      class="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[1920px] min-h-[350px] object-cover object-bottom opacity-50 mix-blend-screen pointer-events-none"
+    />
+    <!-- Gradient overlay ensuring 100% text readability -->
+    <div class="absolute inset-0 bg-gradient-to-t from-[#020204] via-[#020204]/70 to-[#020204]/95 pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[900px] h-[280px] bg-amber-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+  </div>
 
-  <div class="max-w-6xl mx-auto">
+  <div class="relative z-10 max-w-6xl mx-auto">
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 pb-16 border-b border-white/5">
       
       <!-- Col 1: Brand Info -->
@@ -26,10 +40,10 @@ const { isLegal = false } = Astro.props;
             MOB <span class="text-[10px] font-medium px-1.5 py-0.5 rounded bg-amber-500/10 text-amber-300 border border-amber-500/20 font-mono">IA</span>
           </span>
         </a>
-        <p class="text-sm text-gray-400 max-w-sm leading-relaxed mb-6">
+        <p class="text-sm text-zinc-400 max-w-sm leading-relaxed mb-6">
           Inteligência Artificial de última milha para empresas. Servidores locais seguros, automação invisível de orçamentos e assistentes treinados com as regras da sua empresa.
         </p>
-        <div class="flex items-center gap-2 text-xs font-mono text-gray-400">
+        <div class="flex items-center gap-2 text-xs font-mono text-zinc-400">
           <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
           <span>Atendimento presencial em Blumenau e Vale do Itajaí</span>
         </div>
@@ -38,10 +52,10 @@ const { isLegal = false } = Astro.props;
       <!-- Col 2: Soluções -->
       <div>
         <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-semibold mb-4">Soluções</h4>
-        <ul class="space-y-2.5 text-sm text-gray-400">
+        <ul class="space-y-2.5 text-sm text-zinc-400">
           <li><a href="/#mob-box" class="hover:text-white transition-colors">MOB Box Compact</a></li>
           <li><a href="/#mob-box" class="hover:text-white transition-colors">MOB Box Pro (100% Local)</a></li>
-          <li><a href="/#precos" class="hover:text-white transition-colors">MOB Start (Software)</a></li>
+          <li><a href="/#precos" class="hover:text-white transition-colors">MOB Start (Nuvem Privada)</a></li>
           <li><a href="/#como-funciona" class="hover:text-white transition-colors">Pasta de Rede Samba</a></li>
           <li><a href="/#como-funciona" class="hover:text-white transition-colors">Redator de Propostas</a></li>
         </ul>
@@ -50,11 +64,11 @@ const { isLegal = false } = Astro.props;
       <!-- Col 3: Segmentos -->
       <div>
         <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-semibold mb-4">Segmentos</h4>
-        <ul class="space-y-2.5 text-sm text-gray-400">
+        <ul class="space-y-2.5 text-sm text-zinc-400">
           <li>
             <a href="/advocacia" class="text-amber-300 hover:text-amber-200 font-medium transition-colors flex items-center gap-1.5">
               <span>Escritórios de Advocacia</span>
-              <span class="text-[9px] px-1 py-0.2 rounded bg-amber-500/20 text-amber-300">Novo</span>
+              <span class="text-[9px] px-1 py-0.2 rounded bg-amber-500/20 text-amber-300 font-mono">Exclusivo</span>
             </a>
           </li>
           <li><a href="/#como-funciona" class="hover:text-white transition-colors">Imobiliárias & Vistorias</a></li>
@@ -67,7 +81,7 @@ const { isLegal = false } = Astro.props;
       <!-- Col 4: Governança & Contato -->
       <div>
         <h4 class="text-xs font-mono uppercase tracking-wider text-amber-400 font-semibold mb-4">Contato & Apoio</h4>
-        <ul class="space-y-2.5 text-sm text-gray-400">
+        <ul class="space-y-2.5 text-sm text-zinc-400">
           <li>
             <a
               href="https://wa.me/5547999999999?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20o%20Osmar%20sobre%20a%20MOB."
@@ -81,20 +95,20 @@ const { isLegal = false } = Astro.props;
             </a>
           </li>
           <li><a href="mailto:contato@mob.tec.br" class="hover:text-white transition-colors">contato@mob.tec.br</a></li>
-          <li><span class="text-gray-400">Blumenau - Santa Catarina</span></li>
-          <li><span class="text-xs font-mono text-gray-400">CNPJ & Contratos: B2B</span></li>
+          <li><span class="text-zinc-400">Blumenau - Santa Catarina</span></li>
+          <li><span class="text-xs font-mono text-zinc-500">CNPJ & Contratos: B2B</span></li>
         </ul>
       </div>
 
     </div>
 
     <!-- Bottom Bar -->
-    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+    <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400 font-mono">
       <p>© {new Date().getFullYear()} MOB | Inteligência Artificial para Empresas. Todos os direitos reservados.</p>
       <div class="flex items-center gap-6">
-        <span class="text-gray-400">mob.tec.br</span>
-        <span class="text-gray-400">•</span>
-        <span class="text-amber-400/80 font-mono">Privacidade por Desenho (LGPD)</span>
+        <span class="text-zinc-400">mob.tec.br</span>
+        <span class="text-zinc-600">•</span>
+        <span class="text-emerald-400">Privacidade por Desenho (LGPD)</span>
       </div>
     </div>
   </div>
