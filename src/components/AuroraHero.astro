@@ -1,76 +1,63 @@
 ---
-// AuroraHero.astro - Cinematic Cosmic Horizon with Video Aurora & High-Res Texture
+// AuroraHero.astro
 ---
 
-<section class="relative min-h-[92dvh] flex flex-col items-center justify-center pt-32 pb-24 px-4 overflow-hidden">
-  <!-- ------------------------------------------------------------- -->
-  <!-- 1. DYNAMIC LIVING AURORA HERO (Video + Fundo.webp Texture)    -->
-  <!-- ------------------------------------------------------------- -->
+<section class="relative min-h-[92dvh] flex flex-col items-center justify-center pt-32 pb-20 px-4 overflow-hidden">
+  <!-- Atmospheric Background (Clean single light source, lightweight & mobile optimized) -->
   <div class="absolute inset-0 pointer-events-none overflow-hidden z-0">
-    <!-- Deep pitch black base -->
     <div class="absolute inset-0 bg-[#020202]"></div>
 
-    <!-- Video Layer: Living Aurora Beams & Atmosphere -->
-    <div class="absolute inset-0 flex items-center justify-center overflow-hidden">
+    <!-- Base ambient warm gradient -->
+    <div class="absolute inset-0 bg-[radial-gradient(ellipse_70%_40%_at_50%_0%,rgba(245,158,11,0.12),rgba(2,2,2,0))]"></div>
+
+    <!-- Single subtle video layer on desktop only, disabled on reduced motion -->
+    <div class="hidden md:block absolute inset-0 overflow-hidden motion-reduce:hidden">
       <video
         src="/assets/hero-aurora.mp4"
         autoplay
         loop
         muted
         playsinline
-        preload="auto"
-        class="w-full h-full object-cover object-center opacity-75 mix-blend-screen scale-105"
+        preload="metadata"
+        class="w-full h-full object-cover object-center opacity-30 mix-blend-screen pointer-events-none select-none"
       ></video>
     </div>
 
-    <!-- Texture Layer: Fundo.webp (Planetary Curvature, Horizon Rim & Grain) -->
-    <div class="absolute inset-0 flex items-center justify-center overflow-hidden">
-      <img
-        src="/assets/fundo.webp"
-        alt="Horizonte Cósmico MOB"
-        loading="eager"
-        decoding="async"
-        class="w-full h-full object-cover object-center opacity-70 mix-blend-screen select-none pointer-events-none"
-      />
-    </div>
-
-    <!-- Seamless Vignette Blending (Top & Bottom Fades into #020202) -->
-    <div class="absolute inset-x-0 top-0 h-36 bg-gradient-to-b from-[#020202] via-[#020202]/70 to-transparent"></div>
-    <div class="absolute inset-x-0 bottom-0 h-64 bg-gradient-to-t from-[#020202] via-[#020202]/90 to-transparent"></div>
+    <!-- Top and bottom smooth vignettes into page background -->
+    <div class="absolute inset-x-0 top-0 h-32 bg-gradient-to-b from-[#020202] to-transparent"></div>
+    <div class="absolute inset-x-0 bottom-0 h-48 bg-gradient-to-t from-[#020202] to-transparent"></div>
   </div>
 
-  <!-- ------------------------------------------------------------- -->
-  <!-- 2. HERO CONTENT LAYER (No AI Slop / Pure Craft)               -->
-  <!-- ------------------------------------------------------------- -->
+  <!-- Hero Content -->
   <div class="relative z-10 max-w-4xl mx-auto text-center flex flex-col items-center">
     
-    <!-- Headline: Confident, Crisp, No Gradients, Editorial Scale -->
+    <!-- Headline: Single Strong Promise for PME Owner -->
     <h1 class="text-4xl sm:text-6xl md:text-7xl font-bold tracking-tight text-white leading-[1.08] text-balance">
-      A Inteligência Artificial que assume a rotina pesada da sua empresa.
+      Mande o áudio. Receba o orçamento pronto.
     </h1>
 
-    <!-- Subtitle: Asaas Tone, Operational Relief, Zero Fluff -->
-    <p class="mt-7 text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed text-balance">
-      Áudios do WhatsApp viram orçamentos detalhados em segundos, contratos são analisados na hora e assistentes respondem com a tabela de preços do seu negócio. Com a <strong class="text-white font-medium">MOB Box</strong>, seus dados não saem do seu escritório e você não paga mensalidade em dólar por funcionário.
+    <!-- Subtitle: Human, Direct, Asaas-Tone -->
+    <p class="mt-6 text-base sm:text-lg md:text-xl text-zinc-300 max-w-2xl font-normal leading-relaxed text-balance">
+      Mini-servidor de IA instalado no seu escritório, calibrado com a sua tabela de preços e regras de atendimento. Seus dados não saem da sua empresa e você não paga mensalidade em dólar por usuário.
     </p>
 
-    <!-- CTAs: High Contrast, Tactile, Architectural -->
-    <div class="mt-9 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+    <!-- CTAs: High Contrast, Tactile, No Glowing Slop -->
+    <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
       <a
         href="https://wa.me/5547988131910?text=Ol%C3%A1!%20Acessei%20o%20site%20mob.tec.br%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20presencial%20de%2015%20minutos%20no%20meu%20escrit%C3%B3rio."
         target="_blank"
         rel="noopener noreferrer"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-semibold bg-white text-black hover:bg-zinc-200 shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all active:scale-95"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-full text-sm font-semibold bg-white text-black hover:bg-zinc-200 transition-all shadow-md active:scale-95"
       >
         <span>Agendar Demonstração de 15 Minutos</span>
         <svg class="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
         </svg>
       </a>
 
       <a
         href="#como-funciona"
-        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium text-zinc-300 hover:text-white bg-white/[0.05] hover:bg-white/[0.08] border border-white/[0.08] backdrop-blur-xl transition-all"
+        class="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full text-sm font-medium text-zinc-300 hover:text-white bg-white/[0.05] hover:bg-white/[0.08] border border-white/10 transition-all active:scale-95"
       >
         <span>Ver Como Funciona</span>
         <svg class="w-3.5 h-3.5 text-zinc-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -79,78 +66,377 @@
       </a>
     </div>
 
-    <!-- Micro Proof Line (Subtle Typography, No Cheesy Icons) -->
-    <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-xs font-mono text-zinc-400">
-      <span>• Demonstração presencial na sua mesa</span>
-      <span>• Custo fixo sem surpresa no cartão</span>
-      <span>• Dados isolados na rede local</span>
+    <!-- Micro Proof Line (Sans-serif, Clear, High-contrast) -->
+    <div class="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-zinc-400">
+      <span class="inline-flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Demonstração presencial na sua mesa
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Custo fixo em reais, sem surpresa
+      </span>
+      <span class="inline-flex items-center gap-1.5">
+        <svg class="w-4 h-4 text-zinc-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+        </svg>
+        Dados 100% seguros na sua empresa
+      </span>
     </div>
 
-    <!-- ------------------------------------------------------------- -->
-    <!-- 3. APPLIANCE ARCHITECTURE CARD (Zylon Density & Precision)    -->
-    <!-- ------------------------------------------------------------- -->
-    <div class="mt-14 w-full max-w-4xl mx-auto">
-      <div class="relative rounded-2xl bg-[#09090c]/90 border border-white/[0.08] shadow-[0_20px_50px_rgba(0,0,0,0.8)] backdrop-blur-xl overflow-hidden">
+    <!-- Dynamic Animated Interactive Demo (~6s loop or step-by-step) -->
+    <div id="hero-demo" class="mt-12 w-full max-w-3xl mx-auto text-left">
+      <div class="relative rounded-2xl bg-[#09090c] border border-white/10 shadow-2xl overflow-hidden backdrop-blur-xl">
         
-        <!-- Top Precision Bar -->
-        <div class="flex flex-wrap items-center justify-between gap-3 px-6 py-3.5 border-b border-white/[0.06] bg-white/[0.02] text-xs font-mono">
-          <div class="flex items-center gap-2.5">
-            <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
-            <span class="text-zinc-200 font-semibold tracking-wide">MOB BOX — APPLIANCE LOCAL ATIVA</span>
-          </div>
-          <div class="flex items-center gap-4 text-zinc-400 text-[11px]">
-            <span>REDE: <strong class="text-zinc-200">\\mob-box\documentos-ia</strong></span>
-            <span>LATÊNCIA: <strong class="text-emerald-400">&lt; 45ms</strong></span>
-            <span class="text-zinc-500 hidden sm:inline">ZERO DATA RETENTION</span>
-          </div>
+        <!-- Interactive Step Selector Tabs (3 Steps) -->
+        <div class="grid grid-cols-3 border-b border-white/[0.08] bg-white/[0.02] text-xs">
+          <!-- Step 1 Tab -->
+          <button
+            type="button"
+            class="demo-step-tab relative px-3 py-3.5 sm:px-4 text-center sm:text-left transition-colors flex flex-col justify-center gap-1 cursor-pointer focus:outline-none"
+            data-step="0"
+          >
+            <div class="flex items-center gap-2">
+              <span class="demo-step-num text-[11px] font-semibold text-amber-400">Passo 1</span>
+              <span class="hidden sm:inline text-white font-medium text-xs">Áudio no WhatsApp</span>
+            </div>
+            <span class="text-[11px] text-zinc-400 hidden md:block">Recebimento do pedido</span>
+            <div class="demo-progress absolute bottom-0 left-0 right-0 h-0.5 bg-amber-400 transform origin-left transition-transform duration-300 scale-x-100"></div>
+          </button>
+
+          <!-- Step 2 Tab -->
+          <button
+            type="button"
+            class="demo-step-tab relative px-3 py-3.5 sm:px-4 text-center sm:text-left transition-colors flex flex-col justify-center gap-1 cursor-pointer focus:outline-none border-x border-white/[0.08]"
+            data-step="1"
+          >
+            <div class="flex items-center gap-2">
+              <span class="demo-step-num text-[11px] font-semibold text-zinc-400">Passo 2</span>
+              <span class="hidden sm:inline text-zinc-400 font-medium text-xs">IA Cruza Regras</span>
+            </div>
+            <span class="text-[11px] text-zinc-500 hidden md:block">Tabela interna da empresa</span>
+            <div class="demo-progress absolute bottom-0 left-0 right-0 h-0.5 bg-amber-400 transform origin-left transition-transform duration-300 scale-x-0"></div>
+          </button>
+
+          <!-- Step 3 Tab -->
+          <button
+            type="button"
+            class="demo-step-tab relative px-3 py-3.5 sm:px-4 text-center sm:text-left transition-colors flex flex-col justify-center gap-1 cursor-pointer focus:outline-none"
+            data-step="2"
+          >
+            <div class="flex items-center gap-2">
+              <span class="demo-step-num text-[11px] font-semibold text-zinc-400">Passo 3</span>
+              <span class="hidden sm:inline text-zinc-400 font-medium text-xs">Orçamento Pronto</span>
+            </div>
+            <span class="text-[11px] text-zinc-500 hidden md:block">PDF timbrado em segundos</span>
+            <div class="demo-progress absolute bottom-0 left-0 right-0 h-0.5 bg-amber-400 transform origin-left transition-transform duration-300 scale-x-0"></div>
+          </button>
         </div>
 
-        <!-- 3 Pillars Workflow Simulation (Asymmetric & Dense) -->
-        <div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-white/[0.06] text-left">
+        <!-- Dynamic Stages Viewport -->
+        <div class="p-5 sm:p-7 min-h-[290px] flex flex-col justify-center relative">
           
-          <!-- Column 1: Ingestão Invisível -->
-          <div class="p-6">
-            <div class="text-[11px] font-mono text-zinc-500 uppercase tracking-wider mb-1.5">Entrada de Rotina</div>
-            <h3 class="text-sm font-semibold text-white mb-2">Áudios & Documentos na Rede</h3>
-            <p class="text-xs text-zinc-400 leading-relaxed">
-              O colaborador envia um áudio de 40s pelo WhatsApp ou arrasta planilhas e PDFs para a pasta da rede no Windows.
-            </p>
-            <div class="mt-4 px-3 py-2 rounded bg-black/60 border border-white/[0.06] text-[11px] font-mono text-zinc-300 flex items-center justify-between">
-              <span>audio_reuniao_cliente.ogg</span>
-              <span class="text-[10px] text-zinc-500">42s</span>
+          <!-- STAGE 1: ÁUDIO RECEBIDO DO WHATSAPP -->
+          <div class="demo-stage transition-opacity duration-300" data-stage="0">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/[0.06]">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+                  WA
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white">Cliente • Dr. Rodrigo (Clínica São Lucas)</div>
+                  <div class="text-xs text-zinc-400">Enviado hoje pelo WhatsApp</div>
+                </div>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+                Áudio de 42s
+              </span>
+            </div>
+
+            <!-- WhatsApp Audio Player Mockup -->
+            <div class="p-4 rounded-xl bg-black/60 border border-white/[0.08] flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-amber-400 text-black flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+
+              <!-- Animated Sound Waveform -->
+              <div class="flex-1 flex items-center gap-1 h-9 overflow-hidden">
+                <span class="waveform-bar h-3"></span>
+                <span class="waveform-bar h-5"></span>
+                <span class="waveform-bar h-7"></span>
+                <span class="waveform-bar h-4"></span>
+                <span class="waveform-bar h-8"></span>
+                <span class="waveform-bar h-6"></span>
+                <span class="waveform-bar h-3"></span>
+                <span class="waveform-bar h-7"></span>
+                <span class="waveform-bar h-5"></span>
+                <span class="waveform-bar h-8"></span>
+                <span class="waveform-bar h-6"></span>
+                <span class="waveform-bar h-4"></span>
+                <span class="waveform-bar h-7"></span>
+                <span class="waveform-bar h-5"></span>
+                <span class="waveform-bar h-3"></span>
+                <span class="waveform-bar h-6"></span>
+                <span class="waveform-bar h-8"></span>
+                <span class="waveform-bar h-5"></span>
+                <span class="waveform-bar h-4"></span>
+                <span class="waveform-bar h-7"></span>
+                <span class="waveform-bar h-3"></span>
+              </div>
+
+              <div class="text-xs font-mono text-zinc-400 shrink-0">
+                0:42
+              </div>
+            </div>
+
+            <!-- Transcription Preview -->
+            <div class="mt-3.5 p-3.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-xs text-zinc-300 leading-relaxed">
+              <span class="text-zinc-500 font-semibold block mb-1">Transcrição automática na MOB Box:</span>
+              "Oi, Osmar! Preciso fechar o projeto com 12 pontos de rede para os consultórios, o nobreak senoidal e a configuração da pasta segura. Consegue me mandar a proposta com os valores de tabela e o prazo de entrega?"
             </div>
           </div>
 
-          <!-- Column 2: Cérebro Local -->
-          <div class="p-6">
-            <div class="text-[11px] font-mono text-zinc-500 uppercase tracking-wider mb-1.5">Processamento Seguro</div>
-            <h3 class="text-sm font-semibold text-white mb-2">Regras e Tabelas da Empresa</h3>
-            <p class="text-xs text-zinc-400 leading-relaxed">
-              A IA cruza o pedido com a sua tabela de preços oficial dentro da MOB Box. Informações sigilosas jamais saem do escritório.
-            </p>
-            <div class="mt-4 px-3 py-2 rounded bg-black/60 border border-white/[0.06] text-[11px] font-mono text-zinc-300 flex items-center justify-between">
-              <span>Tabela-Precos-2026.pdf</span>
-              <span class="text-[10px] text-emerald-400">Cruzado</span>
+          <!-- STAGE 2: IA PROCESSANDO (CRUZANDO COM TABELA INTERNA) -->
+          <div class="demo-stage hidden opacity-0 transition-opacity duration-300" data-stage="1">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/[0.06]">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span class="text-sm font-medium text-white">MOB Box Processando</span>
+              </div>
+              <span class="text-xs text-zinc-400">Cruzamento de regras locais</span>
+            </div>
+
+            <!-- Matching Items from Internal Rules -->
+            <div class="space-y-2.5">
+              <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-between text-xs">
+                <div>
+                  <span class="text-zinc-400 font-mono text-[11px] block">Tabela_Servicos_2026.xlsx</span>
+                  <span class="text-zinc-200 font-medium">12x Ponto de Rede Cat6 Homologado (R$ 180/un)</span>
+                </div>
+                <span class="text-emerald-400 font-medium">Identificado</span>
+              </div>
+
+              <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-between text-xs">
+                <div>
+                  <span class="text-zinc-400 font-mono text-[11px] block">Politica_Comercial.pdf</span>
+                  <span class="text-zinc-200 font-medium">Desconto de 8% aplicado (pedidos acima de 10 pontos)</span>
+                </div>
+                <span class="text-emerald-400 font-medium">Regra aplicada</span>
+              </div>
+
+              <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-between text-xs">
+                <div>
+                  <span class="text-zinc-400 font-mono text-[11px] block">Catalogo_Hardware.pdf</span>
+                  <span class="text-zinc-200 font-medium">Nobreak Senoidal 1200VA c/ engate rápido</span>
+                </div>
+                <span class="text-emerald-400 font-medium">Identificado</span>
+              </div>
+            </div>
+
+            <div class="mt-3.5 flex items-center gap-2 text-xs text-zinc-400">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              <span>Processamento 100% no mini-servidor local. Nenhum dado transmitido para fora da empresa.</span>
             </div>
           </div>
 
-          <!-- Column 3: Entrega Pronta -->
-          <div class="p-6">
-            <div class="text-[11px] font-mono text-zinc-500 uppercase tracking-wider mb-1.5">Resultado Final</div>
-            <h3 class="text-sm font-semibold text-white mb-2">Orçamento Timbrado em 8s</h3>
-            <p class="text-xs text-zinc-400 leading-relaxed">
-              PDF diagramado com peças calculadas, prazos e aviso legal de conferência humana pronto para envio ao cliente.
-            </p>
-            <div class="mt-4 px-3 py-2 rounded bg-emerald-500/10 border border-emerald-500/20 text-[11px] font-mono text-emerald-300 flex items-center justify-between">
-              <span>Orcamento-Formatado.pdf</span>
-              <span class="text-[10px] font-bold text-emerald-400">PRONTO</span>
+          <!-- STAGE 3: ORÇAMENTO TIMBRADO PRONTO EM PDF -->
+          <div class="demo-stage hidden opacity-0 transition-opacity duration-300" data-stage="2">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/[0.06]">
+              <div>
+                <span class="text-xs text-zinc-400 font-medium">PROPOSTA COMERCIAL #1042</span>
+                <div class="text-sm font-semibold text-white">Clínica Médica São Lucas — Dr. Rodrigo</div>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+                PDF Gerado
+              </span>
+            </div>
+
+            <!-- PDF Invoice Mockup -->
+            <div class="p-3.5 rounded-lg bg-black/60 border border-white/[0.08] text-xs">
+              <div class="space-y-2 pb-3 border-b border-white/[0.06]">
+                <div class="flex justify-between text-zinc-300">
+                  <span>12x Ponto de Rede Estruturado Cat6 (c/ desc. 8%)</span>
+                  <span class="font-mono text-white">R$ 1.987,20</span>
+                </div>
+                <div class="flex justify-between text-zinc-300">
+                  <span>1x Nobreak Senoidal 1200VA com Engate</span>
+                  <span class="font-mono text-white">R$ 1.450,00</span>
+                </div>
+                <div class="flex justify-between text-zinc-300">
+                  <span>Instalação, Certificação & Pasta Segura</span>
+                  <span class="text-emerald-400 font-medium">Incluso</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-3">
+                <div>
+                  <span class="text-[11px] text-zinc-400 block">Condições: Entrada + 30/60 dias</span>
+                  <span class="text-xs text-zinc-300 font-medium">Prazo de execução: 48 horas</span>
+                </div>
+                <div class="text-right">
+                  <span class="text-[10px] text-zinc-400 uppercase tracking-wide block">Valor Total</span>
+                  <span class="text-base font-bold text-amber-400 font-mono">R$ 3.437,20</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-3.5 flex items-center justify-between text-xs text-zinc-400">
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                PDF salvo na pasta da rede e pronto para envio
+              </span>
+              <span class="text-zinc-500 text-[11px] hidden sm:inline">Conferência humana em 1 clique</span>
             </div>
           </div>
 
         </div>
 
+        <!-- Footer status bar of demo -->
+        <div class="px-5 py-3 border-t border-white/[0.06] bg-white/[0.01] flex items-center justify-between text-xs text-zinc-400">
+          <div class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>Fluxo automatizado pelo MOB CORE</span>
+          </div>
+          <span class="text-zinc-500 text-[11px]">Tempo total de geração: ~6 segundos</span>
+        </div>
       </div>
     </div>
 
   </div>
 </section>
+
+<style>
+  .waveform-bar {
+    width: 3px;
+    background-color: #fbbf24;
+    border-radius: 9999px;
+    display: inline-block;
+    animation: wavePulse 1.4s ease-in-out infinite;
+  }
+
+  .waveform-bar:nth-child(2n) {
+    animation-delay: 0.15s;
+  }
+  .waveform-bar:nth-child(3n) {
+    animation-delay: 0.3s;
+  }
+  .waveform-bar:nth-child(4n) {
+    animation-delay: 0.45s;
+  }
+  .waveform-bar:nth-child(5n) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes wavePulse {
+    0%, 100% {
+      transform: scaleY(0.4);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .waveform-bar {
+      animation: none !important;
+      transform: scaleY(0.7) !important;
+      opacity: 0.8 !important;
+    }
+  }
+</style>
+
+<script>
+  const tabs = document.querySelectorAll(".demo-step-tab");
+  const stages = document.querySelectorAll(".demo-stage");
+  const heroDemo = document.getElementById("hero-demo");
+
+  let currentStep = 0;
+  let isPaused = false;
+  const STEP_DURATION = 2400;
+
+  const updateStage = (index: number) => {
+    currentStep = index;
+
+    tabs.forEach((tab, i) => {
+      const progress = tab.querySelector(".demo-progress") as HTMLElement | null;
+      const num = tab.querySelector(".demo-step-num");
+      const title = tab.querySelector("span.font-medium");
+
+      if (i === index) {
+        if (progress) progress.style.transform = "scaleX(1)";
+        if (num) {
+          num.classList.add("text-amber-400");
+          num.classList.remove("text-zinc-400");
+        }
+        if (title) {
+          title.classList.add("text-white");
+          title.classList.remove("text-zinc-400");
+        }
+      } else {
+        if (progress) progress.style.transform = "scaleX(0)";
+        if (num) {
+          num.classList.remove("text-amber-400");
+          num.classList.add("text-zinc-400");
+        }
+        if (title) {
+          title.classList.remove("text-white");
+          title.classList.add("text-zinc-400");
+        }
+      }
+    });
+
+    stages.forEach((stage, i) => {
+      const el = stage as HTMLElement;
+      if (i === index) {
+        el.classList.remove("hidden");
+        void el.offsetWidth;
+        el.classList.remove("opacity-0");
+        el.classList.add("opacity-100");
+      } else {
+        el.classList.add("opacity-0");
+        el.classList.remove("opacity-100");
+        el.classList.add("hidden");
+      }
+    });
+  };
+
+  const nextStep = () => {
+    if (isPaused) return;
+    const next = (currentStep + 1) % 3;
+    updateStage(next);
+  };
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!prefersReducedMotion) {
+    setInterval(nextStep, STEP_DURATION);
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const step = Number((tab as HTMLElement).dataset.step) || 0;
+      updateStage(step);
+    });
+  });
+
+  if (heroDemo) {
+    heroDemo.addEventListener("mouseenter", () => {
+      isPaused = true;
+    });
+    heroDemo.addEventListener("mouseleave", () => {
+      isPaused = false;
+    });
+  }
+</script>
