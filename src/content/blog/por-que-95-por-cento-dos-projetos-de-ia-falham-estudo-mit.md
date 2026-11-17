@@ -6,6 +6,9 @@ publishedAt: 2026-11-15
 readingTime: "7 min de leitura"
 featured: false
 ctaType: "mob-start"
+coverImage: "/assets/blog/estudo-mit-95-por-cento.webp"
+coverAlt: "Ilustração arquitetônica representando a ponte dourada que separa projetos de IA parados dos 5% que geram retorno real"
+coverCaption: "O abismo identificado pelo MIT (2025): a diferença entre testes parados e retorno no caixa está no método de implementação."
 keywords:
   - estudo mit 95 projetos ia falham
   - por que projetos de ia falham nas empresas

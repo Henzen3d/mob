@@ -6,6 +6,9 @@ publishedAt: 2026-11-16
 readingTime: "6 min de leitura"
 featured: false
 ctaType: "roi"
+coverImage: "/assets/blog/como-ia-ajuda-negocio.webp"
+coverAlt: "Ilustração editorial mostrando ondas de áudio se transformando em folhas de propostas comerciais estruturadas"
+coverCaption: "O retorno mais rápido da IA nas PMEs nasce na retaguarda operacional: áudios que viram orçamentos, contratos revisados e tabelas consultadas em segundos."
 keywords:
   - como a ia pode ajudar o meu negocio
   - como usar ia na empresa

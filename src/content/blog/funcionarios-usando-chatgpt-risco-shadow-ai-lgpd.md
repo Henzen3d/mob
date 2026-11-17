@@ -6,6 +6,9 @@ publishedAt: 2026-11-14
 readingTime: "6 min de leitura"
 featured: false
 ctaType: "mob-start"
+coverImage: "/assets/blog/shadow-ai-lgpd.webp"
+coverAlt: "Ilustração editorial de documentos corporativos protegidos dentro de um cubo de vidro fosco sob luz âmbar, simbolizando privacidade na LGPD"
+coverCaption: "Fronteiras claras de dados: proteger contratos, tabelas e informações de clientes sem travar a velocidade da equipe."
 keywords:
   - funcionarios usando chatgpt dados empresa lgpd
   - chatgpt para empresas e seguro lgpd

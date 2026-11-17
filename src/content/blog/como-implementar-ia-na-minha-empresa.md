@@ -6,6 +6,9 @@ publishedAt: 2026-11-17
 readingTime: "6 min de leitura"
 featured: true
 ctaType: "mob-start"
+coverImage: "/assets/blog/como-implementar-ia.webp"
+coverAlt: "Mesa executiva com mini-servidor privado de inteligência artificial e documentos organizados da empresa"
+coverCaption: "Implantar IA na rotina da PME exige processo claro e ferramentas integradas aos documentos que a empresa já usa."
 keywords:
   - como implementar ia na minha empresa
   - implementar inteligencia artificial pequena empresa
