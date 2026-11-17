@@ -14,9 +14,9 @@ import Footer from '../components/Footer.astro';
   <main class="bg-[#020202] text-white selection:bg-amber-400 selection:text-black">
     <AuroraHero />
 
-    <section id="como-funciona" class="relative py-20 md:py-28 px-4 max-w-6xl mx-auto border-t border-white/[0.08]">
+    <section id="como-funciona" class="relative py-20 md:py-28 px-4 max-w-6xl mx-auto border-t border-white/[0.08] scroll-mt-24">
 
-      <div id="mob-box" class="max-w-2xl mb-14 md:mb-16">
+      <div id="mob-box" class="max-w-2xl mb-14 md:mb-16 scroll-mt-28">
         <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
           O que você leva para a sua empresa
         </h2>
@@ -70,7 +70,7 @@ import Footer from '../components/Footer.astro';
       </div>
     </section>
 
-    <section class="relative py-20 md:py-28 px-4 bg-[#050508] border-t border-white/[0.08]">
+    <section id="como-comeca" class="relative py-20 md:py-28 px-4 bg-[#050508] border-t border-white/[0.08]">
       <div class="max-w-6xl mx-auto">
         <div class="max-w-2xl mb-16">
           <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight">
@@ -83,29 +83,29 @@ import Footer from '../components/Footer.astro';
 
         <div class="relative">
           <div class="absolute hidden md:block left-6 right-6 top-6 h-px bg-white/10" aria-hidden="true">
-            <div id="timeline-progress" class="absolute inset-0 origin-left scale-x-0 bg-amber-400/60 transition-transform duration-1000 ease-out"></div>
+            <div id="timeline-progress" class="absolute inset-0 origin-left scale-x-0 motion-reduce:scale-x-100 bg-amber-400/60 transition-transform duration-1000 ease-out"></div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 relative">
-            <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-5">
+            <div class="flex md:flex-col items-start gap-4 md:gap-5">
               <div class="w-12 h-12 shrink-0 rounded-full bg-[#050508] border-2 border-amber-400/70 text-amber-400 flex items-center justify-center text-base font-bold">1</div>
-              <div class="text-center md:text-left">
+              <div class="text-left">
                 <h3 class="text-lg font-bold text-white mb-1.5">Demonstração de 15 minutos</h3>
                 <p class="text-base text-zinc-300 leading-relaxed">Levamos a maleta até o seu escritório, ligamos na tomada da sua sala e mostramos um áudio virando orçamento na sua frente.</p>
               </div>
             </div>
 
-            <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-5">
+            <div class="flex md:flex-col items-start gap-4 md:gap-5">
               <div class="w-12 h-12 shrink-0 rounded-full bg-[#050508] border-2 border-amber-400/70 text-amber-400 flex items-center justify-center text-base font-bold">2</div>
-              <div class="text-center md:text-left">
+              <div class="text-left">
                 <h3 class="text-lg font-bold text-white mb-1.5">Preparamos em 48 a 72 horas</h3>
                 <p class="text-base text-zinc-300 leading-relaxed">Montamos e calibramos o sistema com as tabelas de preços, regras comerciais e modelos oficiais de propostas da sua empresa.</p>
               </div>
             </div>
 
-            <div class="flex md:flex-col items-center md:items-start gap-4 md:gap-5">
+            <div class="flex md:flex-col items-start gap-4 md:gap-5">
               <div class="w-12 h-12 shrink-0 rounded-full bg-[#050508] border-2 border-amber-400/70 text-amber-400 flex items-center justify-center text-base font-bold">3</div>
-              <div class="text-center md:text-left">
+              <div class="text-left">
                 <h3 class="text-lg font-bold text-white mb-1.5">Instalamos e treinamos no mesmo dia</h3>
                 <p class="text-base text-zinc-300 leading-relaxed">Plugamos na sua rede, compartilhamos a pasta no Windows de todos os computadores e realizamos o treinamento prático com a equipe.</p>
               </div>
@@ -603,10 +603,13 @@ import Footer from '../components/Footer.astro';
 
   <script is:inline>
     (function initTimeline() {
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
       const el = document.getElementById('timeline-progress');
       if (!el) return;
-      const section = document.querySelector('#como-funciona');
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        el.style.transform = 'scaleX(1)';
+        return;
+      }
+      const section = document.getElementById('como-comeca');
       if (!section) return;
       const obs = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
