@@ -41,6 +41,14 @@ const homePrefix = currentPage === "home" ? "" : "/";
         Dúvidas
       </a>
       <a
+        href="/blog"
+        class={`transition-colors py-1 ${
+          currentPage === 'blog' ? 'text-white font-semibold' : 'hover:text-white'
+        }`}
+      >
+        Blog
+      </a>
+      <a
         href="/advocacia"
         class={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs transition-all ${
           currentPage === 'advocacia'
@@ -115,6 +123,12 @@ const homePrefix = currentPage === "home" ? "" : "/";
       class="w-full min-h-[44px] flex items-center justify-center text-lg font-medium text-zinc-200 hover:text-white hover:bg-white/5 rounded-xl transition-colors"
     >
       Dúvidas
+    </a>
+    <a
+      href="/blog"
+      class="w-full min-h-[44px] flex items-center justify-center text-lg font-medium text-zinc-200 hover:text-white hover:bg-white/5 rounded-xl transition-colors"
+    >
+      Blog
     </a>
     <a
       href="/advocacia"

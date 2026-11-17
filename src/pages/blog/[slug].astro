@@ -1,0 +1,368 @@
+---
+import { getCollection, render } from 'astro:content';
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('blog');
+  return posts.map((post) => ({
+    params: { slug: post.id },
+    props: { post, allPosts: posts },
+  }));
+}
+
+const { post, allPosts } = Astro.props;
+const { Content, headings } = await render(post);
+
+const sectionHeadings = headings.filter((h) => h.depth === 2);
+
+const otherPosts = allPosts
+  .filter((p) => p.id !== post.id)
+  .sort((a, b) => {
+    const aSame = a.data.section === post.data.section ? 1 : 0;
+    const bSame = b.data.section === post.data.section ? 1 : 0;
+    if (aSame !== bSame) return bSame - aSame;
+    return b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf();
+  });
+
+const relatedPosts = otherPosts.slice(0, 3);
+
+const formatDate = (date: Date) =>
+  new Intl.DateTimeFormat('pt-BR', {
+    day: '2-digit',
+    month: 'long',
+    year: 'numeric',
+  }).format(date);
+
+const articleUrl = `https://mob.tec.br/blog/${post.id}`;
+const whatsappMessage = encodeURIComponent(
+  `Olá Osmar! Li o artigo "${post.data.title}" no site da MOB e quero entender como implantar IA na minha empresa.`
+);
+
+const articleSchema = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: post.data.title,
+    description: post.data.description,
+    datePublished: post.data.publishedAt.toISOString(),
+    dateModified: (post.data.updatedAt ?? post.data.publishedAt).toISOString(),
+    inLanguage: 'pt-BR',
+    mainEntityOfPage: articleUrl,
+    author: {
+      '@type': 'Person',
+      name: post.data.author,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'MOB | Inteligência Artificial para Empresas',
+      url: 'https://mob.tec.br',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://mob.tec.br/favicon.svg',
+      },
+    },
+    articleSection: post.data.section,
+    keywords: post.data.keywords.join(', '),
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: 'https://mob.tec.br/' },
+      { '@type': 'ListItem', position: 2, name: 'Blog', item: 'https://mob.tec.br/blog' },
+      { '@type': 'ListItem', position: 3, name: post.data.title, item: articleUrl },
+    ],
+  },
+];
+---
+
+<Layout
+  title={`${post.data.title} | Blog MOB`}
+  description={post.data.description}
+  ogType="article"
+  publishedTime={post.data.publishedAt.toISOString()}
+  jsonLd={articleSchema}
+>
+  <Navbar currentPage="blog" />
+
+  <main class="bg-[#020202] text-white pt-32 pb-24 px-4">
+    <div class="max-w-4xl mx-auto">
+      <nav aria-label="Navegação estrutural" class="mb-8 text-sm text-zinc-400 flex flex-wrap items-center gap-2">
+        <a href="/" class="hover:text-white transition-colors">Início</a>
+        <span aria-hidden="true">/</span>
+        <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+        <span aria-hidden="true">/</span>
+        <span class="text-amber-400">{post.data.section}</span>
+      </nav>
+
+      <header class="pb-10 border-b border-white/[0.08]">
+        <div class="flex flex-wrap items-center gap-3 text-sm text-zinc-400 mb-5">
+          <span class="px-3 py-1 rounded-full bg-amber-400/15 text-amber-300 font-medium text-xs">
+            {post.data.section}
+          </span>
+          <span>{post.data.readingTime}</span>
+          <span>•</span>
+          <time datetime={post.data.publishedAt.toISOString()}>
+            {formatDate(post.data.publishedAt)}
+          </time>
+        </div>
+
+        <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-[1.12] text-balance">
+          {post.data.title}
+        </h1>
+
+        <p class="mt-5 text-lg text-zinc-300 leading-relaxed">
+          {post.data.description}
+        </p>
+
+        <div class="mt-6 flex items-center gap-3 text-sm text-zinc-400">
+          <div class="w-9 h-9 rounded-full bg-amber-400/15 border border-amber-400/30 text-amber-300 font-bold flex items-center justify-center text-xs">
+            OH
+          </div>
+          <div>
+            <div class="text-white font-medium">{post.data.author}</div>
+            <div class="text-xs text-zinc-400">Fundador da MOB • Implantação prática de IA para PMEs</div>
+          </div>
+        </div>
+      </header>
+
+      {sectionHeadings.length >= 2 && (
+        <aside
+          aria-label="Seções deste artigo"
+          class="my-10 p-6 rounded-2xl bg-[#08080c] border border-white/[0.08]"
+        >
+          <h2 class="text-sm font-semibold text-white mb-4">
+            Seções deste artigo
+          </h2>
+          <ol class="space-y-2.5 text-sm text-zinc-300">
+            {sectionHeadings.map((heading, idx) => (
+              <li>
+                <a
+                  href={`#${heading.slug}`}
+                  class="inline-flex items-baseline gap-2.5 hover:text-amber-300 transition-colors"
+                >
+                  <span class="text-xs font-mono text-amber-400/80 tabular-nums">
+                    {String(idx + 1).padStart(2, '0')}
+                  </span>
+                  <span>{heading.text}</span>
+                </a>
+              </li>
+            ))}
+          </ol>
+        </aside>
+      )}
+
+      <article class="mob-prose">
+        <Content />
+      </article>
+
+      <section
+        aria-label="Próximo passo com a MOB"
+        class="mt-16 p-7 sm:p-9 rounded-2xl bg-[#08080c] border border-amber-400/35"
+      >
+        <p class="text-sm font-medium text-amber-400 mb-2">
+          Implantação em todo o Brasil (MOB Start) ou presencial em SC (MOB Box)
+        </p>
+        <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          Quer colocar IA funcionando na rotina da sua empresa sem perder meses em testes?
+        </h2>
+        <p class="mt-3 text-base text-zinc-300 leading-relaxed">
+          Em uma demonstração de 15 minutos, mostramos ao vivo um áudio do WhatsApp virando orçamento timbrado e assistentes consultando tabelas e contratos com segurança LGPD — sem cobrança em dólar por funcionário.
+        </p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3">
+          <a
+            href={`https://wa.me/5547988131910?text=${whatsappMessage}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[48px] rounded-full text-sm font-semibold bg-amber-400 text-black hover:bg-amber-300 transition-colors"
+          >
+            <span>Agendar demonstração no WhatsApp</span>
+            <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+            </svg>
+          </a>
+          <a
+            href="/#precos"
+            class="inline-flex items-center justify-center px-6 py-3.5 min-h-[48px] rounded-full text-sm font-medium text-zinc-200 hover:text-white bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 transition-colors"
+          >
+            Ver planos e calculadora de retorno
+          </a>
+        </div>
+      </section>
+
+      {relatedPosts.length > 0 && (
+        <section aria-label="Leia também" class="mt-20 pt-14 border-t border-white/[0.08]">
+          <div class="flex items-center justify-between gap-4 mb-8">
+            <h2 class="text-2xl font-bold text-white tracking-tight">
+              Leia também
+            </h2>
+            <a
+              href="/blog"
+              class="text-sm font-medium text-amber-400 hover:text-amber-300 transition-colors"
+            >
+              Ver todos os artigos →
+            </a>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {relatedPosts.map((related) => (
+              <a
+                href={`/blog/${related.id}`}
+                class="group p-6 rounded-2xl bg-[#08080c] border border-white/[0.08] hover:border-white/25 transition-all duration-200 hover:-translate-y-0.5 flex flex-col justify-between"
+              >
+                <div>
+                  <span class="inline-block text-xs font-medium text-amber-300 mb-3">
+                    {related.data.section}
+                  </span>
+                  <h3 class="text-lg font-bold text-white group-hover:text-amber-300 transition-colors leading-snug mb-2">
+                    {related.data.title}
+                  </h3>
+                  <p class="text-sm text-zinc-400 leading-relaxed line-clamp-3">
+                    {related.data.description}
+                  </p>
+                </div>
+
+                <div class="mt-5 pt-4 border-t border-white/[0.06] flex items-center justify-between text-xs text-zinc-400">
+                  <span>{related.data.readingTime}</span>
+                  <span class="text-white font-semibold group-hover:text-amber-300 transition-colors">
+                    Ler →
+                  </span>
+                </div>
+              </a>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  </main>
+
+  <Footer />
+</Layout>
+
+<style is:global>
+  .mob-prose {
+    color: #d4d4d8;
+    font-size: 1.0625rem;
+    line-height: 1.8;
+  }
+
+  .mob-prose h2 {
+    color: #ffffff;
+    font-size: 1.625rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    scroll-margin-top: 7rem;
+  }
+
+  .mob-prose h2:first-child {
+    margin-top: 1.5rem;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  .mob-prose h3 {
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+    scroll-margin-top: 7rem;
+  }
+
+  .mob-prose p {
+    margin-bottom: 1.25rem;
+  }
+
+  .mob-prose strong {
+    color: #ffffff;
+    font-weight: 600;
+  }
+
+  .mob-prose a {
+    color: #fbbf24;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .mob-prose a:hover {
+    color: #fcd34d;
+  }
+
+  .mob-prose ul,
+  .mob-prose ol {
+    margin-bottom: 1.5rem;
+    padding-left: 1.5rem;
+  }
+
+  .mob-prose ul {
+    list-style-type: disc;
+  }
+
+  .mob-prose ol {
+    list-style-type: decimal;
+  }
+
+  .mob-prose li {
+    margin-bottom: 0.55rem;
+    padding-left: 0.25rem;
+  }
+
+  .mob-prose li::marker {
+    color: #fbbf24;
+  }
+
+  .mob-prose blockquote {
+    margin: 2rem 0;
+    padding: 1.25rem 1.5rem;
+    border-left: 3px solid #fbbf24;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 0 0.75rem 0.75rem 0;
+    color: #e4e4e7;
+  }
+
+  .mob-prose blockquote p:last-child {
+    margin-bottom: 0;
+  }
+
+  .mob-prose table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 0.9375rem;
+    display: block;
+    overflow-x: auto;
+  }
+
+  .mob-prose thead {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  }
+
+  .mob-prose th {
+    text-align: left;
+    padding: 0.85rem 1rem;
+    color: #ffffff;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.03);
+  }
+
+  .mob-prose td {
+    padding: 0.85rem 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    color: #d4d4d8;
+    vertical-align: top;
+  }
+
+  .mob-prose hr {
+    border: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    margin: 2.5rem 0;
+  }
+</style>

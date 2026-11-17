@@ -3,11 +3,75 @@ import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import AuroraHero from '../components/AuroraHero.astro';
 import Footer from '../components/Footer.astro';
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Minha empresa precisa de equipe técnica de TI?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Não. A MOB foi desenhada para operar em empresas sem departamento de TI. Entregamos o ambiente pronto e realizamos o treinamento prático de 2h30 com a equipe. Para atualizar tabelas e documentos no dia a dia, basta colocar os arquivos na pasta da empresa.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "A inteligência artificial erra ou alucina?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Nenhum modelo de inteligência artificial é 100% infalível. Por isso nossa calibração exige indicação exata de onde o sistema tirou cada valor ou regra na sua tabela, sempre com conferência humana simples antes de enviar qualquer orçamento ao cliente.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "O que acontece se faltar luz ou a internet cair?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "A MOB Box conta com nobreak incluso e religamento automático configurado diretamente no hardware. Assim que a energia retorna, o servidor religa sozinho e reativa todos os assistentes. No modelo local, a consulta a documentos continua operando na rede do escritório mesmo sem internet externa.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Os dados e contratos dos meus clientes ficam seguros?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Sim. No plano MOB Box Compact os arquivos ficam armazenados fisicamente no escritório. No plano MOB Start (nuvem privada), os dados ficam em instância dedicada e isolada com criptografia e contrato de confidencialidade em conformidade com a LGPD, sem jamais treinar modelos externos.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "E se eu quiser cancelar ou trocar de modelo?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "No plano MOB Box Compact o hardware é da sua empresa em definitivo e a mensalidade de gestão pode ser cancelada sem penalidades abusivas. Se começar na nuvem (MOB Start) e decidir migrar para a MOB Box física depois, parte do setup inicial é abatida na aquisição.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Em quanto tempo vejo resultado?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "O primeiro resultado aparece já na demonstração, vendo um áudio virar orçamento na sua frente. Para o uso diário completo com suas regras, tabela de preços e treinamento, entregamos tudo pronto em até 72 horas.",
+      },
+    },
+    {
+      "@type": "Question",
+      name: "Como funciona a demonstração presencial de 15 minutos?",
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: "Agendamos um horário conveniente e demonstramos ao vivo um áudio do WhatsApp virando orçamento timbrado e a leitura de um contrato com os itens da sua rotina — presencialmente em Blumenau e região ou ao vivo online para todo o Brasil.",
+      },
+    },
+  ],
+};
 ---
 
 <Layout
   title="MOB | Inteligência Artificial para Empresas"
-  description="Mini-servidor físico de IA no seu escritório, sem mensalidade em dólar por usuário e com total sigilo dos dados. Conheça a MOB Box e o MOB CORE."
+  description="Implantação prática de Inteligência Artificial para empresas em todo o Brasil. Transforme áudios em orçamentos, analise contratos e consulte regras internas com privacidade LGPD."
+  jsonLd={faqSchema}
 >
   <Navbar currentPage="home" />
 

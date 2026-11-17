@@ -3,13 +3,46 @@ interface Props {
   title: string;
   description?: string;
   isLegal?: boolean;
+  ogType?: 'website' | 'article';
+  publishedTime?: string;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
 }
 
 const {
   title = "MOB | Inteligência Artificial para Empresas",
-  description = "Servidor físico próprio de IA no seu escritório, sem mensalidade em dólar por usuário e com total sigilo dos dados. Conheça a MOB Box e o MOB CORE.",
+  description = "Implantação prática de Inteligência Artificial para pequenas e médias empresas em todo o Brasil. Nuvem privada dedicada (MOB Start) e servidor local (MOB Box).",
   isLegal = false,
+  ogType = "website",
+  publishedTime,
+  jsonLd,
 } = Astro.props;
+
+const canonicalUrl = new URL(Astro.url.pathname, Astro.site ?? 'https://mob.tec.br').toString();
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "MOB | Inteligência Artificial para Empresas",
+  url: "https://mob.tec.br",
+  logo: "https://mob.tec.br/favicon.svg",
+  email: "contato@mob.tec.br",
+  telephone: "+55-47-98813-1910",
+  areaServed: [
+    { "@type": "Country", name: "Brasil" },
+    { "@type": "City", name: "Blumenau" },
+  ],
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Blumenau",
+    addressRegion: "SC",
+    addressCountry: "BR",
+  },
+};
+
+const schemas = [
+  organizationSchema,
+  ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []),
+];
 ---
 
 <!doctype html>
@@ -18,15 +51,23 @@ const {
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonicalUrl} />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
     <meta name="description" content={description} />
 
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mob.tec.br/" />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:locale" content="pt_BR" />
+    <meta property="og:site_name" content="MOB | Inteligência Artificial para Empresas" />
+    <meta property="og:url" content={canonicalUrl} />
     <meta property="og:title" content={title} />
     <meta property="og:description" content={description} />
     <meta property="og:image" content="https://mob.tec.br/og-cover.png" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -34,6 +75,10 @@ const {
       href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300..800;1,6..72,300..800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+
+    {schemas.map((schema) => (
+      <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+    ))}
 
     <style is:global>
       :root {
