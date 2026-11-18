@@ -4,8 +4,8 @@ description: "Compare configuração, mensalidade e tempo de revisão para decid
 section: "Custos e Retorno"
 publishedAt: 2026-11-18
 readingTime: "2 min de leitura"
-coverImage: "/assets/blog/como-implementar-ia.webp"
-coverAlt: "Mesa com documentos e um servidor compacto"
+coverImage: "/assets/blog/quanto-custa-implantar-ia.webp"
+coverAlt: "Balança minimalista em preto fosco e latão equilibrando investimento e documentos corporativos sob luz âmbar"
 author: "Osmar Henzen"
 ---
 
