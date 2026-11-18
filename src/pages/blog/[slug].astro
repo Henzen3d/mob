@@ -37,7 +37,7 @@ const formatDate = (date: Date) =>
 const articleUrl = `https://mob.tec.br/blog/${post.id}`;
 const coverAbsoluteUrl = new URL(post.data.coverImage, 'https://mob.tec.br').toString();
 const whatsappMessage = encodeURIComponent(
-  `Olá Osmar! Li o artigo "${post.data.title}" no blog da MOB e quero entender como implantar IA na minha empresa.`
+  `Olá Osmar! Li o artigo "${post.data.title}" no blog da MOB e quero avaliar um primeiro teste na minha equipe.`
 );
 
 const articleSchema = [
@@ -201,7 +201,7 @@ const articleSchema = [
 
               <div class="mt-8 pt-6 border-t border-white/[0.08] space-y-3 text-sm">
                 <a
-                  href="/#precos"
+                  href="/#simulador"
                   class="block text-zinc-400 hover:text-amber-300 transition-colors"
                 >
                   Simular retorno (ROI) →
@@ -227,10 +227,10 @@ const articleSchema = [
             class="mt-16 p-7 sm:p-9 rounded-2xl bg-[#14161f] border border-white/[0.14] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)]"
           >
             <h2 class="text-2xl sm:text-3xl font-bold tracking-[-0.025em] text-white leading-tight text-balance">
-              Quer colocar IA funcionando na sua rotina sem perder meses em testes?
+              Qual tarefa você quer testar na sua empresa?
             </h2>
             <p class="mt-3.5 text-base text-zinc-300 leading-relaxed">
-              Com o <strong class="text-white">MOB Start</strong> (nuvem privada dedicada para todo o Brasil) ou a <strong class="text-white">MOB Box</strong> (servidor físico em Blumenau e região), configuramos seus assistentes com as regras da sua empresa em até 72 horas.
+              Conte ao Osmar o que motivou sua leitura. Podemos olhar juntos para um exemplo da sua rotina e definir o que precisaria melhorar para o teste valer a pena.
             </p>
             <div class="mt-6 flex flex-col sm:flex-row gap-3">
               <a
@@ -239,7 +239,7 @@ const articleSchema = [
                 rel="noopener noreferrer"
                 class="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[48px] rounded-full text-sm font-semibold bg-amber-400 text-black hover:bg-amber-300 transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:ring-offset-2 focus-visible:ring-offset-[#08080c]"
               >
-                <span>Agendar demonstração de 15 min</span>
+                <span>Conversar com Osmar sobre esta tarefa</span>
                 <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -248,7 +248,7 @@ const articleSchema = [
                 href="/#precos"
                 class="inline-flex items-center justify-center px-6 py-3.5 min-h-[48px] rounded-full text-sm font-medium text-zinc-200 hover:text-white bg-white/[0.05] hover:bg-white/[0.1] border border-white/10 transition-colors duration-150"
               >
-                Ver planos e calculadora
+                Ver planos da MOB
               </a>
             </div>
           </section>

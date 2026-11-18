@@ -1,0 +1,289 @@
+<details class="max-w-3xl mt-10 rounded-xl border border-white/15 p-5">
+  <summary class="cursor-pointer font-semibold text-white">Ver demonstração de um pedido virando orçamento</summary>
+  <p class="mt-3 text-sm text-zinc-300">Exemplo fictício. Percorra as três etapas para ver o pedido, a consulta à tabela e a proposta para revisão.</p>
+    <div id="hero-demo" class="mt-6 w-full max-w-3xl mx-auto text-left">
+      <div class="relative rounded-2xl bg-[#11131b]/95 border border-white/[0.14] shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_25px_60px_-15px_rgba(0,0,0,0.9)] overflow-hidden backdrop-blur-xl">
+
+        <!-- Interactive Step Selector Tabs (3 Steps) -->
+        <div class="grid grid-cols-3 border-b border-white/[0.08] bg-white/[0.02] text-xs">
+          <!-- Step 1 Tab -->
+          <button
+            type="button"
+            class="demo-step-tab relative px-3 py-3.5 sm:px-4 text-center sm:text-left transition-colors flex flex-col justify-center gap-1 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            data-step="0"
+          >
+            <div class="flex items-center gap-2">
+              <span class="demo-step-num text-xs font-semibold text-amber-400">Passo 1</span>
+              <span class="hidden sm:inline text-white font-medium text-xs">Áudio no WhatsApp</span>
+            </div>
+            <span class="text-xs text-zinc-400 hidden md:block">Recebimento do pedido</span>
+            <div class="demo-progress absolute bottom-0 left-0 right-0 h-0.5 bg-amber-400 transform origin-left transition-transform duration-300 scale-x-100"></div>
+          </button>
+
+          <!-- Step 2 Tab -->
+          <button
+            type="button"
+            class="demo-step-tab relative px-3 py-3.5 sm:px-4 text-center sm:text-left transition-colors flex flex-col justify-center gap-1 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 border-x border-white/[0.08]"
+            data-step="1"
+          >
+            <div class="flex items-center gap-2">
+              <span class="demo-step-num text-xs font-semibold text-zinc-400">Passo 2</span>
+              <span class="hidden sm:inline text-zinc-400 font-medium text-xs">IA Cruza Regras</span>
+            </div>
+            <span class="text-xs text-zinc-500 hidden md:block">Tabela interna da empresa</span>
+            <div class="demo-progress absolute bottom-0 left-0 right-0 h-0.5 bg-amber-400 transform origin-left transition-transform duration-300 scale-x-0"></div>
+          </button>
+
+          <!-- Step 3 Tab -->
+          <button
+            type="button"
+            class="demo-step-tab relative px-3 py-3.5 sm:px-4 text-center sm:text-left transition-colors flex flex-col justify-center gap-1 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+            data-step="2"
+          >
+            <div class="flex items-center gap-2">
+              <span class="demo-step-num text-xs font-semibold text-zinc-400">Passo 3</span>
+              <span class="hidden sm:inline text-zinc-400 font-medium text-xs">Orçamento Pronto</span>
+            </div>
+            <span class="text-xs text-zinc-500 hidden md:block">PDF timbrado em segundos</span>
+            <div class="demo-progress absolute bottom-0 left-0 right-0 h-0.5 bg-amber-400 transform origin-left transition-transform duration-300 scale-x-0"></div>
+          </button>
+        </div>
+
+        <!-- Dynamic Stages Viewport -->
+        <div class="p-5 sm:p-7 min-h-[290px] flex flex-col justify-center relative">
+
+          <!-- STAGE 1: ÁUDIO RECEBIDO DO WHATSAPP -->
+          <div class="demo-stage transition-opacity duration-300" data-stage="0">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/[0.06]">
+              <div class="flex items-center gap-2.5">
+                <div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">
+                  WA
+                </div>
+                <div>
+                  <div class="text-sm font-medium text-white">Cliente • Dr. Rodrigo (Clínica São Lucas)</div>
+                  <div class="text-xs text-zinc-400">Enviado hoje pelo WhatsApp</div>
+                </div>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+                Áudio de 42s
+              </span>
+            </div>
+
+            <!-- WhatsApp Audio Player Mockup -->
+            <div class="p-4 rounded-xl bg-black/60 border border-white/[0.08] flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-amber-400 text-black flex items-center justify-center shrink-0">
+                <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+
+              <!-- Animated Sound Waveform -->
+              <div class="flex-1 flex items-center gap-1 h-9 overflow-hidden">
+                <span class="waveform-bar h-3"></span>
+                <span class="waveform-bar h-5"></span>
+                <span class="waveform-bar h-7"></span>
+                <span class="waveform-bar h-4"></span>
+                <span class="waveform-bar h-8"></span>
+                <span class="waveform-bar h-6"></span>
+                <span class="waveform-bar h-3"></span>
+                <span class="waveform-bar h-7"></span>
+                <span class="waveform-bar h-5"></span>
+                <span class="waveform-bar h-8"></span>
+                <span class="waveform-bar h-6"></span>
+                <span class="waveform-bar h-4"></span>
+                <span class="waveform-bar h-7"></span>
+                <span class="waveform-bar h-5"></span>
+                <span class="waveform-bar h-3"></span>
+                <span class="waveform-bar h-6"></span>
+                <span class="waveform-bar h-8"></span>
+                <span class="waveform-bar h-5"></span>
+                <span class="waveform-bar h-4"></span>
+                <span class="waveform-bar h-7"></span>
+                <span class="waveform-bar h-3"></span>
+              </div>
+
+              <div class="text-xs font-mono text-zinc-400 shrink-0">
+                0:42
+              </div>
+            </div>
+
+            <!-- Transcription Preview -->
+            <div class="mt-3.5 p-3.5 rounded-lg bg-white/[0.03] border border-white/[0.06] text-xs text-zinc-300 leading-relaxed">
+              <span class="text-zinc-500 font-semibold block mb-1">Transcrição automática na MOB Box:</span>
+              "Oi, Osmar! Preciso fechar o projeto com 12 pontos de rede para os consultórios, o nobreak senoidal e a configuração da pasta segura. Consegue me mandar a proposta com os valores de tabela e o prazo de entrega?"
+            </div>
+          </div>
+
+          <!-- STAGE 2: IA PROCESSANDO (CRUZANDO COM TABELA INTERNA) -->
+          <div class="demo-stage hidden opacity-0 transition-opacity duration-300" data-stage="1">
+            <div class="flex items-center justify-between pb-3 mb-4 border-b border-white/[0.06]">
+              <div class="flex items-center gap-2">
+                <span class="w-2 h-2 rounded-full bg-amber-400 animate-pulse"></span>
+                <span class="text-sm font-medium text-white">MOB Box Processando</span>
+              </div>
+              <span class="text-xs text-zinc-400">Cruzamento de regras locais</span>
+            </div>
+
+            <!-- Matching Items from Internal Rules -->
+            <div class="space-y-2.5">
+              <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-between text-xs">
+                <div>
+                  <span class="text-zinc-400 font-mono text-xs block">Tabela_Servicos_2026.xlsx</span>
+                  <span class="text-zinc-200 font-medium">12x Ponto de Rede Cat6 Homologado (R$ 180/un)</span>
+                </div>
+                <span class="text-emerald-400 font-medium">Identificado</span>
+              </div>
+
+              <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-between text-xs">
+                <div>
+                  <span class="text-zinc-400 font-mono text-xs block">Politica_Comercial.pdf</span>
+                  <span class="text-zinc-200 font-medium">Desconto de 8% aplicado (pedidos acima de 10 pontos)</span>
+                </div>
+                <span class="text-emerald-400 font-medium">Regra aplicada</span>
+              </div>
+
+              <div class="p-3 rounded-lg bg-white/[0.03] border border-white/[0.06] flex items-center justify-between text-xs">
+                <div>
+                  <span class="text-zinc-400 font-mono text-xs block">Catalogo_Hardware.pdf</span>
+                  <span class="text-zinc-200 font-medium">Nobreak Senoidal 1200VA c/ engate rápido</span>
+                </div>
+                <span class="text-emerald-400 font-medium">Identificado</span>
+              </div>
+            </div>
+
+            <div class="mt-3.5 flex items-center gap-2 text-xs text-zinc-400">
+              <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+              <span>Processamento 100% no mini-servidor local. Nenhum dado transmitido para fora da empresa.</span>
+            </div>
+          </div>
+
+          <!-- STAGE 3: ORÇAMENTO TIMBRADO PRONTO EM PDF -->
+          <div class="demo-stage hidden opacity-0 transition-opacity duration-300" data-stage="2">
+            <div class="flex items-center justify-between pb-3 mb-3 border-b border-white/[0.06]">
+              <div>
+                <span class="text-xs text-zinc-400 font-medium">PROPOSTA COMERCIAL #1042</span>
+                <div class="text-sm font-semibold text-white">Clínica Médica São Lucas — Dr. Rodrigo</div>
+              </div>
+              <span class="text-xs px-2.5 py-1 rounded-full bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 font-medium">
+                PDF Gerado
+              </span>
+            </div>
+
+            <!-- PDF Invoice Mockup -->
+            <div class="p-3.5 rounded-lg bg-black/60 border border-white/[0.08] text-xs">
+              <div class="space-y-2 pb-3 border-b border-white/[0.06]">
+                <div class="flex justify-between text-zinc-300">
+                  <span>12x Ponto de Rede Estruturado Cat6 (c/ desc. 8%)</span>
+                  <span class="font-mono text-white">R$ 1.987,20</span>
+                </div>
+                <div class="flex justify-between text-zinc-300">
+                  <span>1x Nobreak Senoidal 1200VA com Engate</span>
+                  <span class="font-mono text-white">R$ 1.450,00</span>
+                </div>
+                <div class="flex justify-between text-zinc-300">
+                  <span>Instalação, Certificação & Pasta Segura</span>
+                  <span class="text-emerald-400 font-medium">Incluso</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-3">
+                <div>
+                  <span class="text-xs text-zinc-400 block">Condições: Entrada + 30/60 dias</span>
+                  <span class="text-sm text-zinc-300 font-medium">Prazo de execução: 48 horas</span>
+                </div>
+                <div class="text-right">
+                  <span class="text-xs text-zinc-400 block">Valor Total</span>
+                  <span class="text-base font-bold text-amber-400 font-mono">R$ 3.437,20</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-3.5 flex items-center justify-between text-xs text-zinc-400">
+              <span class="flex items-center gap-1.5">
+                <svg class="w-4 h-4 text-emerald-400 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                </svg>
+                PDF salvo na pasta da rede e pronto para envio
+              </span>
+              <span class="text-xs text-zinc-500 hidden sm:inline">Conferência humana em 1 clique</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Footer status bar of demo -->
+        <div class="px-5 py-3 border-t border-white/[0.06] bg-white/[0.01] flex items-center justify-between text-xs text-zinc-400">
+          <div class="flex items-center gap-2">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
+            <span>Fluxo automatizado pelo MOB CORE</span>
+          </div>
+          <span class="text-zinc-500 text-xs">Geração automática, sem digitação</span>
+        </div>
+      </div>
+    </div>
+
+</details>
+
+<style>
+  .waveform-bar {
+    width: 3px;
+    background-color: #fbbf24;
+    border-radius: 9999px;
+    display: inline-block;
+    animation: wavePulse 1.4s ease-in-out infinite;
+  }
+
+  .waveform-bar:nth-child(2n) {
+    animation-delay: 0.15s;
+  }
+  .waveform-bar:nth-child(3n) {
+    animation-delay: 0.3s;
+  }
+  .waveform-bar:nth-child(4n) {
+    animation-delay: 0.45s;
+  }
+  .waveform-bar:nth-child(5n) {
+    animation-delay: 0.6s;
+  }
+
+  @keyframes wavePulse {
+    0%, 100% {
+      transform: scaleY(0.4);
+      opacity: 0.6;
+    }
+    50% {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .waveform-bar {
+      animation: none !important;
+      transform: scaleY(0.7) !important;
+      opacity: 0.8 !important;
+    }
+  }
+</style>
+
+<script>
+  const buttons = document.querySelectorAll<HTMLButtonElement>(".demo-step-tab");
+  const stages = document.querySelectorAll<HTMLElement>(".demo-stage");
+  function selectStage(index: number) {
+    buttons.forEach((button, i) => {
+      const selected = i === index;
+      button.setAttribute("aria-pressed", String(selected));
+      button.querySelector<HTMLElement>(".demo-progress")?.style.setProperty("transform", selected ? "scaleX(1)" : "scaleX(0)");
+      button.querySelector(".demo-step-num")?.classList.toggle("text-amber-400", selected);
+      button.querySelector(".demo-step-num")?.classList.toggle("text-zinc-400", !selected);
+    });
+    stages.forEach((stage, i) => {
+      stage.classList.toggle("hidden", i !== index);
+      stage.classList.toggle("opacity-0", i !== index);
+    });
+  }
+  buttons.forEach((button, index) => button.addEventListener("click", () => selectStage(index)));
+  selectStage(0);
+</script>

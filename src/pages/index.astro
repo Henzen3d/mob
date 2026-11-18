@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
+import ExemploOrcamento from '../components/ExemploOrcamento.astro';
 import AuroraHero from '../components/AuroraHero.astro';
 import Footer from '../components/Footer.astro';
 
@@ -18,10 +19,10 @@ const faqSchema = {
     },
     {
       "@type": "Question",
-      name: "A inteligência artificial erra ou alucina?",
+      name: "Como a equipe confere as respostas da IA?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Nenhum modelo de inteligência artificial é 100% infalível. Por isso nossa calibração exige indicação exata de onde o sistema tirou cada valor ou regra na sua tabela, sempre com conferência humana simples antes de enviar qualquer orçamento ao cliente.",
+        text: "No piloto, a equipe confere as respostas com os documentos de origem e registra os erros. Quem responde pelo trabalho aprova os resultados antes de usá-los.",
       },
     },
     {
@@ -53,15 +54,15 @@ const faqSchema = {
       name: "Em quanto tempo vejo resultado?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "O primeiro resultado aparece já na demonstração, vendo um áudio virar orçamento na sua frente. Para o uso diário completo com suas regras, tabela de preços e treinamento, entregamos tudo pronto em até 72 horas.",
+        text: "Combinamos uma medida antes do piloto e verificamos o resultado após a equipe usar a solução em casos reais. O prazo depende da tarefa e do volume de trabalho.",
       },
     },
     {
       "@type": "Question",
-      name: "Como funciona a demonstração presencial de 15 minutos?",
+      name: "Como é a primeira conversa?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Agendamos um horário conveniente e demonstramos ao vivo um áudio do WhatsApp virando orçamento timbrado e a leitura de um contrato com os itens da sua rotina — presencialmente em Blumenau e região ou ao vivo online para todo o Brasil.",
+        text: "Você conversa com Osmar sobre uma tarefa que pesa na rotina. A partir de um exemplo, avaliamos se vale testar IA. O atendimento é presencial em Blumenau e região ou online para todo o Brasil.",
       },
     },
   ],
@@ -69,8 +70,8 @@ const faqSchema = {
 ---
 
 <Layout
-  title="MOB | Inteligência Artificial para Empresas"
-  description="Implantação prática de Inteligência Artificial para empresas em todo o Brasil. Transforme áudios em orçamentos, analise contratos e consulte regras internas com privacidade LGPD."
+  title="Implantação de IA para empresas, uma tarefa por vez | MOB"
+  description="A MOB identifica com sua equipe onde a IA pode ajudar, implanta um primeiro piloto e mede o resultado. Presencial em Blumenau e região e online em todo o Brasil."
   jsonLd={faqSchema}
 >
   <Navbar currentPage="home" />
@@ -78,116 +79,54 @@ const faqSchema = {
   <main class="bg-[#050507] text-white selection:bg-amber-400 selection:text-black">
     <AuroraHero />
 
-    <section id="como-funciona" class="relative py-20 md:py-28 px-4 bg-[#050507] border-t border-white/[0.1] scroll-mt-24">
+    <section id="como-funciona" class="scroll-mt-20 bg-stone-100 text-zinc-950 px-6 py-16 md:py-24">
       <div class="max-w-6xl mx-auto">
-        <div id="mob-box" class="max-w-2xl mb-14 md:mb-16 scroll-mt-28">
-          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight text-balance">
-            O que você leva para a sua empresa
-          </h2>
-          <p class="mt-4 text-zinc-300 text-base md:text-lg leading-relaxed text-pretty">
-            Três ferramentas práticas instaladas na sua operação, calibradas com as regras e tabelas do seu negócio desde o primeiro dia.
-          </p>
+        <h2 class="max-w-2xl text-3xl sm:text-5xl font-semibold tracking-tight">Por onde começar?</h2>
+        <ol id="como-comeca" class="mt-10 grid md:grid-cols-3 gap-8 md:gap-12 scroll-mt-24">
+          <li class="border-t border-stone-400 pt-5">
+            <h3 class="text-xl font-semibold">1. Entender o trabalho</h3>
+            <p class="mt-3 leading-relaxed text-stone-700">Você e sua equipe mostram onde há espera, repetição ou erros. Comparamos a frequência, o esforço e os dados disponíveis para escolher uma tarefa que valha o investimento.</p>
+          </li>
+          <li class="border-t border-stone-400 pt-5">
+            <h3 class="text-xl font-semibold">2. Testar em uma tarefa</h3>
+            <p class="mt-3 leading-relaxed text-stone-700">Registramos como ela é feita hoje. A MOB configura a solução com exemplos da sua empresa e acompanha quem vai usá-la no dia a dia.</p>
+          </li>
+          <li class="border-t border-stone-400 pt-5">
+            <h3 class="text-xl font-semibold">3. Decidir com os resultados</h3>
+            <p class="mt-3 leading-relaxed text-stone-700">Comparamos tempo, correções e qualidade com o ponto de partida. Se compensou, escolhemos a próxima rotina. Se ficou aquém, ajustamos ou encerramos o teste.</p>
+          </li>
+        </ol>
+        <a class="inline-block mt-8 underline underline-offset-4" href="/blog/como-implementar-ia-na-minha-empresa/">Leia o guia para escolher seu primeiro projeto de IA</a>
+      </div>
+    </section>
+
+    <section class="px-6 py-16 md:py-24">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl sm:text-5xl font-semibold tracking-tight">Onde a sua equipe perde tempo?</h2>
+        <div class="mt-10 grid md:grid-cols-3 gap-8 md:gap-12">
+          <div><h3 class="text-xl font-semibold">“Sempre me perguntam a mesma coisa.”</h3>
+            <p class="mt-3 text-zinc-300 leading-relaxed">A equipe consulta a regra de troca e recebe o trecho do manual que sustenta a resposta.</p></div>
+          <div><h3 class="text-xl font-semibold">“Preciso abrir cada contrato para achar um prazo.”</h3>
+            <p class="mt-3 text-zinc-300 leading-relaxed">A IA reúne as datas e indica as cláusulas para a pessoa responsável conferir.</p></div>
+          <div><h3 class="text-xl font-semibold">“Passo o fim do dia montando propostas.”</h3>
+            <p class="mt-3 text-zinc-300 leading-relaxed">Um pedido recebido por áudio vira um rascunho com os itens da tabela para o vendedor revisar.</p></div>
         </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          <div class="p-8 rounded-2xl bg-[#14161f] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] hover:border-white/25 transition-all flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-3">Consultor Interno</h3>
-              <p class="text-base text-zinc-300 leading-relaxed">
-                Consulta tabelas de preços, políticas comerciais e regras internas da sua empresa com indicação exata de onde tirou cada resposta.
-              </p>
-            </div>
-          </div>
-
-          <div class="p-8 rounded-2xl bg-[#14161f] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] hover:border-white/25 transition-all flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-3">Redator de Propostas</h3>
-              <p class="text-base text-zinc-300 leading-relaxed">
-                Transforma áudios do WhatsApp e pedidos de clientes em propostas comerciais e orçamentos timbrados em PDF com valores calculados.
-              </p>
-            </div>
-          </div>
-
-          <div class="p-8 rounded-2xl bg-[#14161f] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] hover:border-white/25 transition-all flex flex-col justify-between">
-            <div>
-              <div class="w-12 h-12 rounded-xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </div>
-              <h3 class="text-xl font-bold text-white mb-3">Analista de Documentos</h3>
-              <p class="text-base text-zinc-300 leading-relaxed">
-                Leitura e resumo ágil de contratos extensos, termos e planilhas, apontando pontos de atenção e divergências com precisão.
-              </p>
-            </div>
-          </div>
+        <ExemploOrcamento />
+        <div class="mt-10 border-t border-white/15 pt-6 flex flex-wrap gap-x-8 gap-y-4 text-amber-300 underline underline-offset-4">
+          <a href="/blog/como-a-ia-pode-ajudar-o-meu-negocio/">Explore sete rotinas que podem usar IA</a>
+          <a href="/blog/">Ver todos os guias do blog</a>
         </div>
       </div>
     </section>
 
-    <section id="como-comeca" class="relative py-20 md:py-28 px-4 bg-[#0e1017] border-y border-white/[0.1]">
-      <div class="max-w-6xl mx-auto">
-        <div class="max-w-2xl mb-16">
-          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight text-balance">
-            Como começa a implantação
-          </h2>
-          <p class="mt-3 text-zinc-300 text-base md:text-lg leading-relaxed text-pretty">
-            Sem reformas, sem troca de softwares e sem interromper o trabalho da sua equipe por um único minuto.
-          </p>
-        </div>
-
-        <div class="relative">
-          <div class="absolute hidden md:block left-6 right-6 top-6 h-px bg-white/15" aria-hidden="true">
-            <div id="timeline-progress" class="absolute inset-0 origin-left scale-x-0 motion-reduce:scale-x-100 bg-amber-400 transition-transform duration-1000 ease-out"></div>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 relative">
-            <div class="flex md:flex-col items-start gap-4 md:gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-full bg-[#181b26] border-2 border-amber-400 text-amber-300 flex items-center justify-center text-base font-bold shadow-md">1</div>
-              <div class="text-left">
-                <h3 class="text-xl font-bold text-white mb-1.5 text-balance">Demonstração de 15 minutos</h3>
-                <p class="text-base text-zinc-300 leading-relaxed">Levamos a maleta até o seu escritório, ligamos na tomada da sua sala e mostramos um áudio virando orçamento na sua frente.</p>
-              </div>
-            </div>
-
-            <div class="flex md:flex-col items-start gap-4 md:gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-full bg-[#181b26] border-2 border-amber-400 text-amber-300 flex items-center justify-center text-base font-bold shadow-md">2</div>
-              <div class="text-left">
-                <h3 class="text-xl font-bold text-white mb-1.5 text-balance">Preparamos em 48 a 72 horas</h3>
-                <p class="text-base text-zinc-300 leading-relaxed">Montamos e calibramos o sistema com as tabelas de preços, regras comerciais e modelos oficiais de propostas da sua empresa.</p>
-              </div>
-            </div>
-
-            <div class="flex md:flex-col items-start gap-4 md:gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-full bg-[#181b26] border-2 border-amber-400 text-amber-300 flex items-center justify-center text-base font-bold shadow-md">3</div>
-              <div class="text-left">
-                <h3 class="text-xl font-bold text-white mb-1.5 text-balance">Instalamos e treinamos no mesmo dia</h3>
-                <p class="text-base text-zinc-300 leading-relaxed">Plugamos na sua rede, compartilhamos a pasta no Windows de todos os computadores e realizamos o treinamento prático com a equipe.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="relative py-20 md:py-28 px-4 bg-[#050507]">
+    <section id="simulador" class="scroll-mt-24 relative py-20 md:py-28 px-4 bg-[#050507] border-t border-white/10">
       <div class="max-w-6xl mx-auto">
         <div class="max-w-2xl mb-12">
           <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight text-balance">
-            Quanto custa e retorno do investimento
+            Quanto vale o tempo gasto nessa tarefa?
           </h2>
           <p class="mt-3 text-zinc-300 text-base md:text-lg leading-relaxed text-pretty">
-            Simule o impacto na rotina da sua equipe. Calcule quantas horas de retrabalho são eliminadas no mês e a economia financeira correspondente.
+            Escolha uma tarefa. Estime quantas vezes ela acontece e quantos minutos poderiam ser poupados em cada execução, já contando a revisão. Depois, confira essa hipótese no piloto.
           </p>
         </div>
 
@@ -195,7 +134,7 @@ const faqSchema = {
           <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#14161f] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] flex flex-col justify-center gap-8">
             <div>
               <div class="flex items-center justify-between mb-3">
-                <label for="slider-quotes" class="text-sm font-semibold text-white">Orçamentos e propostas por mês</label>
+                <label for="slider-quotes" class="text-sm font-semibold text-white">Execuções da tarefa por mês</label>
                 <span id="label-quotes" class="text-sm font-mono font-bold text-amber-300 bg-amber-400/15 px-2.5 py-1 rounded-md border border-amber-400/30 tabular-nums">80 / mês</span>
               </div>
               <input
@@ -216,20 +155,20 @@ const faqSchema = {
 
             <div>
               <div class="flex items-center justify-between mb-3">
-                <label for="slider-minutes" class="text-sm font-semibold text-white">Tempo médio por proposta hoje</label>
-                <span id="label-minutes" class="text-sm font-mono font-bold text-amber-300 bg-amber-400/15 px-2.5 py-1 rounded-md border border-amber-400/30 tabular-nums">45 minutos</span>
+                <label for="slider-minutes" class="text-sm font-semibold text-white">Minutos que poderiam ser poupados por execução</label>
+                <span id="label-minutes" class="text-sm font-mono font-bold text-amber-300 bg-amber-400/15 px-2.5 py-1 rounded-md border border-amber-400/30 tabular-nums">30 minutos</span>
               </div>
               <input
                 id="slider-minutes"
                 type="range"
-                min="15"
+                min="0"
                 max="120"
                 step="5"
-                value="45"
+                value="30"
                 class="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               />
               <div class="flex justify-between text-xs text-zinc-400 font-mono mt-1.5 tabular-nums">
-                <span>15 min</span>
+                <span>0 min</span>
                 <span>60 min</span>
                 <span>120 min</span>
               </div>
@@ -265,28 +204,28 @@ const faqSchema = {
 
               <div class="space-y-6">
                 <div>
-                  <div class="text-xs text-zinc-300 mb-1">Horas de trabalho manual recuperadas:</div>
+                  <div class="text-xs text-zinc-300 mb-1">Horas que poderiam ser liberadas</div>
                   <div class="flex items-baseline gap-2">
-                    <span id="stat-hours" class="text-4xl sm:text-5xl font-extrabold text-white font-mono tracking-tight tabular-nums">45</span>
+                    <span id="stat-hours" class="text-4xl sm:text-5xl font-extrabold text-white font-mono tracking-tight tabular-nums">40</span>
                     <span class="text-sm text-zinc-300">horas / mês</span>
                   </div>
                 </div>
 
                 <div>
-                  <div class="text-xs text-zinc-300 mb-1">Economia mensal em tempo operacional:</div>
+                  <div class="text-xs text-zinc-300 mb-1">Valor estimado desse tempo</div>
                   <div class="flex items-baseline gap-2">
-                    <span id="stat-money" class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono tracking-tight tabular-nums">R$ 2.250</span>
+                    <span id="stat-money" class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono tracking-tight tabular-nums">R$ 2.000</span>
                     <span class="text-sm text-zinc-300">/ mês</span>
                   </div>
                 </div>
 
                 <div class="pt-6 border-t border-white/[0.1]">
-                  <div class="text-xs text-zinc-300 mb-1">Resultado líquido frente à mensalidade (R$ 990/mês):</div>
+                  <div class="text-xs text-zinc-300 mb-1">Valor do tempo menos a mensalidade de referência (R$ 990)</div>
                   <div id="stat-net" class="text-xl sm:text-2xl font-bold font-mono text-emerald-300 tabular-nums">
-                    + R$ 1.260 / mês de retorno
+                    + R$ 1.010 / mês
                   </div>
                   <p id="stat-summary" class="text-xs text-zinc-300 mt-2 leading-relaxed">
-                    A economia gerada cobre a mensalidade em aproximadamente 14 dias de operação comercial.
+                    A estimativa considera apenas o tempo e a mensalidade. A implantação inicial é cobrada à parte.
                   </p>
                 </div>
               </div>
@@ -295,12 +234,12 @@ const faqSchema = {
             <div class="mt-8 pt-6 border-t border-white/[0.1]">
               <a
                 id="roi-whatsapp-link"
-                href="https://wa.me/5547988131910?text=Ol%C3%A1!%20Fiz%20uma%20simula%C3%A7%C3%A3o%20na%20calculadora%20de%20ROI%20do%20site%20(80%20or%C3%A7amentos%20de%2045min)%20e%20gostaria%20de%20conversar."
+                href="https://wa.me/5547988131910?text=Ol%C3%A1%2C%20Osmar%21%20Gostaria%20de%20conversar%20sobre%20uma%20tarefa%20da%20minha%20empresa%20e%20avaliar%20por%20onde%20come%C3%A7ar%20com%20IA."
                 target="_blank"
                 rel="noopener noreferrer"
                 class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white text-black font-semibold text-sm hover:bg-zinc-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               >
-                Agendar Demonstração com Esse Cenário
+                Conversar sobre esta estimativa
               </a>
             </div>
           </div>
@@ -320,16 +259,13 @@ const faqSchema = {
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
-          <div class="relative p-8 rounded-2xl bg-[#1a1d2a] border-2 border-amber-400/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_22px_50px_-24px_rgba(0,0,0,0.9)] flex flex-col justify-between">
-            <div class="absolute -top-3.5 left-8 px-3 py-1 rounded-full bg-amber-400 text-black text-xs font-semibold">
-              Recomendado
-            </div>
+          <div class="relative p-8 rounded-2xl bg-[#1a1d2a] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_22px_50px_-24px_rgba(0,0,0,0.9)] flex flex-col justify-between">
 
             <div>
               <div class="text-sm text-amber-300 font-medium mb-2">
                 Servidor físico na sua empresa
               </div>
-              <h3 class="text-2xl font-bold text-white mb-2">MOB Box Compact</h3>
+              <h3 id="mob-box" class="scroll-mt-24 text-2xl font-bold text-white mb-2">MOB Box Compact</h3>
               <p class="text-sm text-zinc-300 mb-6 leading-relaxed">
                 O mini-servidor físico é propriedade da sua empresa. Seus arquivos e propostas ficam gravados no seu escritório.
               </p>
@@ -478,7 +414,7 @@ const faqSchema = {
 
           <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
             <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
-              <span>A inteligência artificial erra ou alucina?</span>
+              <span>Como a equipe confere as respostas da IA?</span>
               <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
                 <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -486,7 +422,7 @@ const faqSchema = {
               </span>
             </summary>
             <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
-              Nenhum modelo de inteligência artificial é 100% infalível. Por essa razão, nossa calibração aplica regras estritas: o sistema sempre indica a citação exata de onde tirou cada valor ou regra na sua tabela. Além disso, antes de enviar qualquer orçamento ao cliente, a sua equipe faz uma conferência humana simples de conferir e aprovar.
+              No piloto, a equipe confere as respostas com os documentos de origem e registra os erros. Quem responde pelo trabalho aprova os resultados antes de usá-los.
             </div>
           </details>
 
@@ -542,13 +478,13 @@ const faqSchema = {
               </span>
             </summary>
             <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
-              O primeiro resultado já aparece na demonstração: você vê um áudio virar orçamento na sua frente. Para o uso diário completo (calibração das suas regras, tabela de preços, treinamento), entregamos tudo pronto em até 72 horas — com treinamento prático de cerca de 2h30.
+              Combinamos uma medida antes do piloto e verificamos o resultado após a equipe usar a solução em casos reais. O prazo depende da tarefa e do volume de trabalho.
             </div>
           </details>
 
           <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
             <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
-              <span>Como funciona a demonstração presencial de 15 minutos?</span>
+              <span>Como é a primeira conversa?</span>
               <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
                 <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
@@ -556,7 +492,7 @@ const faqSchema = {
               </span>
             </summary>
             <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
-              Agendamos um horário na sua conveniência e vamos até seu escritório em Blumenau e região com a maleta de demonstração — ou fazemos ao vivo online para qualquer cidade do Brasil. Demonstramos um áudio do WhatsApp virando orçamento timbrado e a leitura de um contrato com os itens da sua rotina, sem custo e sem compromisso.
+              Você conversa com Osmar sobre uma tarefa que pesa na rotina. A partir de um exemplo, avaliamos se vale testar IA. O atendimento é presencial em Blumenau e região ou online para todo o Brasil.
             </div>
           </details>
         </div>
@@ -569,14 +505,14 @@ const faqSchema = {
             </div>
 
             <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight text-balance">
-              Pronto para colocar IA funcionando na sua empresa?
+              Qual tarefa você gostaria de resolver primeiro?
             </h3>
             <p class="text-base text-zinc-300 mb-8 leading-relaxed">
-              Fale diretamente com Osmar Henzen no WhatsApp e agende uma demonstração prática de 15 minutos — presencial em Blumenau e região ou online para todo o Brasil.
+              Conte ao Osmar o que acontece hoje e quem faz o trabalho. O atendimento é <a href="/implantacao-ia-blumenau/" class="underline underline-offset-4 hover:text-white">presencial em Blumenau e região</a> ou online em todo o Brasil.
             </p>
 
             <a
-              href="https://wa.me/5547988131910?text=Ol%C3%A1%20Osmar!%20Acessei%20o%20site%20mob.tec.br%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20de%2015%20minutos%20na%20minha%20empresa."
+              href="https://wa.me/5547988131910?text=Ol%C3%A1%2C%20Osmar%21%20Gostaria%20de%20conversar%20sobre%20uma%20tarefa%20da%20minha%20empresa%20e%20avaliar%20por%20onde%20come%C3%A7ar%20com%20IA."
               target="_blank"
               rel="noopener noreferrer"
               class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold bg-amber-400 text-black hover:bg-amber-300 transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
@@ -611,7 +547,6 @@ const faqSchema = {
       const statHours = document.getElementById('stat-hours');
       const statMoney = document.getElementById('stat-money');
       const statNet = document.getElementById('stat-net');
-      const statSummary = document.getElementById('stat-summary');
       const whatsappLink = document.getElementById('roi-whatsapp-link');
 
       if (!sliderQuotes || !sliderMinutes || !sliderRate) return;
@@ -633,32 +568,24 @@ const faqSchema = {
         labelMinutes.textContent = `${minutes} minutos`;
         labelRate.textContent = `R$ ${rate} / hora`;
 
-        const totalHoursPerMonth = (quotes * minutes) / 60;
-        const hoursSaved = Math.max(1, Math.round(totalHoursPerMonth * 0.75));
+        const hoursSaved = (quotes * minutes) / 60;
         const grossSavings = Math.round(hoursSaved * rate);
         const monthlyFee = 990;
         const netSavings = grossSavings - monthlyFee;
 
-        statHours.textContent = hoursSaved;
+        const hoursLabel = hoursSaved.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+        statHours.textContent = hoursLabel;
         statMoney.textContent = formatBRL(grossSavings);
 
         if (netSavings >= 0) {
           statNet.className = 'text-xl sm:text-2xl font-bold font-mono text-emerald-300 tabular-nums';
-          statNet.textContent = `+ ${formatBRL(netSavings)} / mês de retorno líquido`;
+          statNet.textContent = `+ ${formatBRL(netSavings)} / mês`;
         } else {
           statNet.className = 'text-xl sm:text-2xl font-bold font-mono text-amber-300 tabular-nums';
-          statNet.textContent = `${formatBRL(netSavings)} / mês frente ao custo base`;
+          statNet.textContent = `${formatBRL(netSavings)} / mês`;
         }
 
-        const daysToBreakeven = grossSavings > 0
-          ? Math.min(30, Math.max(1, Math.round(monthlyFee / (grossSavings / 30))))
-          : 30;
-
-        statSummary.textContent = netSavings >= 0
-          ? `A economia gerada cobre a mensalidade em aproximadamente ${daysToBreakeven} dias de operação comercial.`
-          : 'Cenário inicial com baixo volume; ganho principal em agilidade de resposta ao cliente.';
-
-        const message = `Olá! Fiz uma simulação na calculadora de ROI do site (${quotes} propostas/mês, ${minutes}min cada a R$ ${rate}/h) gerando economia estimada de ${hoursSaved}h/mês e gostaria de agendar uma demonstração.`;
+        const message = `Olá, Osmar! Simulei uma tarefa com ${quotes} execuções/mês e uma possível redução de ${minutes} minutos por execução (${hoursLabel} h/mês). Quero avaliar essa hipótese.`;
         whatsappLink.href = `https://wa.me/5547988131910?text=${encodeURIComponent(message)}`;
       }
 
@@ -670,25 +597,4 @@ const faqSchema = {
     })();
   </script>
 
-  <script is:inline>
-    (function initTimeline() {
-      const el = document.getElementById('timeline-progress');
-      if (!el) return;
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        el.style.transform = 'scaleX(1)';
-        return;
-      }
-      const section = document.getElementById('como-comeca');
-      if (!section) return;
-      const obs = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            el.style.transform = 'scaleX(1)';
-            obs.disconnect();
-          }
-        });
-      }, { threshold: 0.35 });
-      obs.observe(section);
-    })();
-  </script>
 </Layout>

@@ -1,0 +1,32 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+
+const message = encodeURIComponent('Olá, Osmar! Quero conversar sobre uma implantação de IA em Blumenau e região. A tarefa que temos em mente é ');
+---
+
+<Layout title="Implantação de inteligência artificial em Blumenau | MOB"
+  description="Implantação presencial de IA em Blumenau e no Vale do Itajaí. Mostre uma tarefa ao Osmar, avalie o retorno e teste com sua equipe antes de ampliar.">
+  <Navbar currentPage="blumenau" />
+  <main class="bg-stone-100 text-zinc-950 px-6 pt-32 pb-20">
+    <div class="max-w-3xl mx-auto">
+      <h1 class="max-w-2xl text-4xl sm:text-6xl tracking-tight font-semibold leading-tight">Implantação de IA em Blumenau e região</h1>
+      <p class="mt-6 max-w-2xl text-lg leading-relaxed text-stone-700">Osmar Henzen, da MOB, acompanha sua equipe no local de trabalho para entender onde ela perde tempo. Você pode começar a conversa com um pedido, uma planilha ou uma pergunta que volta à sua mesa toda semana.</p>
+      <a class="inline-block mt-7 px-6 py-3 rounded-full bg-zinc-950 text-white font-semibold hover:bg-zinc-700" href={'https://wa.me/5547988131910?text=' + message}>Conversar com Osmar no WhatsApp</a>
+      <section class="mt-14 border-t border-stone-300 pt-8">
+        <h2 class="text-2xl font-semibold tracking-tight">O que mostrar na primeira conversa?</h2>
+        <p class="mt-3 leading-relaxed text-stone-700">Escolha uma ocorrência recente. Quem recebeu o pedido? Onde procurou as informações? Em qual etapa precisou esperar ou refazer algo? Uma descrição simples já permite conversar. Documentos confidenciais podem ficar para uma avaliação com os acessos combinados.</p>
+      </section>
+      <section class="mt-10">
+        <h2 class="text-2xl font-semibold tracking-tight">O que fica definido para o primeiro teste?</h2>
+        <p class="mt-3 leading-relaxed text-stone-700">A MOB e a pessoa que executa a tarefa delimitam o que será testado, os dados necessários e um critério para decidir se vale continuar. Com o escopo acordado, configuramos a solução, orientamos a equipe e comparamos o resultado com o processo anterior.</p>
+      </section>
+      <div class="mt-10 pt-6 border-t border-stone-300 flex flex-wrap gap-5 underline underline-offset-4">
+        <a href="/blog/quanto-custa-implantar-ia-na-empresa/">Entender os custos de implantação</a>
+        <a href="/blog/">Consultar os guias da MOB</a>
+      </div>
+    </div>
+  </main>
+  <Footer />
+</Layout>

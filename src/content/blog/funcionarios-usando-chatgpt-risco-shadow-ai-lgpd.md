@@ -65,4 +65,4 @@ Na MOB, atendemos dois perfis de exigência de segurança, ambos sem cobrança e
 
 Quando você substitui o uso improvisado em contas pessoais por um ambiente privado da empresa, ganha dos dois lados: **fecha a brecha de segurança na LGPD** e **multiplica o resultado da equipe**, já que os assistentes passam a trabalhar com os documentos oficiais da casa e não com respostas genéricas.
 
-Quer ver como estruturar isso de forma simples na sua empresa? Confira nosso guia de [como implementar IA na minha empresa em 4 passos](/blog/como-implementar-ia-na-minha-empresa) ou entenda [por que 95% dos projetos de IA falham segundo o MIT](/blog/por-que-95-por-cento-dos-projetos-de-ia-falham-estudo-mit).
+Quer ver como estruturar isso de forma simples na sua empresa? Confira nosso guia de [como implementar IA na minha empresa em 4 passos](/blog/como-implementar-ia-na-minha-empresa) ou entenda [o que o Project NANDA observou sobre começar por uma tarefa](/blog/por-que-95-por-cento-dos-projetos-de-ia-falham-estudo-mit).
