@@ -75,103 +75,104 @@ const faqSchema = {
 >
   <Navbar currentPage="home" />
 
-  <main class="bg-[#F4F3EE] text-zinc-900 selection:bg-amber-400 selection:text-black">
+  <main class="bg-[#050507] text-white selection:bg-amber-400 selection:text-black">
     <AuroraHero />
 
-    <section id="como-funciona" class="relative py-20 md:py-28 px-4 max-w-6xl mx-auto border-t border-zinc-200 scroll-mt-24">
-
-      <div id="mob-box" class="max-w-2xl mb-14 md:mb-16 scroll-mt-28">
-        <h2 class="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight leading-tight text-balance">
-          O que você leva para a sua empresa
-        </h2>
-        <p class="mt-4 text-zinc-600 text-base md:text-lg leading-relaxed text-pretty">
-          Três ferramentas práticas instaladas na sua operação, calibradas com as regras e tabelas do seu negócio desde o primeiro dia.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        <div class="p-8 rounded-2xl bg-white border border-zinc-200 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_10px_28px_-14px_rgba(16,24,40,0.12)] hover:border-zinc-300 transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-700 mb-6">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold text-zinc-900 mb-3">Consultor Interno</h3>
-            <p class="text-base text-zinc-600 leading-relaxed">
-              Consulta tabelas de preços, políticas comerciais e regras internas da sua empresa com indicação exata de onde tirou cada resposta.
-            </p>
-          </div>
+    <section id="como-funciona" class="relative py-20 md:py-28 px-4 bg-[#050507] border-t border-white/[0.1] scroll-mt-24">
+      <div class="max-w-6xl mx-auto">
+        <div id="mob-box" class="max-w-2xl mb-14 md:mb-16 scroll-mt-28">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight text-balance">
+            O que você leva para a sua empresa
+          </h2>
+          <p class="mt-4 text-zinc-300 text-base md:text-lg leading-relaxed text-pretty">
+            Três ferramentas práticas instaladas na sua operação, calibradas com as regras e tabelas do seu negócio desde o primeiro dia.
+          </p>
         </div>
 
-        <div class="p-8 rounded-2xl bg-white border border-zinc-200 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_10px_28px_-14px_rgba(16,24,40,0.12)] hover:border-zinc-300 transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-700 mb-6">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-              </svg>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          <div class="p-8 rounded-2xl bg-[#14161f] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] hover:border-white/25 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Consultor Interno</h3>
+              <p class="text-base text-zinc-300 leading-relaxed">
+                Consulta tabelas de preços, políticas comerciais e regras internas da sua empresa com indicação exata de onde tirou cada resposta.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-zinc-900 mb-3">Redator de Propostas</h3>
-            <p class="text-base text-zinc-600 leading-relaxed">
-              Transforma áudios do WhatsApp e pedidos de clientes em propostas comerciais e orçamentos timbrados em PDF com valores calculados.
-            </p>
           </div>
-        </div>
 
-        <div class="p-8 rounded-2xl bg-white border border-zinc-200 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_10px_28px_-14px_rgba(16,24,40,0.12)] hover:border-zinc-300 transition-all flex flex-col justify-between">
-          <div>
-            <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-700 mb-6">
-              <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
+          <div class="p-8 rounded-2xl bg-[#14161f] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] hover:border-white/25 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Redator de Propostas</h3>
+              <p class="text-base text-zinc-300 leading-relaxed">
+                Transforma áudios do WhatsApp e pedidos de clientes em propostas comerciais e orçamentos timbrados em PDF com valores calculados.
+              </p>
             </div>
-            <h3 class="text-xl font-bold text-zinc-900 mb-3">Analista de Documentos</h3>
-            <p class="text-base text-zinc-600 leading-relaxed">
-              Leitura e resumo ágil de contratos extensos, termos e planilhas, apontando pontos de atenção e divergências com precisão.
-            </p>
+          </div>
+
+          <div class="p-8 rounded-2xl bg-[#14161f] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] hover:border-white/25 transition-all flex flex-col justify-between">
+            <div>
+              <div class="w-12 h-12 rounded-xl bg-amber-400/15 border border-amber-400/30 flex items-center justify-center text-amber-400 mb-6">
+                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+              </div>
+              <h3 class="text-xl font-bold text-white mb-3">Analista de Documentos</h3>
+              <p class="text-base text-zinc-300 leading-relaxed">
+                Leitura e resumo ágil de contratos extensos, termos e planilhas, apontando pontos de atenção e divergências com precisão.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="como-comeca" class="relative py-20 md:py-28 px-4 bg-white border-t border-zinc-200">
+    <section id="como-comeca" class="relative py-20 md:py-28 px-4 bg-[#0e1017] border-y border-white/[0.1]">
       <div class="max-w-6xl mx-auto">
         <div class="max-w-2xl mb-16">
-          <h2 class="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight leading-tight text-balance">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight text-balance">
             Como começa a implantação
           </h2>
-          <p class="mt-3 text-zinc-600 text-base md:text-lg leading-relaxed text-pretty">
+          <p class="mt-3 text-zinc-300 text-base md:text-lg leading-relaxed text-pretty">
             Sem reformas, sem troca de softwares e sem interromper o trabalho da sua equipe por um único minuto.
           </p>
         </div>
 
         <div class="relative">
-          <div class="absolute hidden md:block left-6 right-6 top-6 h-px bg-zinc-300" aria-hidden="true">
-            <div id="timeline-progress" class="absolute inset-0 origin-left scale-x-0 motion-reduce:scale-x-100 bg-amber-500 transition-transform duration-1000 ease-out"></div>
+          <div class="absolute hidden md:block left-6 right-6 top-6 h-px bg-white/15" aria-hidden="true">
+            <div id="timeline-progress" class="absolute inset-0 origin-left scale-x-0 motion-reduce:scale-x-100 bg-amber-400 transition-transform duration-1000 ease-out"></div>
           </div>
 
           <div class="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 relative">
             <div class="flex md:flex-col items-start gap-4 md:gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-full bg-white border-2 border-amber-400/70 text-amber-600 flex items-center justify-center text-base font-bold">1</div>
+              <div class="w-12 h-12 shrink-0 rounded-full bg-[#181b26] border-2 border-amber-400 text-amber-300 flex items-center justify-center text-base font-bold shadow-md">1</div>
               <div class="text-left">
-                <h3 class="text-xl font-bold text-zinc-900 mb-1.5 text-balance">Demonstração de 15 minutos</h3>
-                <p class="text-base text-zinc-600 leading-relaxed">Levamos a maleta até o seu escritório, ligamos na tomada da sua sala e mostramos um áudio virando orçamento na sua frente.</p>
+                <h3 class="text-xl font-bold text-white mb-1.5 text-balance">Demonstração de 15 minutos</h3>
+                <p class="text-base text-zinc-300 leading-relaxed">Levamos a maleta até o seu escritório, ligamos na tomada da sua sala e mostramos um áudio virando orçamento na sua frente.</p>
               </div>
             </div>
 
             <div class="flex md:flex-col items-start gap-4 md:gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-full bg-white border-2 border-amber-400/70 text-amber-600 flex items-center justify-center text-base font-bold">2</div>
+              <div class="w-12 h-12 shrink-0 rounded-full bg-[#181b26] border-2 border-amber-400 text-amber-300 flex items-center justify-center text-base font-bold shadow-md">2</div>
               <div class="text-left">
-                <h3 class="text-xl font-bold text-zinc-900 mb-1.5 text-balance">Preparamos em 48 a 72 horas</h3>
-                <p class="text-base text-zinc-600 leading-relaxed">Montamos e calibramos o sistema com as tabelas de preços, regras comerciais e modelos oficiais de propostas da sua empresa.</p>
+                <h3 class="text-xl font-bold text-white mb-1.5 text-balance">Preparamos em 48 a 72 horas</h3>
+                <p class="text-base text-zinc-300 leading-relaxed">Montamos e calibramos o sistema com as tabelas de preços, regras comerciais e modelos oficiais de propostas da sua empresa.</p>
               </div>
             </div>
 
             <div class="flex md:flex-col items-start gap-4 md:gap-5">
-              <div class="w-12 h-12 shrink-0 rounded-full bg-white border-2 border-amber-400/70 text-amber-600 flex items-center justify-center text-base font-bold">3</div>
+              <div class="w-12 h-12 shrink-0 rounded-full bg-[#181b26] border-2 border-amber-400 text-amber-300 flex items-center justify-center text-base font-bold shadow-md">3</div>
               <div class="text-left">
-                <h3 class="text-xl font-bold text-zinc-900 mb-1.5 text-balance">Instalamos e treinamos no mesmo dia</h3>
-                <p class="text-base text-zinc-600 leading-relaxed">Plugamos na sua rede, compartilhamos a pasta no Windows de todos os computadores e realizamos o treinamento prático com a equipe.</p>
+                <h3 class="text-xl font-bold text-white mb-1.5 text-balance">Instalamos e treinamos no mesmo dia</h3>
+                <p class="text-base text-zinc-300 leading-relaxed">Plugamos na sua rede, compartilhamos a pasta no Windows de todos os computadores e realizamos o treinamento prático com a equipe.</p>
               </div>
             </div>
           </div>
@@ -179,248 +180,250 @@ const faqSchema = {
       </div>
     </section>
 
-    <section class="relative py-20 md:py-28 px-4 max-w-6xl mx-auto border-t border-zinc-200">
-      <div class="max-w-2xl mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight leading-tight text-balance">
-          Quanto custa e retorno do investimento
-        </h2>
-        <p class="mt-3 text-zinc-600 text-base md:text-lg leading-relaxed text-pretty">
-          Simule o impacto na rotina da sua equipe. Calcule quantas horas de retrabalho são eliminadas no mês e a economia financeira correspondente.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
-        <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-white border border-zinc-200 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_10px_28px_-14px_rgba(16,24,40,0.12)] flex flex-col justify-center gap-8">
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <label for="slider-quotes" class="text-sm font-semibold text-zinc-900">Orçamentos e propostas por mês</label>
-              <span id="label-quotes" class="text-sm font-mono font-bold text-amber-600 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">80 / mês</span>
-            </div>
-            <input
-              id="slider-quotes"
-              type="range"
-              min="10"
-              max="300"
-              step="5"
-              value="80"
-              class="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-amber-500 focus:outline-none"
-            />
-            <div class="flex justify-between text-xs text-zinc-500 font-mono mt-1">
-              <span>10</span>
-              <span>150</span>
-              <span>300</span>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <label for="slider-minutes" class="text-sm font-semibold text-zinc-900">Tempo médio por proposta hoje</label>
-              <span id="label-minutes" class="text-sm font-mono font-bold text-amber-600 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">45 minutos</span>
-            </div>
-            <input
-              id="slider-minutes"
-              type="range"
-              min="15"
-              max="120"
-              step="5"
-              value="45"
-              class="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-amber-500 focus:outline-none"
-            />
-            <div class="flex justify-between text-xs text-zinc-500 font-mono mt-1">
-              <span>15 min</span>
-              <span>60 min</span>
-              <span>120 min</span>
-            </div>
-          </div>
-
-          <div>
-            <div class="flex items-center justify-between mb-3">
-              <label for="slider-rate" class="text-sm font-semibold text-zinc-900">Custo estimado da hora da equipe</label>
-              <span id="label-rate" class="text-sm font-mono font-bold text-amber-600 bg-amber-500/10 px-2.5 py-1 rounded-md border border-amber-500/20">R$ 50 / hora</span>
-            </div>
-            <input
-              id="slider-rate"
-              type="range"
-              min="25"
-              max="150"
-              step="5"
-              value="50"
-              class="w-full h-2 bg-zinc-200 rounded-lg appearance-none cursor-pointer accent-amber-500 focus:outline-none"
-            />
-            <div class="flex justify-between text-xs text-zinc-500 font-mono mt-1">
-              <span>R$ 25/h</span>
-              <span>R$ 80/h</span>
-              <span>R$ 150/h</span>
-            </div>
-          </div>
+    <section class="relative py-20 md:py-28 px-4 bg-[#050507]">
+      <div class="max-w-6xl mx-auto">
+        <div class="max-w-2xl mb-12">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight text-balance">
+            Quanto custa e retorno do investimento
+          </h2>
+          <p class="mt-3 text-zinc-300 text-base md:text-lg leading-relaxed text-pretty">
+            Simule o impacto na rotina da sua equipe. Calcule quantas horas de retrabalho são eliminadas no mês e a economia financeira correspondente.
+          </p>
         </div>
 
-        <div class="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-zinc-100 border border-zinc-300 flex flex-col justify-between">
-          <div>
-            <div class="text-sm font-semibold text-zinc-900 mb-6">
-              Estimativa de retorno mensal
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <div class="lg:col-span-7 p-6 sm:p-8 rounded-2xl bg-[#14161f] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] flex flex-col justify-center gap-8">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <label for="slider-quotes" class="text-sm font-semibold text-white">Orçamentos e propostas por mês</label>
+                <span id="label-quotes" class="text-sm font-mono font-bold text-amber-300 bg-amber-400/15 px-2.5 py-1 rounded-md border border-amber-400/30 tabular-nums">80 / mês</span>
+              </div>
+              <input
+                id="slider-quotes"
+                type="range"
+                min="10"
+                max="300"
+                step="5"
+                value="80"
+                class="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+              />
+              <div class="flex justify-between text-xs text-zinc-400 font-mono mt-1.5 tabular-nums">
+                <span>10</span>
+                <span>150</span>
+                <span>300</span>
+              </div>
             </div>
 
-            <div class="space-y-6">
-              <div>
-                <div class="text-xs text-zinc-500 mb-1">Horas de trabalho manual recuperadas:</div>
-                <div class="flex items-baseline gap-2">
-                  <span id="stat-hours" class="text-4xl sm:text-5xl font-extrabold text-zinc-900 font-mono tracking-tight">45</span>
-                  <span class="text-sm text-zinc-600">horas / mês</span>
-                </div>
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <label for="slider-minutes" class="text-sm font-semibold text-white">Tempo médio por proposta hoje</label>
+                <span id="label-minutes" class="text-sm font-mono font-bold text-amber-300 bg-amber-400/15 px-2.5 py-1 rounded-md border border-amber-400/30 tabular-nums">45 minutos</span>
               </div>
-
-              <div>
-                <div class="text-xs text-zinc-500 mb-1">Economia mensal em tempo operacional:</div>
-                <div class="flex items-baseline gap-2">
-                  <span id="stat-money" class="text-3xl sm:text-4xl font-extrabold text-emerald-600 font-mono tracking-tight">R$ 2.250</span>
-                  <span class="text-sm text-zinc-600">/ mês</span>
-                </div>
+              <input
+                id="slider-minutes"
+                type="range"
+                min="15"
+                max="120"
+                step="5"
+                value="45"
+                class="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+              />
+              <div class="flex justify-between text-xs text-zinc-400 font-mono mt-1.5 tabular-nums">
+                <span>15 min</span>
+                <span>60 min</span>
+                <span>120 min</span>
               </div>
+            </div>
 
-              <div class="pt-6 border-t border-zinc-200">
-                <div class="text-xs text-zinc-500 mb-1">Resultado líquido frente à mensalidade (R$ 990/mês):</div>
-                <div id="stat-net" class="text-xl sm:text-2xl font-bold font-mono text-emerald-600">
-                  + R$ 1.260 / mês de retorno
-                </div>
-                <p id="stat-summary" class="text-xs text-zinc-500 mt-2 leading-relaxed">
-                  A economia gerada cobre a mensalidade em aproximadamente 14 dias de operação comercial.
-                </p>
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <label for="slider-rate" class="text-sm font-semibold text-white">Custo estimado da hora da equipe</label>
+                <span id="label-rate" class="text-sm font-mono font-bold text-amber-300 bg-amber-400/15 px-2.5 py-1 rounded-md border border-amber-400/30 tabular-nums">R$ 50 / hora</span>
+              </div>
+              <input
+                id="slider-rate"
+                type="range"
+                min="25"
+                max="150"
+                step="5"
+                value="50"
+                class="w-full h-2 bg-zinc-700 rounded-lg appearance-none cursor-pointer accent-amber-400 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+              />
+              <div class="flex justify-between text-xs text-zinc-400 font-mono mt-1.5 tabular-nums">
+                <span>R$ 25/h</span>
+                <span>R$ 80/h</span>
+                <span>R$ 150/h</span>
               </div>
             </div>
           </div>
 
-          <div class="mt-8 pt-6 border-t border-zinc-200">
-            <a
-              id="roi-whatsapp-link"
-              href="https://wa.me/5547988131910?text=Ol%C3%A1!%20Fiz%20uma%20simula%C3%A7%C3%A3o%20na%20calculadora%20de%20ROI%20do%20site%20(80%20or%C3%A7amentos%20de%2045min)%20e%20gostaria%20de%20conversar."
-              target="_blank"
-              rel="noopener noreferrer"
-              class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white text-black font-semibold text-sm hover:bg-zinc-200 transition-colors"
-            >
-              Agendar Demonstração com Esse Cenário
-            </a>
+          <div class="lg:col-span-5 p-6 sm:p-8 rounded-2xl bg-[#1b1e2b] border border-white/[0.16] shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_20px_45px_-20px_rgba(0,0,0,0.9)] flex flex-col justify-between">
+            <div>
+              <div class="text-sm font-semibold text-zinc-200 mb-6">
+                Estimativa de retorno mensal
+              </div>
+
+              <div class="space-y-6">
+                <div>
+                  <div class="text-xs text-zinc-300 mb-1">Horas de trabalho manual recuperadas:</div>
+                  <div class="flex items-baseline gap-2">
+                    <span id="stat-hours" class="text-4xl sm:text-5xl font-extrabold text-white font-mono tracking-tight tabular-nums">45</span>
+                    <span class="text-sm text-zinc-300">horas / mês</span>
+                  </div>
+                </div>
+
+                <div>
+                  <div class="text-xs text-zinc-300 mb-1">Economia mensal em tempo operacional:</div>
+                  <div class="flex items-baseline gap-2">
+                    <span id="stat-money" class="text-3xl sm:text-4xl font-extrabold text-emerald-400 font-mono tracking-tight tabular-nums">R$ 2.250</span>
+                    <span class="text-sm text-zinc-300">/ mês</span>
+                  </div>
+                </div>
+
+                <div class="pt-6 border-t border-white/[0.1]">
+                  <div class="text-xs text-zinc-300 mb-1">Resultado líquido frente à mensalidade (R$ 990/mês):</div>
+                  <div id="stat-net" class="text-xl sm:text-2xl font-bold font-mono text-emerald-300 tabular-nums">
+                    + R$ 1.260 / mês de retorno
+                  </div>
+                  <p id="stat-summary" class="text-xs text-zinc-300 mt-2 leading-relaxed">
+                    A economia gerada cobre a mensalidade em aproximadamente 14 dias de operação comercial.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-8 pt-6 border-t border-white/[0.1]">
+              <a
+                id="roi-whatsapp-link"
+                href="https://wa.me/5547988131910?text=Ol%C3%A1!%20Fiz%20uma%20simula%C3%A7%C3%A3o%20na%20calculadora%20de%20ROI%20do%20site%20(80%20or%C3%A7amentos%20de%2045min)%20e%20gostaria%20de%20conversar."
+                target="_blank"
+                rel="noopener noreferrer"
+                class="w-full inline-flex items-center justify-center gap-2 py-3.5 px-6 rounded-xl bg-white text-black font-semibold text-sm hover:bg-zinc-200 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
+              >
+                Agendar Demonstração com Esse Cenário
+              </a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="precos" class="relative py-20 md:py-28 px-4 bg-white border-t border-zinc-200">
+    <section id="precos" class="relative py-20 md:py-28 px-4 bg-[#0e1017] border-y border-white/[0.1]">
       <div class="max-w-6xl mx-auto">
         <div class="text-center max-w-2xl mx-auto mb-16">
-          <h2 class="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight text-balance">
             Planos transparentes em reais
           </h2>
-          <p class="mt-4 text-zinc-600 text-base md:text-lg">
-            Sem cobrança em dólar por usuário, sem surpresas na fatura e com suporte presencial em Blumenau e região.
+          <p class="mt-4 text-zinc-300 text-base md:text-lg text-pretty">
+            Sem cobrança em dólar por usuário, sem surpresas na fatura e com atendimento para todo o Brasil ou presencial em Blumenau e região.
           </p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch max-w-4xl mx-auto">
-          <div class="relative p-8 rounded-2xl bg-white border-2 border-amber-500 shadow-[0_2px_4px_rgba(16,24,40,0.05),0_14px_34px_-14px_rgba(217,119,6,0.25)] flex flex-col justify-between">
+          <div class="relative p-8 rounded-2xl bg-[#1a1d2a] border-2 border-amber-400/80 shadow-[inset_0_1px_0_rgba(255,255,255,0.08),0_22px_50px_-24px_rgba(0,0,0,0.9)] flex flex-col justify-between">
             <div class="absolute -top-3.5 left-8 px-3 py-1 rounded-full bg-amber-400 text-black text-xs font-semibold">
               Recomendado
             </div>
 
             <div>
-              <div class="text-sm text-zinc-500 mb-2">
+              <div class="text-sm text-amber-300 font-medium mb-2">
                 Servidor físico na sua empresa
               </div>
-              <h3 class="text-2xl font-bold text-zinc-900 mb-2">MOB Box Compact</h3>
-              <p class="text-sm text-zinc-600 mb-6 leading-relaxed">
+              <h3 class="text-2xl font-bold text-white mb-2">MOB Box Compact</h3>
+              <p class="text-sm text-zinc-300 mb-6 leading-relaxed">
                 O mini-servidor físico é propriedade da sua empresa. Seus arquivos e propostas ficam gravados no seu escritório.
               </p>
 
-              <div class="mb-6 pb-6 border-b border-zinc-200">
-                <div class="text-xs text-zinc-500 uppercase tracking-wider font-mono mb-1">Mensalidade de suporte e gestão</div>
+              <div class="mb-6 pb-6 border-b border-white/[0.1]">
+                <div class="text-xs text-zinc-300 mb-1">Mensalidade de suporte e gestão</div>
                 <div class="flex items-baseline gap-2">
-                  <span class="text-4xl font-extrabold text-zinc-900 font-mono">R$ 990</span>
-                  <span class="text-sm text-zinc-500">/ mês</span>
+                  <span class="text-4xl font-extrabold text-white font-mono tabular-nums">R$ 990</span>
+                  <span class="text-sm text-zinc-300">/ mês</span>
                 </div>
-                <div class="text-sm text-amber-300/90 font-mono mt-1.5">+ R$ 6.490 setup e aquisição única do hardware</div>
+                <div class="text-sm text-amber-300 font-mono mt-1.5 tabular-nums">+ R$ 6.490 setup e aquisição única do hardware</div>
               </div>
 
-              <ul class="space-y-3 text-sm text-zinc-600">
+              <ul class="space-y-3 text-sm text-zinc-200">
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Servidor físico próprio compacto e silencioso
+                  <span class="text-amber-400 font-bold">✓</span> Servidor físico próprio compacto e silencioso
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Nobreak incluso com religamento automático
+                  <span class="text-amber-400 font-bold">✓</span> Nobreak incluso com religamento automático
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Pasta compartilhada na rede interna do Windows
+                  <span class="text-amber-400 font-bold">✓</span> Pasta compartilhada na rede interna do Windows
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> 3 Assistentes calibrados com suas regras
+                  <span class="text-amber-400 font-bold">✓</span> 3 Assistentes calibrados com suas regras
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Treinamento presencial de 2h30 para a equipe
+                  <span class="text-amber-400 font-bold">✓</span> Treinamento presencial de 2h30 para a equipe
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Manutenção e suporte presencial em Blumenau
+                  <span class="text-amber-400 font-bold">✓</span> Manutenção e suporte presencial em Blumenau
                 </li>
               </ul>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-zinc-200">
+            <div class="mt-8 pt-6 border-t border-white/[0.1]">
               <a
                 href="https://wa.me/5547988131910?text=Ol%C3%A1!%20Quero%20a%20MOB%20Box%20Compact%20no%20meu%20escrit%C3%B3rio."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="block w-full py-3.5 text-center rounded-xl text-sm font-semibold bg-amber-400 text-black hover:bg-amber-300 transition-colors"
+                class="block w-full py-3.5 text-center rounded-xl text-sm font-semibold bg-amber-400 text-black hover:bg-amber-300 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
               >
                 Quero a MOB Box no Escritório
               </a>
             </div>
           </div>
 
-          <div class="p-8 rounded-2xl bg-white border border-zinc-200 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_10px_28px_-14px_rgba(16,24,40,0.12)] hover:border-zinc-300 transition-all flex flex-col justify-between">
+          <div class="p-8 rounded-2xl bg-[#151822] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.06),0_18px_40px_-20px_rgba(0,0,0,0.85)] hover:border-white/25 transition-all flex flex-col justify-between">
             <div>
-              <div class="text-sm text-zinc-500 mb-2">
+              <div class="text-sm text-zinc-300 mb-2">
                 Começa em nuvem, sem hardware agora
               </div>
-              <h3 class="text-2xl font-bold text-zinc-900 mb-2">MOB Start</h3>
-              <p class="text-sm text-zinc-600 mb-6 leading-relaxed">
-                Para empresas que preferem iniciar de imediato em ambiente de nuvem dedicada, sem adquirir hardware físico inicial.
+              <h3 class="text-2xl font-bold text-white mb-2">MOB Start</h3>
+              <p class="text-sm text-zinc-300 mb-6 leading-relaxed">
+                Para empresas em todo o Brasil que preferem iniciar de imediato em nuvem privada dedicada, sem adquirir hardware físico inicial.
               </p>
 
-              <div class="mb-6 pb-6 border-b border-zinc-200">
-                <div class="text-xs text-zinc-500 uppercase tracking-wider font-mono mb-1">Mensalidade de operação e suporte</div>
+              <div class="mb-6 pb-6 border-b border-white/[0.1]">
+                <div class="text-xs text-zinc-300 mb-1">Mensalidade de operação e suporte</div>
                 <div class="flex items-baseline gap-2">
-                  <span class="text-4xl font-extrabold text-zinc-900 font-mono">R$ 990</span>
-                  <span class="text-sm text-zinc-500">/ mês</span>
+                  <span class="text-4xl font-extrabold text-white font-mono tabular-nums">R$ 990</span>
+                  <span class="text-sm text-zinc-300">/ mês</span>
                 </div>
-                <div class="text-sm text-zinc-600 font-mono mt-1.5">+ R$ 4.900 setup único de configuração</div>
+                <div class="text-sm text-zinc-300 font-mono mt-1.5 tabular-nums">+ R$ 4.900 setup único de configuração</div>
               </div>
 
-              <ul class="space-y-3 text-sm text-zinc-600">
+              <ul class="space-y-3 text-sm text-zinc-200">
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Instância em nuvem privada dedicada e isolada
+                  <span class="text-amber-400 font-bold">✓</span> Instância em nuvem privada dedicada e isolada
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Acesso protegido por autenticação segura
+                  <span class="text-amber-400 font-bold">✓</span> Acesso protegido por autenticação segura
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> 3 Assistentes calibrados com suas regras
+                  <span class="text-amber-400 font-bold">✓</span> 3 Assistentes calibrados com suas regras
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Carga de até 50 documentos e tabelas base
+                  <span class="text-amber-400 font-bold">✓</span> Carga de até 50 documentos e tabelas base
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Treinamento prático da equipe
+                  <span class="text-amber-400 font-bold">✓</span> Treinamento prático da equipe
                 </li>
                 <li class="flex items-center gap-2.5">
-                  <span class="text-amber-700 font-bold">✓</span> Ativação rápida em até 72 horas
+                  <span class="text-amber-400 font-bold">✓</span> Ativação rápida em até 72 horas
                 </li>
               </ul>
             </div>
 
-            <div class="mt-8 pt-6 border-t border-zinc-200">
+            <div class="mt-8 pt-6 border-t border-white/[0.1]">
               <a
                 href="https://wa.me/5547988131910?text=Ol%C3%A1!%20Tenho%20interesse%20no%20plano%20MOB%20Start%20(Nuvem%20Privada)."
                 target="_blank"
                 rel="noopener noreferrer"
-                class="block w-full py-3.5 text-center rounded-xl text-sm font-semibold bg-white hover:bg-zinc-100 text-zinc-900 border border-zinc-300 transition-colors"
+                class="block w-full py-3.5 text-center rounded-xl text-sm font-semibold bg-white/[0.1] hover:bg-white/[0.16] text-white border border-white/15 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
               >
                 Contratar MOB Start
               </a>
@@ -428,18 +431,18 @@ const faqSchema = {
           </div>
         </div>
 
-        <div class="mt-12 p-6 rounded-2xl bg-white border border-zinc-200 shadow-[0_1px_2px_rgba(16,24,40,0.04),0_10px_28px_-14px_rgba(16,24,40,0.12)] max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
+        <div class="mt-12 p-6 sm:p-7 rounded-2xl bg-[#151822] border border-white/[0.12] shadow-[inset_0_1px_0_rgba(255,255,255,0.05)] max-w-4xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
           <div>
-            <div class="text-base font-semibold text-zinc-900 mb-1">Prefere alugar o hardware em vez de comprar?</div>
-            <p class="text-sm text-zinc-600 leading-relaxed">
-              Conheça o <strong class="text-zinc-900">MOB Comodato</strong>: R$ 2.900 de ativação de bancada + R$ 1.290/mês durante 12 meses, com garantia de troca física em 24h e suporte total. <span class="text-zinc-500">Após os 12 meses, a mensalidade reduz para R$ 990/mês para manutenção e suporte contínuos.</span>
+            <div class="text-base font-semibold text-white mb-1">Prefere alugar o hardware em vez de comprar?</div>
+            <p class="text-sm text-zinc-300 leading-relaxed">
+              Conheça o <strong class="text-white">MOB Comodato</strong>: R$ 2.900 de ativação de bancada + R$ 1.290/mês durante 12 meses, com garantia de troca física em 24h e suporte total. <span class="text-zinc-400">Após os 12 meses, a mensalidade reduz para R$ 990/mês para manutenção e suporte contínuos.</span>
             </p>
           </div>
           <a
             href="https://wa.me/5547988131910?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20o%20plano%20MOB%20Comodato."
             target="_blank"
             rel="noopener noreferrer"
-            class="shrink-0 px-5 py-3 rounded-xl text-sm font-semibold bg-amber-50 hover:bg-amber-100 text-amber-700 border border-amber-200 transition-colors whitespace-nowrap"
+            class="shrink-0 px-5 py-3 rounded-xl text-sm font-semibold bg-amber-400/15 hover:bg-amber-400/25 text-amber-300 border border-amber-400/30 transition-colors whitespace-nowrap focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-400"
           >
             Conhecer MOB Comodato &rarr;
           </a>
@@ -447,144 +450,146 @@ const faqSchema = {
       </div>
     </section>
 
-    <section id="faq" class="relative py-20 md:py-28 px-4 max-w-4xl mx-auto border-t border-zinc-200">
-      <div class="mb-14">
-        <h2 class="text-3xl sm:text-4xl font-bold text-zinc-900 tracking-tight">
-          Perguntas Frequentes
-        </h2>
-        <p class="mt-3 text-zinc-600 text-base md:text-lg">
-          Respostas diretas sobre o funcionamento prático, segurança e modelo de contratação.
-        </p>
-      </div>
-
-      <div class="space-y-4">
-        <details class="group rounded-2xl border border-zinc-200 bg-white p-6 transition-colors open:border-zinc-400">
-          <summary class="flex cursor-pointer items-center justify-between font-semibold text-zinc-900 text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:rounded-lg">
-            <span>Minha empresa precisa de equipe técnica de TI?</span>
-            <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-zinc-100 text-zinc-600 group-open:rotate-180 transition-transform duration-200">
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 pt-4 border-t border-zinc-200 text-base text-zinc-600 leading-relaxed">
-            Não. A MOB Box foi desenhada exatamente para operar em empresas sem departamento de TI. Entregamos o equipamento pronto na sua rede e realizamos o treinamento presencial de 2h30 com a sua equipe. No dia a dia, para atualizar tabelas e documentos, basta arrastar os arquivos para uma pasta comum no Windows.
-          </div>
-        </details>
-
-        <details class="group rounded-2xl border border-zinc-200 bg-white p-6 transition-colors open:border-zinc-400">
-          <summary class="flex cursor-pointer items-center justify-between font-semibold text-zinc-900 text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:rounded-lg">
-            <span>A inteligência artificial erra ou alucina?</span>
-            <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-zinc-100 text-zinc-600 group-open:rotate-180 transition-transform duration-200">
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 pt-4 border-t border-zinc-200 text-base text-zinc-600 leading-relaxed">
-            Nenhum modelo de inteligência artificial é 100% infalível. Por essa razão, nossa calibração aplica regras estritas: o sistema sempre indica a citação exata de onde tirou cada valor ou regra na sua tabela. Além disso, antes de enviar qualquer orçamento ao cliente, a sua equipe faz uma conferência humana simples de conferir e aprovar.
-          </div>
-        </details>
-
-        <details class="group rounded-2xl border border-zinc-200 bg-white p-6 transition-colors open:border-zinc-400">
-          <summary class="flex cursor-pointer items-center justify-between font-semibold text-zinc-900 text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:rounded-lg">
-            <span>O que acontece se faltar luz ou a internet cair?</span>
-            <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-zinc-100 text-zinc-600 group-open:rotate-180 transition-transform duration-200">
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 pt-4 border-t border-zinc-200 text-base text-zinc-600 leading-relaxed">
-            A MOB Box conta com nobreak incluso e religamento automático configurado diretamente no hardware: assim que a energia retorna, o servidor liga sozinho e reativa todos os assistentes sem necessidade de suporte. No modelo de equipamento local, mesmo se a internet externa cair, a consulta a documentos e a geração interna continuam operando na rede do escritório.
-          </div>
-        </details>
-
-        <details class="group rounded-2xl border border-zinc-200 bg-white p-6 transition-colors open:border-zinc-400">
-          <summary class="flex cursor-pointer items-center justify-between font-semibold text-zinc-900 text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:rounded-lg">
-            <span>Os dados e contratos dos meus clientes ficam seguros?</span>
-            <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-zinc-100 text-zinc-600 group-open:rotate-180 transition-transform duration-200">
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 pt-4 border-t border-zinc-200 text-base text-zinc-600 leading-relaxed">
-            Sim, com total transparência técnica e jurídica. No plano MOB Box Compact (físico), os arquivos ficam armazenados no mini-servidor dentro da sua empresa e nunca são utilizados para treinar modelos externos. No plano MOB Start (nuvem privada), utilizamos servidores dedicados isolados com criptografia de ponta a ponta e contrato formal de confidencialidade em conformidade com a LGPD.
-          </div>
-        </details>
-
-        <details class="group rounded-2xl border border-zinc-200 bg-white p-6 transition-colors open:border-zinc-400">
-          <summary class="flex cursor-pointer items-center justify-between font-semibold text-zinc-900 text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:rounded-lg">
-            <span>E se eu quiser cancelar ou trocar de modelo?</span>
-            <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-zinc-100 text-zinc-600 group-open:rotate-180 transition-transform duration-200">
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 pt-4 border-t border-zinc-200 text-base text-zinc-600 leading-relaxed">
-            Você tem total liberdade. No plano MOB Box Compact, a máquina física é da sua empresa em definitivo. A mensalidade de gestão e suporte técnico pode ser cancelada sem penalidades abusivas. Se começar na nuvem e decidir comprar a MOB Box física depois, parte do valor investido no setup inicial é abatido na aquisição do hardware.
-          </div>
-        </details>
-
-        <details class="group rounded-2xl border border-zinc-200 bg-white p-6 transition-colors open:border-zinc-400">
-          <summary class="flex cursor-pointer items-center justify-between font-semibold text-zinc-900 text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:rounded-lg">
-            <span>Em quanto tempo vejo resultado?</span>
-            <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-zinc-100 text-zinc-600 group-open:rotate-180 transition-transform duration-200">
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 pt-4 border-t border-zinc-200 text-base text-zinc-600 leading-relaxed">
-            O primeiro resultado já aparece na demonstração: você vê um áudio virar orçamento em segundos, no seu celular. Para o uso diário completo (calibração das suas regras, tabela de preços, treinamento), entregamos tudo pronto em até 72 horas — com suporte presencial durante o treinamento, que dura cerca de 2h30.
-          </div>
-        </details>
-
-        <details class="group rounded-2xl border border-zinc-200 bg-white p-6 transition-colors open:border-zinc-400">
-          <summary class="flex cursor-pointer items-center justify-between font-semibold text-zinc-900 text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:rounded-lg">
-            <span>Como funciona a demonstração presencial de 15 minutos?</span>
-            <span class="ml-4 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-zinc-100 text-zinc-600 group-open:rotate-180 transition-transform duration-200">
-              <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-              </svg>
-            </span>
-          </summary>
-          <div class="mt-4 pt-4 border-t border-zinc-200 text-base text-zinc-600 leading-relaxed">
-            Agendamos um horário na sua conveniência e vamos até seu escritório com a maleta de demonstração. Ligamos a MOB Box na tomada e demonstramos ao vivo um áudio do WhatsApp se transformando em orçamento timbrado com os preços e itens da sua rotina. É uma experiência real, sem slides, sem custo e sem compromisso.
-          </div>
-        </details>
-      </div>
-
-      <div class="mt-16 p-8 md:p-12 rounded-2xl bg-[#0B0B0D] border border-zinc-800 text-center relative overflow-hidden">
-        <div class="max-w-xl mx-auto">
-          <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.06] border border-white/10 mb-6">
-            <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
-            <span class="text-sm text-zinc-300">Atendimento direto com o fundador</span>
-          </div>
-
-          <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight text-balance">
-            Pronto para colocar IA funcionando na sua empresa?
-          </h3>
-          <p class="text-base text-zinc-300 mb-8 leading-relaxed">
-            Fale diretamente com Osmar Henzen no WhatsApp e agende uma demonstração prática de 15 minutos na sua mesa em Blumenau e região.
+    <section id="faq" class="relative py-20 md:py-28 px-4 bg-[#050507]">
+      <div class="max-w-4xl mx-auto">
+        <div class="mb-14">
+          <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight text-balance">
+            Perguntas Frequentes
+          </h2>
+          <p class="mt-3 text-zinc-300 text-base md:text-lg text-pretty">
+            Respostas diretas sobre o funcionamento prático, segurança e modelo de contratação.
           </p>
+        </div>
 
-          <a
-            href="https://wa.me/5547988131910?text=Ol%C3%A1%20Osmar!%20Acessei%20o%20site%20mob.tec.br%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20de%2015%20minutos%20na%20minha%20empresa."
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold bg-white text-zinc-900 hover:bg-zinc-200 transition-all active:scale-95"
-          >
-            Fale com o Osmar no WhatsApp
-            <svg class="w-4 h-4 text-zinc-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
-            </svg>
-          </a>
+        <div class="space-y-4">
+          <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
+              <span>Minha empresa precisa de equipe técnica de TI?</span>
+              <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
+              Não. A MOB Box foi desenhada exatamente para operar em empresas sem departamento de TI. Entregamos o equipamento pronto na sua rede e realizamos o treinamento presencial de 2h30 com a sua equipe. No dia a dia, para atualizar tabelas e documentos, basta arrastar os arquivos para uma pasta comum no Windows.
+            </div>
+          </details>
 
-          <div class="mt-4 text-sm text-zinc-400">
-            WhatsApp: (47) 98813-1910 • Blumenau - SC
+          <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
+              <span>A inteligência artificial erra ou alucina?</span>
+              <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
+              Nenhum modelo de inteligência artificial é 100% infalível. Por essa razão, nossa calibração aplica regras estritas: o sistema sempre indica a citação exata de onde tirou cada valor ou regra na sua tabela. Além disso, antes de enviar qualquer orçamento ao cliente, a sua equipe faz uma conferência humana simples de conferir e aprovar.
+            </div>
+          </details>
+
+          <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
+              <span>O que acontece se faltar luz ou a internet cair?</span>
+              <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
+              A MOB Box conta com nobreak incluso e religamento automático configurado diretamente no hardware: assim que a energia retorna, o servidor liga sozinho e reativa todos os assistentes sem necessidade de suporte. No modelo de equipamento local, mesmo se a internet externa cair, a consulta a documentos e a geração interna continuam operando na rede do escritório.
+            </div>
+          </details>
+
+          <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
+              <span>Os dados e contratos dos meus clientes ficam seguros?</span>
+              <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
+              Sim, com total transparência técnica e jurídica. No plano MOB Box Compact (físico), os arquivos ficam armazenados no mini-servidor dentro da sua empresa e nunca são utilizados para treinar modelos externos. No plano MOB Start (nuvem privada), utilizamos servidores dedicados isolados com criptografia de ponta a ponta e contrato formal de confidencialidade em conformidade com a LGPD.
+            </div>
+          </details>
+
+          <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
+              <span>E se eu quiser cancelar ou trocar de modelo?</span>
+              <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
+              Você tem total liberdade. No plano MOB Box Compact, a máquina física é da sua empresa em definitivo. A mensalidade de gestão e suporte técnico pode ser cancelada sem penalidades abusivas. Se começar na nuvem e decidir comprar a MOB Box física depois, parte do valor investido no setup inicial é abatido na aquisição do hardware.
+            </div>
+          </details>
+
+          <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
+              <span>Em quanto tempo vejo resultado?</span>
+              <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
+              O primeiro resultado já aparece na demonstração: você vê um áudio virar orçamento na sua frente. Para o uso diário completo (calibração das suas regras, tabela de preços, treinamento), entregamos tudo pronto em até 72 horas — com treinamento prático de cerca de 2h30.
+            </div>
+          </details>
+
+          <details class="group rounded-2xl border border-white/[0.12] bg-[#14161f] p-6 transition-colors open:border-amber-400/40 open:bg-[#181b26]">
+            <summary class="flex cursor-pointer items-center justify-between font-semibold text-white text-base md:text-lg list-none focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400 focus-visible:rounded-lg">
+              <span>Como funciona a demonstração presencial de 15 minutos?</span>
+              <span class="ml-4 flex h-8 w-8 shrink-0 items-center justify-center rounded-full border border-white/15 bg-white/[0.06] text-zinc-300 group-open:rotate-180 transition-transform duration-200">
+                <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                </svg>
+              </span>
+            </summary>
+            <div class="mt-4 pt-4 border-t border-white/[0.08] text-base text-zinc-300 leading-relaxed">
+              Agendamos um horário na sua conveniência e vamos até seu escritório em Blumenau e região com a maleta de demonstração — ou fazemos ao vivo online para qualquer cidade do Brasil. Demonstramos um áudio do WhatsApp virando orçamento timbrado e a leitura de um contrato com os itens da sua rotina, sem custo e sem compromisso.
+            </div>
+          </details>
+        </div>
+
+        <div class="mt-16 p-8 md:p-12 rounded-2xl bg-[#14161f] border border-white/[0.14] shadow-[inset_0_1px_0_rgba(255,255,255,0.07),0_20px_50px_-24px_rgba(0,0,0,0.9)] text-center relative overflow-hidden">
+          <div class="max-w-xl mx-auto">
+            <div class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-white/[0.07] border border-white/15 mb-6">
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+              <span class="text-sm text-zinc-200">Atendimento direto com o fundador</span>
+            </div>
+
+            <h3 class="text-2xl md:text-3xl font-bold text-white mb-3 tracking-tight text-balance">
+              Pronto para colocar IA funcionando na sua empresa?
+            </h3>
+            <p class="text-base text-zinc-300 mb-8 leading-relaxed">
+              Fale diretamente com Osmar Henzen no WhatsApp e agende uma demonstração prática de 15 minutos — presencial em Blumenau e região ou online para todo o Brasil.
+            </p>
+
+            <a
+              href="https://wa.me/5547988131910?text=Ol%C3%A1%20Osmar!%20Acessei%20o%20site%20mob.tec.br%20e%20gostaria%20de%20agendar%20uma%20demonstra%C3%A7%C3%A3o%20de%2015%20minutos%20na%20minha%20empresa."
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-2.5 px-8 py-4 rounded-full text-base font-semibold bg-amber-400 text-black hover:bg-amber-300 transition-all active:scale-95 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-300"
+            >
+              Fale com o Osmar no WhatsApp
+              <svg class="w-4 h-4 text-black" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
+              </svg>
+            </a>
+
+            <div class="mt-4 text-sm text-zinc-400">
+              WhatsApp: (47) 98813-1910 • Blumenau - SC • Atendimento em todo o Brasil
+            </div>
           </div>
         </div>
       </div>
@@ -638,10 +643,10 @@ const faqSchema = {
         statMoney.textContent = formatBRL(grossSavings);
 
         if (netSavings >= 0) {
-          statNet.className = 'text-xl sm:text-2xl font-bold font-mono text-emerald-600';
+          statNet.className = 'text-xl sm:text-2xl font-bold font-mono text-emerald-300 tabular-nums';
           statNet.textContent = `+ ${formatBRL(netSavings)} / mês de retorno líquido`;
         } else {
-          statNet.className = 'text-xl sm:text-2xl font-bold font-mono text-amber-600';
+          statNet.className = 'text-xl sm:text-2xl font-bold font-mono text-amber-300 tabular-nums';
           statNet.textContent = `${formatBRL(netSavings)} / mês frente ao custo base`;
         }
 
